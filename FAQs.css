@@ -1,0 +1,47 @@
+main{
+    margin-top: 170px;
+}
+.content {
+    display: flex;
+}
+.listQues{
+    width: 20%;
+    margin-left: 220px;
+}
+main .content .listQues ul{
+    text-decoration: none;
+    list-style: none;
+    
+}
+main .content .listQues ul li a:hover{
+    text-decoration: underline;
+}
+.listQues ul li{
+    padding-bottom: 15px;
+}
+.content .commonQ{
+    width: 60%;
+}
+.content .blank{
+    width: 20%;
+}
+.vertical-line{
+    width: 1px;
+    background-color: #0000002e;
+    height: 100px; 
+    float: left; 
+}
+.vertical-line1{
+    width: 1px;
+    background-color: #0000002e;
+    height: 260px; 
+    float: left; 
+}
+.commonQ hr {
+    border: none;
+    border-top: 1px dotted #0000004f;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 80%;
+}
