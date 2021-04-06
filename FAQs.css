@@ -37,6 +37,7 @@ main .content .listQues ul li a:hover{
     height: 260px; 
     float: left; 
 }
+
 .commonQ hr {
     border: none;
     border-top: 1px dotted #0000004f;
@@ -44,4 +45,30 @@ main .content .listQues ul li a:hover{
     background-color: #fff;
     height: 1px;
     width: 80%;
+}
+.commonQ h2{
+    text-align: center;
+}
+.commonQ ul {
+    margin-left: 170px;
+}
+.commonQ ul li{
+    padding-bottom: 15px;
+}
+
+.commonQ ul li a {
+    text-transform: capitalize;
+    color: rgb(2, 95, 142);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    
+}
+.commonQ h1{
+    text-align:left;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: revert;
+    text-transform: capitalize;
+}
+.commonQ .answer{
+    margin-left: 75px;
 }
