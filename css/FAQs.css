@@ -1,0 +1,80 @@
+h1,h2,h3{
+    font-family: "Archivo", sans-serif;
+}
+
+main{
+    margin-top: 170px;
+    font-family: "Roboto", sans-serif;
+}
+.content {
+    display: flex;
+}
+.listQues{
+    width: 20%;
+    margin-left: 220px;
+}
+main .content .listQues ul{
+    text-decoration: none;
+    list-style: none;
+    
+}
+main .content .listQues ul li a:hover{
+    background-color: #00000014;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.listQues ul li{
+    padding-bottom: 15px;
+}
+.content .commonQ{
+    width: 60%;
+}
+.content .blank{
+    width: 20%;
+}
+.vertical-line{
+    width: 1px;
+    background-color: #0000002e;
+    height: 100px; 
+    float: left; 
+}
+.vertical-line1{
+    width: 1px;
+    background-color: #0000002e;
+    height: 260px; 
+    float: left; 
+}
+
+.commonQ hr {
+    border: none;
+    border-top: 1px dotted #0000004f;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 80%;
+}
+.commonQ h2{
+    text-align: center;
+}
+.commonQ ul {
+    margin-left: 170px;
+}
+.commonQ ul li{
+    padding-bottom: 15px;
+}
+
+.commonQ ul li a {
+    text-transform: capitalize;
+    color: rgb(2, 95, 142);
+    font-size: 20px;
+    
+}
+.commonQ h1{
+    text-align:left;
+    font-weight: revert;
+    text-transform: capitalize;
+}
+.commonQ .answer{
+    margin-left: 75px;
+}
