@@ -1,0 +1,342 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+/*header*/
+header {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0px 9px 3px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 9px 3px -2px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background-color: #fff;
+}
+
+header li,
+a,
+button {
+    font-family: "Archivo", sans-serif;
+    color: #000;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.logo-name {
+    margin-left: 7vw;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    float: left;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.logo-name span {
+    font-family: "Archivo", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 25px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-right: 12vw;
+}
+
+nav ul li {
+    line-height: 20px;
+    margin: 15px 10px;
+    display: inline-block;
+}
+
+nav ul li a {
+    position: relative;
+    transition: all 0.3s ease 0s;
+    padding: 5px 0px;
+    font-size: 20px;
+}
+
+nav ul li .underline:before,
+#browse-text a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #FAB325;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s linear;
+}
+
+nav ul li .underline:hover:before,
+#browse-text a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.browse {
+    position: relative;
+}
+
+#browse-text {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 20px;
+}
+
+.browse-dropdown {
+    display: list-item;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    padding: 0;
+    padding-top: 15px;
+    width: 180px;
+    display: none;
+}
+
+.browse-dropdown li {
+    perspective: 1000px;
+    display: inline-block;
+    background: #bfbfbf;
+    width: 180px;
+    box-sizing: border-box;
+    padding: 10px 25px;
+    float: left;
+    clear: left;
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    border-radius: 3px;
+}
+
+.browse-dropdown li:hover {
+    background-color: #FAB325;
+}
+
+.browse-dropdown-info:first-child {
+    border-bottom: 2px solid #fff;
+}
+
+.browse-links {
+    font-size: 18px;
+}
+
+.browse:hover .browse-dropdown {
+    box-sizing: border-box;
+    letter-spacing: 0px;
+    display: block;
+}
+
+.browse:hover .browse-dropdown-info:first-child {
+    display: block;
+    animation: dropDownAnimation 300ms ease normal;
+    animation-delay: -200ms;
+}
+
+.browse:hover .browse-dropdown-info:last-child {
+    display: block;
+    animation: dropDownAnimation 300ms ease normal;
+    animation-delay: 0ms;
+}
+
+@keyframes dropDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+label #open,
+label #close {
+    color: #000;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#active {
+    display: none;
+}
+
+/*Main content starts here*/
+main {
+    margin-top: 140px;
+    margin-bottom: 80px;
+    margin-left: 13%;
+    margin-right: 13%;
+    text-align: justify;
+}
+
+/*footer*/
+footer {
+    display: flexbox;
+    width: 100%;
+    height: 200px;
+    background-color: #262626;
+    -webkit-box-shadow: 0px -3px 4px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px -3px 4px 2px rgba(0, 0, 0, 0.15);
+    font-family: "Archivo", sans-serif;
+}
+
+#logoName {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #D0D3D9;
+}
+
+.policy,
+.copyright {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+
+.policy li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 20px;
+}
+
+.policy a {
+    color: #fff;
+}
+
+.copyright a {
+    text-align: center;
+    color: #bfbfbf;
+}
+
+/*Tablet*/
+@media screen and (max-width: 1024px) {
+
+    /*responsive navbar*/
+    label #open {
+        display: block;
+    }
+
+    nav>ul {
+        position: fixed;
+        float: left;
+        height: 100vh;
+        width: 100%;
+        background: #262626;
+        top: 70px;
+        left: -100%;
+        transition: all 0.5s;
+        padding: 0;
+    }
+
+    nav>ul>li {
+        display: block;
+        width: 100%;
+        line-height: 50px;
+        padding: 0 15vw;
+    }
+
+    nav ul li a {
+        font-size: 30px;
+        margin-left: 10px;
+        color: #fff;
+    }
+
+    nav ul li:first-of-type {
+        margin-top: 50px;
+    }
+
+    nav ul li .underline:before,
+    #browse-text a:before {
+        background: #bfbfbf;
+    }
+
+    #active:checked~ul {
+        left: 0;
+    }
+
+    #active:checked~label #open {
+        display: none;
+    }
+
+    #active:checked~label #close {
+        display: block;
+    }
+
+    .browse-dropdown {
+        width: 100%;
+        position: relative;
+        padding-top: 0;
+    }
+
+    .browse-dropdown-info:first-child {
+        margin-top: 0;
+        border: none;
+    }
+
+    .browse-dropdown li {
+        width: 100%;
+        display: none;
+        background: none;
+    }
+
+    .browse-links {
+        font-size: 23px;
+    }
+
+    .browse-dropdown li:hover {
+        background-color: #bfbfbf;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .logo-name span {
+        font-size: 25px;
+        font-weight: bold;
+        display: inline-block;
+        padding: 25px 20px;
+    }
+}
