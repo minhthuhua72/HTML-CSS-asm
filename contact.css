@@ -1,12 +1,11 @@
 h1 {
     margin: auto;
-    margin-top: 150px;
     font-family: "Archivo", sans-serif;
     font-size: 50px;
 }
 
 main {
-    margin-top: 60px;
+    margin-top: 25px;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
 }
@@ -61,7 +60,7 @@ button {
     
 }
 #name, #mail, #phonenum {
-    display: block;
+    display: flex;
 }
 
 #smail {
@@ -76,11 +75,16 @@ button {
     width: 100%;
     display: flex
 }
-
+#mess {
+    font-size: 18px;
+}
 
 
 #cp {
     margin-right: 50px;
+}
+#purpose:focus {
+    border-color: #1039df;
 }
 
 #purpose {
@@ -96,14 +100,14 @@ button {
 
 
 .input100 {
-    display: block;
+    display: flex;
     width: 100%;
     line-height: 1.2;
     border: 0px;
     outline: none;
     padding: 0.5rem 0.7rem;
     background-color: #f7f7f7;
-    font-size: 30px;
+    font-size: 25px;
 }
 .form-group:after {
     content: "*";
@@ -111,6 +115,12 @@ button {
 }
 
 .form-group {
+    font-size: 150%;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex
+}
+.form-group1 {
     font-size: 150%;
     margin-bottom: 1rem;
     width: 100%;
@@ -130,7 +140,6 @@ button {
     justify-content: flex-end;
     width: 100%;
     margin-right: 40%;
-    margin-bottom: 2%;
 }
 
 .wrap-input150 {
