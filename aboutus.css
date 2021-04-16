@@ -1,0 +1,84 @@
+#about {
+    color: #FAB325;
+}
+
+main {
+    margin-top: 140px;
+    margin-left: 13%;
+    margin-right: 13%;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Archivo Bold", sans-serif;
+    margin-bottom: 30px;
+}
+
+.vline {
+    border-bottom: 5px solid #bfbfbf;
+    padding-bottom: 5px;
+}
+
+.ourteam {
+    margin-top: 140px;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.ourmembers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+
+.members {
+    margin-top: 20px;
+}
+
+.mem-photo {
+    display: block;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.real-person {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.portraits {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.portraits:hover .overlay {
+    opacity: 1;
+}
+
+.mem-info {
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    line-height: 40px;
+}
+
+.icons {
+    width: 50px;
+}
