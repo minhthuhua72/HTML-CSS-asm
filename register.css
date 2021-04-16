@@ -196,6 +196,7 @@ button {
 
 .inform{
     font-size: medium;
+    width: 98% !important;
 }
 
 input[value="storeowner"]:checked ~ .otoke{
