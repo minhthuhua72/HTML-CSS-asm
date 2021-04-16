@@ -1,3 +1,4 @@
+
 h1 {
     margin: auto;
     font-family: "Archivo", sans-serif;
@@ -5,9 +6,10 @@ h1 {
 }
 
 main {
-    margin-top: 25px;
+    margin-top: 60px;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
+
 }
 
 p {
@@ -60,7 +62,7 @@ button {
     
 }
 #name, #mail, #phonenum {
-    display: flex;
+    display: block;
 }
 
 #smail {
@@ -71,20 +73,12 @@ button {
 }
 #Mess {
     font-size: 150%;
-    margin-bottom: 1rem;
     width: 100%;
     display: flex
 }
-#mess {
-    font-size: 18px;
-}
-
 
 #cp {
     margin-right: 50px;
-}
-#purpose:focus {
-    border-color: #1039df;
 }
 
 #purpose {
@@ -92,6 +86,25 @@ button {
     height: 40px;
 }
 
+#shopper {
+    margin-left: 5%;
+}#countries {
+    height: 30px;
+    width: 100%;
+}
+ 
+#sc {
+    height: 30px;
+    width: 50%;
+    min-width: 250px;
+}
+
+#countries:focus {
+    border-color: #0d3efd;
+}
+#sc:focus {
+    border-color: #0d3efd;
+}
 .content {
     display: flex;
     flex-direction: column;
@@ -100,7 +113,7 @@ button {
 
 
 .input100 {
-    display: flex;
+    display: block;
     width: 100%;
     line-height: 1.2;
     border: 0px;
@@ -109,16 +122,10 @@ button {
     background-color: #f7f7f7;
     font-size: 25px;
 }
+
 .form-group:after {
     content: "*";
     color: red;
-}
-
-.form-group {
-    font-size: 150%;
-    margin-bottom: 1rem;
-    width: 100%;
-    display: flex
 }
 .form-group1 {
     font-size: 150%;
@@ -126,6 +133,20 @@ button {
     width: 100%;
     display: flex
 }
+.form-group {
+    font-size: 150%;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex
+}
+
+.form-group1 {
+    font-size: 150%;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex
+}
+
 .bg0 {
     background-color: #fff;
 }
@@ -140,6 +161,7 @@ button {
     justify-content: flex-end;
     width: 100%;
     margin-right: 40%;
+    margin-bottom: 2%;
 }
 
 .wrap-input150 {
@@ -151,7 +173,32 @@ button {
     margin: auto;
     margin-bottom: 20px;
 }
+.note {
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 13px;
+    margin-bottom: 1.5%;
+}
+.right {
+    display: inline-block;
+    width: 50%;
+}
 
-* {
-    margin: 0;
+.vertical-left{
+    width: 60%;
+    position: relative;
+    padding: 10px 30px 9px 22px;  
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    height: 76.203;
+}
+
+.inform{
+    font-size: medium;
+    width: 98% !important;
+}
+
+input[value="storeowner"]:checked ~ .otoke{
+    display: block !important;
 }

@@ -1,0 +1,51 @@
+main {
+    margin-top: 160px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    text-align: left;
+}
+legend {
+    margin: auto;
+    font-family: "Archivo", sans-serif;
+    font-size: 50px;
+}
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+fieldset {
+    width: 50%;
+    margin-bottom: 7.7%;
+  }
+main > span {
+    margin-left: 50%;
+}
+.fpass {
+    text-align: right;
+}
+.no-regis {
+    text-align: right;
+}
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+      opacity: 0.6;
+  }
