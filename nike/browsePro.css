@@ -62,10 +62,14 @@ main>p {
 
 .productLST {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    flex-wrap: wrap;
+}
+
+.productLST>div {
+    margin: 10px;
 }
 
 .nikePro {

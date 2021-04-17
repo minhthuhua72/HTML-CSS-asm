@@ -1,4 +1,4 @@
-T* {
+* {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
@@ -253,7 +253,8 @@ footer {
 }
 
 /*Tablet*/
-@media screen and (max-width: 1024px) {
+/*Tablet*/
+@media screen and (max-width: 1224px) {
 
     /*responsive navbar*/
     label #open {
@@ -291,7 +292,7 @@ footer {
 
     nav ul li .underline:before,
     #browse-text a:before {
-        background: #ff6600;
+        background: #bfbfbf;
     }
 
     #active:checked~ul {
@@ -328,7 +329,7 @@ footer {
     }
 
     .browse-dropdown li:hover {
-        background-color: #ff6600;
+        background-color: #bfbfbf;
     }
 }
 

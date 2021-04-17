@@ -1,4 +1,3 @@
-
 h1 {
     margin: auto;
     font-family: "Archivo", sans-serif;
@@ -21,8 +20,8 @@ label {
 }
 
 
-input[type="text"]:focus, 
-input[type="email"]:focus, 
+input[type="text"]:focus,
+input[type="email"]:focus,
 input[type="number"]:focus {
     border-color: #7db0fb;
     outline: 0;
@@ -42,7 +41,7 @@ input[type="reset"] {
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #1ce38c;
+    background-color: rgb(2, 95, 142);
 }
 
 
@@ -53,24 +52,35 @@ textarea {
 }
 
 button {
-    background-color: #0d3efd;  
+    background-color: #0d3efd;
 }
 
 
-#mon, #tue, #wed, #thu, #fri, #sat, #sun {
+#mon,
+#tue,
+#wed,
+#thu,
+#fri,
+#sat,
+#sun {
     margin-left: 25px;
-    
+
 }
-#name, #mail, #phonenum {
+
+#name,
+#mail,
+#phonenum {
     display: block;
 }
 
 #smail {
     margin-left: 25px;
 }
+
 #num {
     margin-left: 40px;
 }
+
 #Mess {
     font-size: 150%;
     width: 100%;
@@ -88,11 +98,13 @@ button {
 
 #shopper {
     margin-left: 5%;
-}#countries {
+}
+
+#countries {
     height: 30px;
     width: 100%;
 }
- 
+
 #sc {
     height: 30px;
     width: 50%;
@@ -102,9 +114,11 @@ button {
 #countries:focus {
     border-color: #0d3efd;
 }
+
 #sc:focus {
     border-color: #0d3efd;
 }
+
 .content {
     display: flex;
     flex-direction: column;
@@ -127,12 +141,14 @@ button {
     content: "*";
     color: red;
 }
+
 .form-group1 {
     font-size: 150%;
     margin-bottom: 1rem;
     width: 100%;
     display: flex
 }
+
 .form-group {
     font-size: 150%;
     margin-bottom: 1rem;
@@ -169,36 +185,38 @@ button {
     position: relative;
     border: 1px solid #e6e6e6;
     border-radius: 13px;
-    padding: 10px 30px 9px 22px;  
+    padding: 10px 30px 9px 22px;
     margin: auto;
     margin-bottom: 20px;
 }
+
 .note {
     background-color: #f7f7f7;
     border: 1px solid #e6e6e6;
     border-radius: 13px;
     margin-bottom: 1.5%;
 }
+
 .right {
     display: inline-block;
     width: 50%;
 }
 
-.vertical-left{
+.vertical-left {
     width: 60%;
     position: relative;
-    padding: 10px 30px 9px 22px;  
+    padding: 10px 30px 9px 22px;
     margin: auto;
     margin-bottom: 20px;
     background-color: white;
     height: 76.203;
 }
 
-.inform{
+.inform {
     font-size: medium;
     width: 98% !important;
 }
 
-input[value="storeowner"]:checked ~ .otoke{
+input[value="storeowner"]:checked~.otoke {
     display: block !important;
 }

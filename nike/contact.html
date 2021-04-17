@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="nike.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>My Account</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <!--Logo-->
+        <a href="nike.html" class="logo-name">
+            <img class="logo" src="imgs/ni-ke.jpg" alt="logo">
+            <span>NIKE</span>
+        </a>
+        <nav>
+            <!--Responsive Navbar-->
+            <input type="checkbox" id="active">
+            <label for="active">
+                <i class="fa fa-bars" id="open"></i>
+                <i class="fa fa-times" id="close"></i>
+            </label>
+            <ul>
+                <li><a class="underline" href="nike.html">Home</a></li>
+                <li><a class="underline" id="about" href="about.html">About Us</a></li>
+                <li class="browse">
+                    <span id="browse-text"><a href="#">Products</a></span>
+                    <ul class="browse-dropdown">
+                        <li class="browse-dropdown-info">
+                            <a class="browse-links" href="browseProC.html">Browse Products by Category</a>
+                        </li>
+                        <li class="browse-dropdown-info">
+                            <a class="browse-links" href="browseProCT.html">Browse Stores by Created Time</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="underline" href="Contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!--EndHeader-->
+
+    <h1 style="text-align: center; margin-top: 100px;">Contact</h1>
+    <main>
+        <div>
+            <form class="content" method="GET" action="contact.html">
+
+                <!-- input full name -->
+                <div class="wrap-input150 bg1">
+                    <span class="form-group">Full Name</span>
+                    <input class="input-design" type="text" id="name" name="name" placeholder="Your name..." required>
+                </div>
+                <!-- input email -->
+                <div class="wrap-input150 bg1">
+                    <span class="form-group">E-mail</span>
+                    <input class="input-design" type="email" id="mail" name="email" placeholder="Your email..."
+                        required>
+                </div>
+                <!-- input number phone -->
+                <div class="wrap-input150 bg1">
+                    <span class="form-group">Phone Number</span>
+                    <input class="input-design" type="number" id="phonenum" name="phonenumber" maxlength="10"
+                        minlength="10" placeholder="Your phone..." required>
+                </div>
+                <!-- input preferred contact method -->
+                <!-- select Contact days -->
+                <!-- textfield -->
+                <div class="wrap-input150 bg0">
+                    <span id="Mess">Message</span>
+                    <textarea name="mess" id="mess" placeholder="Type here" cols="85" rows="10"></textarea>
+                </div>
+                <!-- button -->
+                <div class="button-control">
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Clear">
+                </div>
+            </form>
+        </div>
+    </main>
+    <!--Footer copy this-->
+    <footer>
+        <a id="logoName" href="nike.html">
+            <img class="logo" src="imgs/ni-ke.jpg" alt="logo">
+            <span>Nike</span>
+        </a>
+
+        <div class="policy">
+            <ul>
+                <li><a href="tos.html">Term of Service</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <a href="copyright.html">Copyright &copy; Mall 2021</a>
+        </div>
+    </footer>
+    <!--EndFooter-->
+</body>
+
+</html>

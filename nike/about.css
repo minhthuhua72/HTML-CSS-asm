@@ -3,7 +3,7 @@
 }
 
 .nike-store {
-    background-image: url(/nike/imgs/);
+    background-image: url(imgs/kristian-egelund-wwqRpSNBPq4-unsplash.jpg);
     height: 400px;
     width: 100%;
     background-size: cover;
@@ -44,7 +44,6 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 800px;
     height: fit-content;
     margin-bottom: 50px;
     text-align: justify;
@@ -69,4 +68,18 @@ h1 {
     height: 380px;
     object-fit: fill;
     border-radius: 50%;
+}
+
+@media screen and (max-width:875px) {
+    .content div {
+        align-items: center;
+    }
+
+    .content div:nth-child(1) {
+        flex-direction: column;
+    }
+
+    .content div:nth-child(2) {
+        flex-direction: column-reverse;
+    }
 }

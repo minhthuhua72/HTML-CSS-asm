@@ -1,48 +1,58 @@
-h1,h2,h3{
+h1,
+h2,
+h3 {
     font-family: "Archivo", sans-serif;
 }
 
-main{
+main {
+    width: 96%;
+    padding: 0 2%;
     margin-top: 170px;
     font-family: "Roboto", sans-serif;
 }
+
 .content {
     display: flex;
 }
-.listQues{
+
+.listQues {
     width: 30%;
-  
+
 }
-main .content .listQues ul{
+
+main .content .listQues ul {
     text-decoration: none;
     list-style: none;
-    
+
 }
-main .content .listQues ul li a:hover{
+
+main .content .listQues ul li a:hover {
     background-color: #00000014;
     padding: 10px;
     border-radius: 10px;
 }
 
-.listQues ul li{
+.listQues ul li {
     padding-bottom: 15px;
 }
-.content .commonQ{
+
+.content .commonQ {
     width: 70%;
-    
+
 }
 
-.vertical-line{
+.vertical-line {
     width: 1px;
     background-color: #0000002e;
-    height: 100px; 
-    float: left; 
+    height: 100px;
+    float: left;
 }
-.vertical-line1{
+
+.vertical-line1 {
     width: 1px;
     background-color: #0000002e;
-    height: 260px; 
-    float: left; 
+    height: 260px;
+    float: left;
 }
 
 .commonQ hr {
@@ -53,13 +63,16 @@ main .content .listQues ul li a:hover{
     height: 1px;
     width: 80%;
 }
-.commonQ h2{
+
+.commonQ h2 {
     text-align: center;
 }
+
 .commonQ ul {
     margin-left: 170px;
 }
-.commonQ ul li{
+
+.commonQ ul li {
     padding-bottom: 15px;
 }
 
@@ -67,26 +80,46 @@ main .content .listQues ul li a:hover{
     text-transform: capitalize;
     color: rgb(2, 95, 142);
     font-size: 20px;
-    
+
 }
-.commonQ h1{
-    
+
+.commonQ h1 {
+
     font-weight: revert;
     text-transform: capitalize;
     margin-top: -10px;
 }
-.commonQ .answer{
+
+.commonQ .answer {
     margin-left: 75px;
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
     .listQues {
-        margin-left: -91px;
+        display: none;
+    }
+
+
+    .commonQ ul {
+        margin-left: 20px
     }
 
     .commonQ {
-        margin-left: 82px;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .content .commonQ {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content .commonQ .answer {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -97,7 +130,7 @@ main .content .listQues ul li a:hover{
       
     } */
 
-    /* #left .column {
+/* #left .column {
       width: 50%;
       float: left;
     }

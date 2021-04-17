@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="../navbar.css">
-    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="register.css">
     <title>Register Account</title>
 </head>
 
@@ -62,8 +62,8 @@
                 <!-- input phone num -->
                 <div class="wrap-input150 bg1">
                     <span class="form-group">Phone Number</span>
-                    <input class="input-design" type="number" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
-                        placeholder="Your phone..." required>
+                    <input class="input-design" type="number" id="phonenum" name="phonenumber" maxlength="10"
+                        minlength="10" placeholder="Your phone..." required>
                 </div>
                 <!-- input password -->
                 <div class="wrap-input150 bg1">
@@ -74,8 +74,8 @@
                 <!-- retype pass -->
                 <div class="wrap-input150 bg1">
                     <span class="form-group">Retype Password</span>
-                    <input class="input-design" type="repassword" id="rpw" name="repassword" maxlength="10" minlength="6"
-                        placeholder="Retype your Password" required>
+                    <input class="input-design" type="repassword" id="rpw" name="repassword" maxlength="10"
+                        minlength="6" placeholder="Retype your Password" required>
                 </div>
                 <!-- Add picture -->
                 <div class="wrap-input150 bg1">
@@ -95,7 +95,8 @@
                 <!-- input address -->
                 <div class="wrap-input150 bg1">
                     <span class="form-group1">Address</span>
-                    <input class="input-design" type="text" id="address" name="address" placeholder="Home Address" required>
+                    <input class="input-design" type="text" id="address" name="address" placeholder="Home Address"
+                        required>
                 </div>
                 <!-- city -->
                 <div class="wrap-input150 bg1">
@@ -368,16 +369,18 @@
                     <label for="shopper">Shopper</label>
                     <br>
                     <br>
-                        <fieldset class="otoke" style="display: none;">
-                            <legend><strong style="color: red;">These fields are for Store Owner</strong></legend>
-                            <label for="bname">Business Name:</label>
-                            <br>
-                            <input class="input-design inform" type="text" id='bname' name='bname' placeholder="Business Name" required>
-                            <label for="sname">Store Name:</label>
-                            <br>
-                            <input class="input-design inform" type="text" id='sname' name='sname' placeholder="Store Name" required>
-                            <span class="form-group1">Store Category</span>
-                            <select name="storecate" id="sc">
+                    <fieldset class="otoke" style="display: none;">
+                        <legend><strong style="color: red;">These fields are for Store Owner</strong></legend>
+                        <label for="bname">Business Name:</label>
+                        <br>
+                        <input class="input-design inform" type="text" id='bname' name='bname'
+                            placeholder="Business Name" required>
+                        <label for="sname">Store Name:</label>
+                        <br>
+                        <input class="input-design inform" type="text" id='sname' name='sname' placeholder="Store Name"
+                            required>
+                        <span class="form-group1">Store Category</span>
+                        <select name="storecate" id="sc">
                             <option value="0" selected>Select your store category</option>
                             <option value="1">Department store</option>
                             <option value="2">Grocery store</option>
@@ -392,7 +395,7 @@
                             <option value="11">Service</option>
                             <option value="12">Kiosks</option>
                         </select>
-                        </fieldset>
+                    </fieldset>
                 </div>
                 <!-- button -->
                 <div class="button-control">
@@ -402,23 +405,23 @@
             </form>
         </div>
     </main>
-            <!--Footer copy this-->
-            <footer>
-                <a id="logoName" href="index.html">
-                    <img class="logo" src="../imgs/LOGO-01.png" alt="logo">
-                    <span>Shopeeverse</span>
-                </a>
-                <div class="policy">
-                    <ul>
-                        <li><a href="#">Term Of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="copyright">
-                    <a href="#">Copyright &copy; Mall 2021</a>
-                </div>
-            </footer>
-            <!--EndFooter-->
+    <!--Footer copy this-->
+    <footer>
+        <a id="logoName" href="index.html">
+            <img class="logo" src="../imgs/LOGO-01.png" alt="logo">
+            <span>Shopeeverse</span>
+        </a>
+        <div class="policy">
+            <ul>
+                <li><a href="#">Term Of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <a href="#">Copyright &copy; Mall 2021</a>
+        </div>
+    </footer>
+    <!--EndFooter-->
 </body>
 
 </html>

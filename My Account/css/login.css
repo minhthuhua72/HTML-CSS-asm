@@ -1,56 +1,78 @@
 main {
-    margin-top: 160px;
-    font-family: "Roboto", sans-serif;
-    line-height: 1.5;
-    text-align: left;
+  margin-top: 160px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  text-align: left;
 }
+
 legend {
-    margin: auto;
-    font-family: "Archivo", sans-serif;
-    font-size: 50px;
+  margin: auto;
+  font-family: "Archivo", sans-serif;
+  font-size: 50px;
 }
+
 .input-design {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: medium;
-  }
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: medium;
+}
+
 .input-design:focus {
   background-color: rgb(236, 236, 236);
 }
+
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  }
+}
 
 fieldset {
-    width: 50%;
-    margin-bottom: 7.7%;
-  }
-main > span {
-    margin-left: 50%;
-}
-.fpass {
-    text-align: right;
-}
-.no-regis {
-    text-align: right;
+  width: 50%;
+  margin-bottom: 7.7%;
 }
 
-  /* Set a style for all buttons */
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+main>span {
+  margin-left: 50%;
+}
+
+.fpass {
+  text-align: right;
+}
+
+.no-regis {
+  text-align: right;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgb(2, 95, 142);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: rgb(158, 154, 154);
+}
+
+@media screen and (max-width:600px) {
+  fieldset {
+    width: 70%;
+    margin-bottom: 7.7%;
   }
-  button:hover {
-      background-color: rgb(158, 154, 154);
+}
+
+@media screen and (max-width:450px) {
+  fieldset {
+    width: 90%;
+    margin-bottom: 7.7%;
   }
+}
