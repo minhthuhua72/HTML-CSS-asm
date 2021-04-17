@@ -1,0 +1,72 @@
+#about {
+    color: #ff6600;
+}
+
+.nike-store {
+    background-image: url(/imgs/kristian-egelund-wwqRpSNBPq4-unsplash.jpg);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 400px;
+}
+
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 90px;
+    color: #f2f2f2;
+    text-shadow: 4px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    margin-top: 160px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 800px;
+    height: fit-content;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.info:nth-child(even) h2 {
+    text-align: right;
+}
+
+.left {
+    margin-right: 10px;
+    width: 380px;
+}
+
+.right {
+    margin-left: 10px;
+    width: 380px;
+}
+
+.pic {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 50%;
+}

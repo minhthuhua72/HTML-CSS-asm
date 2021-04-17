@@ -1,0 +1,139 @@
+main {
+    margin-top: 140px;
+    display: block;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Archivo Bold", sans-serif;
+    margin-bottom: 35px;
+}
+
+.vline {
+    border-bottom: 5px solid #ff6600;
+    padding-bottom: 5px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pro-info {
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#title-one {
+    width: 50%;
+    height: 30px;
+    text-align: left;
+    font-weight: bold;
+    color: #afafaf;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+#title-two,
+#title-three {
+    width: 25%;
+    height: 30px;
+    font-weight: bold;
+    color: #afafaf;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+
+.product {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+}
+
+.price,
+.quantity {
+    width: 25%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.quantity input {
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    color: #777;
+}
+
+.pro-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #bfbfbf;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.summary {
+    width: 30%;
+    background-color: #bfbfbf;
+    padding: 100px 5px;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.order-sum {
+    width: 300px;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.order-sum .detailBox {
+    padding: 5px 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between
+}
+
+.order-sum p {
+    font-weight: 20px;
+    margin: 30px 20px;
+}
