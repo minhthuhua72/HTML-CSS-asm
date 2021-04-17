@@ -163,17 +163,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .extra-img {
     width: 500px;
     height: 400px;
     object-fit: contain;
-}
-
-.newstore-info a,
-.newstore-info {
-    margin-top: 20px;
 }
 
 .extra-img {
