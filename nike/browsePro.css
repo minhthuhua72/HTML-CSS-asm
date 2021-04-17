@@ -118,6 +118,7 @@ main>p {
 .description p {
     padding: 10px 0;
     text-align: justify;
+    margin: 0;
 }
 
 .description p>span {
@@ -148,6 +149,7 @@ main>p {
     color: #ff6600;
     font-weight: bold;
     padding-top: 30px;
+    margin: 0;
 }
 
 .date {

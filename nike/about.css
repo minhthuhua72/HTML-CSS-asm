@@ -3,7 +3,7 @@
 }
 
 .nike-store {
-    background-image: url(/imgs/kristian-egelund-wwqRpSNBPq4-unsplash.jpg);
+    background-image: url(/nike/imgs/);
     height: 400px;
     width: 100%;
     background-size: cover;
@@ -67,6 +67,6 @@ h1 {
 .pic {
     width: 380px;
     height: 380px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 50%;
 }
