@@ -8,7 +8,7 @@ legend {
     font-family: "Archivo", sans-serif;
     font-size: 50px;
 }
-input[type=email] {
+.input-design {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -16,9 +16,8 @@ input[type=email] {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-input[type=email]:focus {
-    border-color: royalblue;
-    outline: 0;
+.input-design:focus {
+    background-color: rgb(236, 236, 236); 
 }
 .content {
     display: flex;
@@ -44,8 +43,7 @@ main > span {
 .rsp > label > p {
     font-size: large;
 }
-  /* Set a style for all buttons */
-  button {
+button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -53,7 +51,7 @@ main > span {
     border: none;
     cursor: pointer;
     width: 100%;
-  }
-  button:hover {
-      opacity: 0.6;
-  }
+}
+button:hover {
+      background-color: rgb(158, 154, 154);
+}

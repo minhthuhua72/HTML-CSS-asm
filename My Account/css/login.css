@@ -9,14 +9,18 @@ legend {
     font-family: "Archivo", sans-serif;
     font-size: 50px;
 }
-input[type=email], input[type=password] {
+.input-design {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: medium;
   }
+.input-design:focus {
+  background-color: rgb(236, 236, 236);
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -36,6 +40,7 @@ main > span {
 .no-regis {
     text-align: right;
 }
+
   /* Set a style for all buttons */
   button {
     background-color: #4CAF50;
@@ -47,5 +52,5 @@ main > span {
     width: 100%;
   }
   button:hover {
-      opacity: 0.6;
+      background-color: rgb(158, 154, 154);
   }
