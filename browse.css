@@ -131,6 +131,7 @@ main>p {
 }
 
 .store-logo {
+
     display: flex;
     justify-content: flex-end;
     width: 30%;
