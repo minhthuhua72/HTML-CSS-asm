@@ -1,7 +1,21 @@
-h1,
-h2,
-h3 {
-    font-family: "Archivo", sans-serif;
+#faq {
+    color: #FAB325;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Archivo Bold", sans-serif;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: left;
+}
+
+.vline {
+    border-bottom: 5px solid #bfbfbf;
+    padding-bottom: 5px;
 }
 
 main {
@@ -122,36 +136,3 @@ main .content .listQues ul li a:hover {
         margin-right: auto;
     }
 }
-
-/* @media screen and (min-width: 1024px) {
-    .listQues {
-      width: 20%;
-      
-      
-    } */
-
-/* #left .column {
-      width: 50%;
-      float: left;
-    }
-
-    #right {
-      width: 80%;
-      float: left;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .listQues {
-        float: left;
-        width: 5%;
-        margin-left: 10px;
-    }
-  
-    .commonQ {
-        float: right;
-        width: 100%;
-        margin-left: 20px;
-        margin-right: -60px;
-    }
-} 

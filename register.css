@@ -1,14 +1,24 @@
-h1 {
-    margin: auto;
-    font-family: "Archivo", sans-serif;
-    font-size: 50px;
+#account {
+    color: #FAB325;
 }
 
 main {
-    margin-top: 60px;
-    font-family: "Roboto", sans-serif;
-    line-height: 1.5;
+    margin-top: 140px;
+    margin-left: 13%;
+    margin-right: 13%;
+    display: block;
+}
 
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Archivo Bold", sans-serif;
+    margin-bottom: 30px;
+}
+
+.vline {
+    border-bottom: 5px solid #bfbfbf;
+    padding-bottom: 5px;
 }
 
 p {

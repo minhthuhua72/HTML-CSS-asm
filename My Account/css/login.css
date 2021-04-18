@@ -1,3 +1,7 @@
+#account {
+  color: #FAB325;
+}
+
 main {
   margin-top: 160px;
   font-family: "Roboto", sans-serif;
@@ -7,7 +11,7 @@ main {
 
 legend {
   margin: auto;
-  font-family: "Archivo", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 50px;
 }
 
