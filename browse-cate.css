@@ -97,6 +97,14 @@ h2 {
     border-radius: 15px;
 }
 
+.stores-lst a {
+    font-family: "Roboto", sans-serif;
+}
+
+h3 {
+    margin: 0;
+}
+
 .category {
     background: rgb(2, 95, 142);
     color: #fff;
