@@ -1,13 +1,26 @@
-h1 {
-    margin: auto;
-    font-family: "Archivo", sans-serif;
-    font-size: 50px;
+#contact {
+    color: #FAB325;
 }
 
 main {
-    margin-top: 25px;
+    margin-top: 140px;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-bottom: 80px;
+    display: block;
     font-family: "Roboto", sans-serif;
-    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Archivo Bold", sans-serif;
+    margin-bottom: 30px;
+}
+
+.vline {
+    border-bottom: 5px solid #bfbfbf;
+    padding-bottom: 5px;
 }
 
 p {
@@ -19,8 +32,8 @@ label {
 }
 
 
-input[type="text"]:focus, 
-input[type="email"]:focus, 
+input[type="text"]:focus,
+input[type="email"]:focus,
 input[type="number"]:focus {
     border-color: #7db0fb;
     outline: 0;
@@ -51,30 +64,42 @@ textarea {
 }
 
 button {
-    background-color: #0d3efd;  
+    background-color: #0d3efd;
 }
 
 
-#mon, #tue, #wed, #thu, #fri, #sat, #sun {
+#mon,
+#tue,
+#wed,
+#thu,
+#fri,
+#sat,
+#sun {
     margin-left: 25px;
-    
+
 }
-#name, #mail, #phonenum {
+
+#name,
+#mail,
+#phonenum {
     display: flex;
 }
 
 #smail {
     margin-left: 25px;
 }
+
 #num {
     margin-left: 40px;
 }
+
 #Mess {
     font-size: 150%;
     margin-bottom: 1rem;
     width: 100%;
     display: flex
 }
+
 #mess {
     font-size: 18px;
 }
@@ -83,6 +108,7 @@ button {
 #cp {
     margin-right: 50px;
 }
+
 #purpose:focus {
     border-color: #1039df;
 }
@@ -109,6 +135,7 @@ button {
     background-color: #f7f7f7;
     font-size: 25px;
 }
+
 .form-group:after {
     content: "*";
     color: red;
@@ -120,12 +147,14 @@ button {
     width: 100%;
     display: flex
 }
+
 .form-group1 {
     font-size: 150%;
     margin-bottom: 1rem;
     width: 100%;
     display: flex
 }
+
 .bg0 {
     background-color: #fff;
 }
@@ -147,7 +176,7 @@ button {
     position: relative;
     border: 1px solid #e6e6e6;
     border-radius: 13px;
-    padding: 10px 30px 9px 22px;  
+    padding: 10px 30px 9px 22px;
     margin: auto;
     margin-bottom: 20px;
 }

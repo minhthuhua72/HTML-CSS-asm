@@ -163,40 +163,37 @@
 
  .productItem {
     display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
- /* .orderPlace{
-   margin: 200px;
-} */
+
  .introProduct {
-    width: 70%;
+    width: 50%;
+ }
+
+ .introProduct img {
+    width: 100%;
+    ;
  }
 
  .orderPlace {
-    width: 30%;
-    margin-top: 200px;
-    margin-left: -65px;
- }
-
- .orderPlace hr {
-    border: none;
-    border-top: 2px solid #edeff0;
-    color: #fff;
-    background-color: #fff;
-    height: 1px;
-    width: 110%;
-    margin-left: -40px;
-    margin-top: -30px;
+    width: 40%;
+    margin-left: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 
  }
+
 
  .introProduct #Description {
-    display: flex;
-    margin-bottom: 80px;
+    width: 100%;
+
  }
 
  .introProduct #Description .DescriptionItem {
-    width: 50%;
+    width: 80%;
     margin-left: 50px;
     ;
     /* margin-right: -63px; */
@@ -207,7 +204,7 @@
 
  .introProduct #Description .imgItem {
     background-image: url("/imgs/Nike/Nike1/Image\ 4-16-21\ at\ 13.14.jpg");
-    width: 50%;
+    width: 100%;
     height: 370px;
     background-position: 50% 50%;
     background-size: contain;
@@ -447,11 +444,13 @@
     color: white;
  }
 
+ .cart {}
+
  .cart button {
     width: 230px;
     height: 40px;
     border-radius: inherit;
-    margin-top: 70px;
+    margin-top: 20px;
     background-color: black;
     color: white;
     margin-left: 90px;
@@ -482,16 +481,9 @@
     margin-left: 25px;
  }
 
- .cart {
-    margin-top: -35px;
- }
 
 
- @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .orderPlace {
-       margin-top: 808px;
-    }
-
+ @media screen and (max-width: 1023px) {
     .introProduct #slideshow {
        margin-left: -15px;
     }
@@ -539,55 +531,9 @@
  }
 
 
- @media screen and (max-width: 767px) {
-    .introProduct #slideshow {
-       width: 142%;
-       height: 527px;
-       margin-left: 1px;
-    }
-
-    .orderPlace {
-       margin-bottom: 808px;
-       display: grid;
-       margin-left: -215px;
-
-    }
-
-    .infoItem {
-       display: none;
-    }
-
-    .orderPlace .namePrice {
-       margin-top: 20px;
-    }
-
-    .orderPlace .size {
-       margin-top: -537px;
-    }
-
-    .orderPlace .cart {
-       margin-top: -959px;
-    }
-
-    #Description {
-       margin-top: 700px;
-    }
-
-    .comment .rating {
-       display: none;
-    }
-
-    .introProduct {}
-
-    #detail .ul1 {
-       margin-left: -8px;
-    }
-
-    #detail .ul2 {
-       margin-left: 65px;
-    }
-
-    .comment {
-       margin-left: -50px;
+ @media screen and (max-width: 850px) {
+    .productItem {
+       justify-content: center;
+       flex-direction: row;
     }
  }
