@@ -147,7 +147,7 @@ main>p {
 .store-info {
     display: flex;
     flex-direction: column;
-    line-height: 25px;
+    line-height: 5px;
     width: 70%;
 }
 
