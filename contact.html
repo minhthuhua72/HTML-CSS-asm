@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="navbar.css">
     <title>Contact</title>
 </head>
 
@@ -43,7 +44,7 @@
                     </ul>
 
                 </li>
-                <li><a class="underline" href="Contact.html">Contact</a></li>
+                <li><a class="underline" id="contact" href="contact.html">Contact</a></li>
                 <li><a class="underline" href="Fees.html">Fees</a></li>
                 <li><a class="underline" href="FAQs.html">FAQs</a></li>
                 <li><a class="underline" href="MyAccount.html">My Account</a></li>
@@ -52,78 +53,79 @@
     </header>
     <!--EndHeader-->
 
-    <h1 style="text-align: center; margin-top: 100px;">Contact</h1>
     <main>
-        <div>
-            <form class="content" method="GET" action="contact.html">
-                <!-- contact purpose -->
-                <div class="wrap-input150 bg1">
-                    <span id="cp" class="form-group">Contact Purpose</span>
-                    <select id="purpose">
-                        <option value="0" selected>Select the purpose</option>
-                        <option value="1">Product</option>
-                        <option value="2">How to place order</option>
-                        <option value="3">Ordering</option>
-                        <option value="4">Payment</option>
-                        <option value="5">Delivery</option>
-                        <option value="6">Refund</option>
-                        <option value="7">Account</option>
-                    </select>
-                </div>
-                <!-- input full name -->
-                <div class="wrap-input150 bg1">
-                    <span class="form-group">Full Name</span>
-                    <input class="input100" type="text" id="name" name="name" placeholder="Your name..." required>
-                </div>
-                <!-- input email -->
-                <div class="wrap-input150 bg1">
-                    <span class="form-group">E-mail</span>
-                    <input class="input100" type="email" id="mail" name="email" placeholder="Your email..." required>
-                </div>
-                <!-- input number phone -->
-                <div class="wrap-input150 bg1">
-                    <span class="form-group">Phone Number</span>
-                    <input class="input100" type="number" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
-                        placeholder="Your phone..." required>
-                </div>
-                <!-- input preferred contact method -->
-                <div class="wrap-input150 bg1">
-                    <span class="form-group1">Preferred Contact Method</span>
-                    <input type="radio" id="smail" name="method" value="email" />
-                    <label for="smail">Email</label>
-                    <input type="radio" id="num" name="method" value="phone" />
-                    <label for="num">Phone</label>
-                </div>
-                <!-- select Contact days -->
-                <div class="wrap-input150 bg1">
-                    <span class="form-group1">Contact days</span><br>
-                    <input type="checkbox" id="mon" name="mon" value="Monday">
-                    <label for="mon">Monday</label><br>
-                    <input type="checkbox" id="tue" name="tue" value="Tuesday">
-                    <label for="tue">Tuesday</label><br>
-                    <input type="checkbox" id="wed" name="wed" value="Wednesday">
-                    <label for="wed">Wednesday</label><br>
-                    <input type="checkbox" id="thu" name="thu" value="Thursday">
-                    <label for="thu">Thursday</label><br>
-                    <input type="checkbox" id="fri" name="fri" value="Friday">
-                    <label for="fri">Friday</label><br>
-                    <input type="checkbox" id="sat" name="sat" value="Saturday">
-                    <label for="sat">Saturday</label><br>
-                    <input type="checkbox" id="sun" name="sun" value="Sunday">
-                    <label for="sun">Sunday</label><br>
-                </div>
-                <!-- textfield -->
-                <div class="wrap-input150 bg0">
-                    <span id="Mess">Message</span>
-                    <textarea name="mess" id="mess" placeholder="Type here" cols="85" rows="10"></textarea>
-                </div>
-                <!-- button -->
-                <div class="button-control">
-                    <input type="submit" value="Send">
-                    <input type="reset" value="Clear">
-                </div>
-            </form>
-        </div>
+        <h1><span class="vline">CONTACT</span></h1>
+
+
+        <form class="content" method="GET" action="contact.html">
+            <!-- contact purpose -->
+            <div class="wrap-input150 bg1">
+                <span id="cp" class="form-group">Contact Purpose</span>
+                <select id="purpose">
+                    <option value="0" selected>Select the purpose</option>
+                    <option value="1">Product</option>
+                    <option value="2">How to place order</option>
+                    <option value="3">Ordering</option>
+                    <option value="4">Payment</option>
+                    <option value="5">Delivery</option>
+                    <option value="6">Refund</option>
+                    <option value="7">Account</option>
+                </select>
+            </div>
+            <!-- input full name -->
+            <div class="wrap-input150 bg1">
+                <span class="form-group">Full Name</span>
+                <input class="input100" type="text" id="name" name="name" placeholder="Your name..." required>
+            </div>
+            <!-- input email -->
+            <div class="wrap-input150 bg1">
+                <span class="form-group">E-mail</span>
+                <input class="input100" type="email" id="mail" name="email" placeholder="Your email..." required>
+            </div>
+            <!-- input number phone -->
+            <div class="wrap-input150 bg1">
+                <span class="form-group">Phone Number</span>
+                <input class="input100" type="number" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
+                    placeholder="Your phone..." required>
+            </div>
+            <!-- input preferred contact method -->
+            <div class="wrap-input150 bg1">
+                <span class="form-group1">Preferred Contact Method</span>
+                <input type="radio" id="smail" name="method" value="email" />
+                <label for="smail">Email</label>
+                <input type="radio" id="num" name="method" value="phone" />
+                <label for="num">Phone</label>
+            </div>
+            <!-- select Contact days -->
+            <div class="wrap-input150 bg1">
+                <span class="form-group1">Contact days</span><br>
+                <input type="checkbox" id="mon" name="mon" value="Monday">
+                <label for="mon">Monday</label><br>
+                <input type="checkbox" id="tue" name="tue" value="Tuesday">
+                <label for="tue">Tuesday</label><br>
+                <input type="checkbox" id="wed" name="wed" value="Wednesday">
+                <label for="wed">Wednesday</label><br>
+                <input type="checkbox" id="thu" name="thu" value="Thursday">
+                <label for="thu">Thursday</label><br>
+                <input type="checkbox" id="fri" name="fri" value="Friday">
+                <label for="fri">Friday</label><br>
+                <input type="checkbox" id="sat" name="sat" value="Saturday">
+                <label for="sat">Saturday</label><br>
+                <input type="checkbox" id="sun" name="sun" value="Sunday">
+                <label for="sun">Sunday</label><br>
+            </div>
+            <!-- textfield -->
+            <div class="wrap-input150 bg0">
+                <span id="Mess">Message</span>
+                <textarea name="mess" id="mess" placeholder="Type here" cols="85" rows="10"></textarea>
+            </div>
+            <!-- button -->
+            <div class="button-control">
+                <input type="submit" value="Send">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+
     </main>
     <!--Footer copy this-->
     <footer>
