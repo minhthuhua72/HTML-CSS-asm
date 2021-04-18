@@ -9,657 +9,267 @@
     <link rel="stylesheet" href="browse.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <title>Navbar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
+    <title>Browse by Name</title>
 </head>
 
 <body>
-    <!--Header copy this-->
     <header>
-        <a href="index.html" class="LogoName"><img class="logo" src="imgs/LOGO-01.png"><span>Shopeeverse</span>
-            <nav>
-                <ul class="navLinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                    <li class="Browse">
-                        <k class="BrowseText">Browse</k>
-                        <ul class="BrowseDropDown">
-                            <li class="BrowseDropDownInfo">Browse Stores by Name</li>
-                            <li class="BrowseDropDownInfo BrowseDropDownEnd">Browse Stores by Category</li>
-                        </ul>
-                    </li>
-                    <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="Fees.html">Fees</a></li>
-                    <li><a href="FAQs.html">FAQs</a></li>
-                    <li><a href="MyAccount.html">MyAccount</a></li>
-                </ul>
-            </nav>
+        <!--Logo-->
+        <a href="index.html" class="logo-name">
+            <img class="logo" src="imgs/LOGO-01.png" alt="logo">
+            <span>Shopeeverse</span>
+        </a>
+        <nav>
+            <!--Responsive Navbar-->
+            <input type="checkbox" id="active">
+            <label for="active">
+                <i class="fa fa-bars" id="open"></i>
+                <i class="fa fa-times" id="close"></i>
+            </label>
+            <ul>
+                <li><a class="underline" href="index.html">Home</a></li>
+                <li><a class="underline" href="AboutUs.html">About Us</a></li>
+                <li class="browse">
+                    <span id="browse-text"><a href="#" id="browse">Browse</a></span>
+                    <ul class="browse-dropdown">
+                        <li class="browse-dropdown-info">
+                            <a class="browse-links" href="browse-store-name.html">Browse Stores by Name</a>
+                        </li>
+                        <li class="browse-dropdown-info">
+                            <a class="browse-links" href="browse-store-category.html">Browse Stores by Category</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="underline" href="Contact.html">Contact</a></li>
+                <li><a class="underline" href="Fees.html">Fees</a></li>
+                <li><a class="underline" href="FAQs.html">FAQs</a></li>
+                <li><a class="underline" href="MyAccount.html">My Account</a></li>
+            </ul>
+        </nav>
     </header>
-    <!--EndHeader-->
 
     <main>
-        <div class="mall-section">
-            <div class="browse-header">
-                <h1>OUR STORES</h1>
-                <p>Browse by Name</p>
-                <hr>
-            </div>
+        <h1><span class="vline">OUR STORES</span></h1>
+        <p>Browse by Name</p>
+
+        <div class="alpha-links">
+            <ul>
+                <li><a href="#a" title="Scroll to A">A</a></li>
+                <li><a href="#b" title="Scroll to B">B</a></li>
+                <li><a href="#c" title="Scroll to C">C</a></li>
+                <li><a href="#d" title="Scroll to D">D</a></li>
+                <li><a href="#e" title="Scroll to E">E</a></li>
+                <li><a href="#f" title="Scroll to F">F</a></li>
+                <li><a href="#g" title="Scroll to G">G</a></li>
+                <li><a href="#h" title="Scroll to H">H</a></li>
+                <li><a href="#i" title="Scroll to I">I</a></li>
+                <li><a href="#j" title="Scroll to J">J</a></li>
+                <li><a href="#k" title="Scroll to K">K</a></li>
+                <li><a href="#l" title="Scroll to L">L</a></li>
+                <li><a href="#m" title="Scroll to M">M</a></li>
+                <li><a href="#n" title="Scroll to N">N</a></li>
+                <li><a href="#o" title="Scroll to O">O</a></li>
+                <li><a href="#p" title="Scroll to P">P</a></li>
+                <li><a href="#q" title="Scroll to Q">Q</a></li>
+                <li><a href="#r" title="Scroll to R">R</a></li>
+                <li><a href="#s" title="Scroll to S">S</a></li>
+                <li><a href="#t" title="Scroll to T">T</a></li>
+                <li><a href="#u" title="Scroll to U">U</a></li>
+                <li><a href="#v" title="Scroll to V">V</a></li>
+                <li><a href="#q" title="Scroll to W">W</a></li>
+                <li><a href="#x" title="Scroll to X">X</a></li>
+                <li><a href="#y" title="Scroll to Y">Y</a></li>
+                <li><a href="#z" title="Scroll to Z">Z</a></li>
+            </ul>
         </div>
-        <div class="mall-section">
-            <div class="alpha-links">
-                <ul>
-                    <li><a href="#a" title="Scroll to A">A</a></li>
-                    <li><a href="#b" title="Scroll to B">B</a></li>
-                    <li><a href="#c" title="Scroll to C">C</a></li>
-                    <li><a href="#d" title="Scroll to D">D</a></li>
-                    <li><a href="#e" title="Scroll to E">E</a></li>
-                    <li><a href="#f" title="Scroll to F">F</a></li>
-                    <li><a href="#g" title="Scroll to G">G</a></li>
-                    <li><a href="#h" title="Scroll to H">H</a></li>
-                    <li><a href="#i" title="Scroll to I">I</a></li>
-                    <li><a href="#j" title="Scroll to J">J</a></li>
-                    <li><a href="#k" title="Scroll to K">K</a></li>
-                    <li><a href="#l" title="Scroll to L">L</a></li>
-                    <li><a href="#m" title="Scroll to M">M</a></li>
-                    <li><a href="#n" title="Scroll to N">N</a></li>
-                    <li><a href="#o" title="Scroll to O">O</a></li>
-                    <li><a href="#p" title="Scroll to P">P</a></li>
-                    <li><a href="#q" title="Scroll to Q">Q</a></li>
-                    <li><a href="#r" title="Scroll to R">R</a></li>
-                    <li><a href="#s" title="Scroll to S">S</a></li>
-                    <li><a href="#t" title="Scroll to T">T</a></li>
-                    <li><a href="#u" title="Scroll to U">U</a></li>
-                    <li><a href="#v" title="Scroll to V">V</a></li>
-                    <li><a href="#q" title="Scroll to W">W</a></li>
-                    <li><a href="#x" title="Scroll to X">X</a></li>
-                    <li><a href="#y" title="Scroll to Y">Y</a></li>
-                    <li><a href="#z" title="Scroll to Z">Z</a></li>
-                </ul>
-            </div>
         </div>
 
-        <div class="mall-section">
-            <!--Brand A-->
-            <div class="store-list">
-                <div class="stores f-store" id="a">#A</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/adidas.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Adidas</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
+        <!--Brand A-->
+        <div class="store-list">
+            <div class="stores f-store" id="a">#A</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand B-->
+        <div class="store-list">
+            <div class="stores f-store" id="b">#B</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand C-->
+        <div class="store-list">
+            <div class="stores f-store" id="c">#C</div>
+            <div class="available-stores">
+                <div class="store-logo">
+                    <img src="imgs/charles.jpg" alt="logo">
                 </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/apple.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Apple</h3>
-                        <p>Electronics</p>
-                    </div>
+                <div class="store-info">
+                    <h3>Charles & Keith</h3>
+                    <p>Fashion Accessories</p>
                 </div>
             </div>
-            <!--Brand B-->
-            <div class="store-list">
-                <div class="stores f-store" id="b">#B</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/bonchon.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Bonchon</h3>
-                        <p>Restaurant</p>
-                    </div>
+        </div>
+        <!--Brand D-->
+        <div class="store-list">
+            <div class="stores f-store" id="d">#D</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand E-->
+        <div class="store-list">
+            <div class="stores f-store" id="e">#E</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand F-->
+        <div class="store-list">
+            <div class="stores f-store" id="f">#F</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand G-->
+        <div class="store-list">
+            <div class="stores f-store" id="g">#G</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand H-->
+        <div class="store-list">
+            <div class="stores f-store" id="h">#H</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand I-->
+        <div class="store-list">
+            <div class="stores f-store" id="i">#I</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand J-->
+        <div class="store-list">
+            <div class="stores f-store" id="j">#J</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand K-->
+        <div class="store-list">
+            <div class="stores f-store" id="k">#K</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand L-->
+        <div class="store-list">
+            <div class="stores f-store" id="l">#L</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand M-->
+        <div class="store-list">
+            <div class="stores f-store" id="m">#M</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand N-->
+        <div class="store-list">
+            <div class="stores f-store" id="n">#N</div>
+            <div class="available-stores">
+                <div class="store-logo">
+                    <img src="imgs/nike.png" alt="logo">
                 </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/burger.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Burger King</h3>
-                        <p>Fast Food</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand C-->
-            <div class="store-list">
-                <div class="stores f-store" id="c">#C</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/charles.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Charles & Keith</h3>
-                        <p>Fashion Accessories</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/crocs.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Crocs</h3>
-                        <p>Footwear</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand D-->
-            <div class="store-list">
-                <div class="stores f-store" id="d">#D</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/dairy.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Dairy Queen</h3>
-                        <p>Fast Food</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/dunkin.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Dunkin' Donuts</h3>
-                        <p>Fast Food</p>
-                    </div>
+                <div class="store-info">
+                    <h3>Nike</h3>
+                    <p>Unisex Apparel</p>
                 </div>
             </div>
-            <!--Brand E-->
-            <div class="store-list">
-                <div class="stores f-store" id="e">#E</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/ecco.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>ECCO</h3>
-                        <p>Footwear</p>
-                    </div>
+        </div>
+        <!--Brand O-->
+        <div class="store-list">
+            <div class="stores f-store" id="o">#O</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand P-->
+        <div class="store-list">
+            <div class="stores f-store" id="p">#P</div>
+            <div class="available-stores">
+                <div class="store-logo">
+                    <img src="imgs/pandora.jpg" alt="logo">
                 </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/elie.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Elie Saab</h3>
-                        <p>Ladies Apparel</p>
-                    </div>
+                <div class="store-info">
+                    <h3>Pandora</h3>
+                    <p>Fashion Accessories</p>
                 </div>
             </div>
-            <!--Brand F-->
-            <div class="store-list">
-                <div class="stores f-store" id="f">#F</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/fitflop.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Fitflop</h3>
-                        <p>Footwear</p>
-                    </div>
+        </div>
+        <!--Brand Q-->
+        <div class="store-list">
+            <div class="stores f-store" id="q">#Q</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand R-->
+        <div class="store-list">
+            <div class="stores f-store" id="r">#R</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand S-->
+        <div class="store-list">
+            <div class="stores f-store" id="s">#S</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand T-->
+        <div class="store-list">
+            <div class="stores f-store" id="t">#T</div>
+            <div class="available-stores">
+                <div class="store-logo">
+                    <img src="imgs/tommy.jpg" alt="logo">
                 </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/fossil.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Fossil</h3>
-                        <p>Fashion Accessories</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand G-->
-            <div class="store-list">
-                <div class="stores f-store" id="g">#G</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/geox.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Geox</h3>
-                        <p>Footwear</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/gnc.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>GNC</h3>
-                        <p>Health and Beauty</p>
-                    </div>
+                <div class="store-info">
+                    <h3>Tommy Hilfiger</h3>
+                    <p>Unisex Apparel</p>
                 </div>
             </div>
-            <!--Brand H-->
-            <div class="store-list">
-                <div class="stores f-store" id="h">#H</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/hm.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>H&M</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/halidao.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Hadilao</h3>
-                        <p>Restaurant</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand I-->
-            <div class="store-list">
-                <div class="stores f-store" id="i">#I</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/intel.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Intel</h3>
-                        <p>Electronics</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/iron-fever.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Iron-fever</h3>
-                        <p>Men's Apparel</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand J-->
-            <div class="store-list">
-                <div class="stores f-store" id="j">#J</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/jollibee.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Jollibee</h3>
-                        <p>Fast Food</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/jvc.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>JVC</h3>
-                        <p>Electronics</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand K-->
-            <div class="store-list">
-                <div class="stores f-store" id="k">#K</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/kfc.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>KFC</h3>
-                        <p>Fast Food</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/kielhs.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Kielh's</h3>
-                        <p>Health and Beauty</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand L-->
-            <div class="store-list">
-                <div class="stores f-store" id="l">#L</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/levi.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Levi's</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/lulu.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Lululemon</h3>
-                        <p>Ladies Apparel</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand M-->
-            <div class="store-list">
-                <div class="stores f-store" id="m">#M</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/mac.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Mac Cosmetics</h3>
-                        <p>Health and Beauty</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/mango.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Mango</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand N-->
-            <div class="store-list">
-                <div class="stores f-store" id="n">#N</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/new.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>New Balance</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/nike.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Nike</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand O-->
-            <div class="store-list">
-                <div class="stores f-store" id="o">#O</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/old-navy.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Old Navy</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/omega.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Omega</h3>
-                        <p>Fashion Accessories
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand P-->
-            <div class="store-list">
-                <div class="stores f-store" id="p">#P</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/pandora.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Pandora</h3>
-                        <p>Fashion Accessories</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/puma.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Puma</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand Q-->
-            <div class="store-list">
-                <div class="stores f-store" id="q">#Q</div>
-                <div class="unavailable-stores">No store is available at the moment!</div>
-            </div>
-            <!--Brand R-->
-            <div class="store-list">
-                <div class="stores f-store" id="r">#R</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/reebok.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Reebok</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/revlon.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Revlon</h3>
-                        <p>Health and Beauty</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand S-->
-            <div class="store-list">
-                <div class="stores f-store" id="s">#S</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/sephora.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Sephora</h3>
-                        <p>Health and Beauty</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/starbucks.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Starbucks</h3>
-                        <p>Specialty Food</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand T-->
-            <div class="store-list">
-                <div class="stores f-store" id="t">#T</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/thai.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Thai Express</h3>
-                        <p>Restaurant</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/tommy.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Tommy Hilfiger</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand U-->
-            <div class="store-list">
-                <div class="stores f-store" id="u">#U</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/union.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Union Bank</h3>
-                        <p>Service</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/uniqlo.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Uniqlo</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand V-->
-            <div class="store-list">
-                <div class="stores f-store" id="v">#V</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/vans.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Vans</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/vietcom.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Vietcombank</h3>
-                        <p>Service</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand W-->
-            <div class="store-list">
-                <div class="stores f-store" id="w">#W</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/wendys.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Sephora</h3>
-                        <p>Fast Food</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/wrap.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Wrap and Roll</h3>
-                        <p>Restaurant</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand X-->
-            <div class="store-list">
-                <div class="stores f-store" id="x">#Q</div>
-                <div class="unavailable-stores">No store is available at the moment!</div>
-            </div>
-            <!--Brand Y-->
-            <div class="store-list">
-                <div class="stores f-store" id="y">#Y</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/yogen.jpg" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Yogen Fruz</h3>
-                        <p>Specialty Food</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/yves.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Yves Rocher</h3>
-                        <p>Health and Beauty</p>
-                    </div>
-                </div>
-            </div>
-            <!--Brand Z-->
-            <div class="store-list">
-                <div class="stores f-store" id="z">#Z</div>
-                <div class="stores">
-                    <div class="store-logo">
-                        <img src="imgs/zara.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Zara</h3>
-                        <p>Unisex Apparel</p>
-                    </div>
-                </div>
-                <div class="stores">
-                    <div class="vl"></div>
-                    <div class="store-logo">
-                        <img src="imgs/zwilling.png" alt="logo">
-                    </div>
-                    <div class="store-info">
-                        <h3>Zwilling</h3>
-                        <p>Sporting Goods</p>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <!--Brand U-->
+        <div class="store-list">
+            <div class="stores f-store" id="u">#U</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand V-->
+        <div class="store-list">
+            <div class="stores f-store" id="v">#V</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand W-->
+        <div class="store-list">
+            <div class="stores f-store" id="w">#W</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand X-->
+        <div class="store-list">
+            <div class="stores f-store" id="x">#X</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand Y-->
+        <div class="store-list">
+            <div class="stores f-store" id="y">#Y</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
+        </div>
+        <!--Brand Z-->
+        <div class="store-list">
+            <div class="stores f-store" id="z">#Z</div>
+            <div class="unavailable-stores">No store is available at the moment!</div>
         </div>
 
         <a class="back-top" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-
     </main>
 
     <!--Footer copy this-->
     <footer>
-        <section class="CopyRight">
-            Copyright &copy; Mall 2021
-        </section>
-        <section class="Policy">
+        <a id="logoName" href="index.html">
+            <img class="logo" src="imgs/LOGO-01.png" alt="logo">
+            <span>Shopeeverse</span>
+        </a>
+        <div class="policy">
             <ul>
-                <li>Term Of Service</li>
-                <li>Privacy Policy</li>
+                <li><a href="tos.html">Term of Service</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
-        </section>
+        </div>
+        <div class="copyright">
+            <a href="copyright.html">Copyright &copy; Mall 2021</a>
+        </div>
     </footer>
+
     <!--EndFooter-->
 
 </body>
