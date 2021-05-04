@@ -50,7 +50,7 @@ h1 {
     cursor: pointer;
 }
 
-/*Featured stores section starts*/
+/*Featured & new stores section starts*/
 h2 {
     text-align: center;
     font-family: "Archivo Bold", sans-serif;
@@ -77,8 +77,7 @@ h2 {
     margin-top: 80px;
 }
 
-.store-sections,
-.new-stores {
+.store-sections {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -86,7 +85,6 @@ h2 {
 }
 
 .storeLists,
-.newLists,
 .newProduct-list {
     display: flex;
     flex-direction: column;
@@ -115,9 +113,7 @@ h2 {
 }
 
 .store-info a,
-.store-info,
-.newstore-info a,
-.newstore-info {
+.store-info {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -133,29 +129,11 @@ h2 {
     margin-top: 30px;
 }
 
-.store-info a:hover,
-.newstore-info a:hover {
+.store-info a:hover {
     color: rgb(2, 95, 142);
 }
 
-/*Featured stores section ends*/
-
-/*New Stores section starts*/
-.newStore-logo {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-right: 20px;
-    object-fit: contain;
-}
-
-
-
-
-/*New Stores section ends*/
+/*Featured & new stores section ends*/
 
 /*Featured products section starts*/
 .product-sections {
@@ -255,16 +233,18 @@ h2 {
 
 /*New Products section starts*/
 .pro-logo {
-    width: 260px;
-    height: 320px;
+    width: 230px;
+    height: 300px;
     object-fit: fill;
 }
 
 .newProduct-list {
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .newProduct-list a p {
@@ -273,7 +253,6 @@ h2 {
 
 .newProduct-list>a {
     line-height: 40px;
-
 }
 
 .price {
@@ -287,6 +266,7 @@ h2 {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
+
 }
 
 @media screen and (max-width:1024px) {
@@ -296,26 +276,6 @@ h2 {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-    }
-
-    .new-stores {
-        display: flex;
-        grid-template-columns: unset;
-        grid-template-rows: unset;
-        column-gap: 0;
-        row-gap: 0;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .new-stores .newLists {
-        margin: 20px;
-    }
-
-    .new-stores .newLists img {
-        width: 200px;
-        height: 200px;
     }
 
     .product-sections {
