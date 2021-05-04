@@ -68,6 +68,10 @@ main>p {
     transition: all 150ms ease;
 }
 
+.alpha-container {
+    display: none;
+}
+
 .store-list {
     display: flex;
     flex-direction: row;
@@ -175,4 +179,36 @@ main>p {
 .back-top:hover {
     background-color: rgb(2, 95, 142);
     color: #fff;
+}
+
+@media screen and (max-width:850px) {
+    .alpha-links ul li {
+        display: none;
+    }
+
+    .alpha-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .alpha {
+        background-color: rgb(2, 95, 142);
+        width: 150px;
+        text-align: center;
+        padding: 10px 5px;
+    }
+
+    .alpha-container a {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .alpha-container a:hover {
+        text-decoration: underline;
+    }
+
+    .alpha-container a:active {
+        color: #000;
+    }
 }
