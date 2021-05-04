@@ -77,7 +77,8 @@ h2 {
     margin-top: 80px;
 }
 
-.store-sections {
+.store-sections,
+.new-stores {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -85,6 +86,7 @@ h2 {
 }
 
 .storeLists,
+.newLists,
 .newProduct-list {
     display: flex;
     flex-direction: column;
@@ -139,66 +141,19 @@ h2 {
 /*Featured stores section ends*/
 
 /*New Stores section starts*/
-.new-stores {
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(2, 200px);
-    column-gap: 60px;
-    row-gap: 60px;
-    justify-content: center;
-    margin: 50px 0;
-}
-
-.newLists {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-}
-
 .newStore-logo {
-    width: 130px;
-    height: 130px;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
-
-.extra-img {
-    width: 500px;
-    height: 400px;
+    margin-right: 20px;
     object-fit: contain;
 }
 
-.extra-info {
-    margin-top: 0;
-}
 
-.new-one {
-    grid-row: 1/3;
-    grid-column: 1/3;
-}
 
-.new-two {
-    grid-column: 3/4;
-
-}
-
-.new-three {
-    grid-column: 4/5;
-}
-
-.new-four {
-    grid-column: 3/4;
-    grid-row: 2/3;
-}
-
-.new-five {
-    grid-column: 4/5;
-    grid-row: 2/3;
-}
 
 /*New Stores section ends*/
 
