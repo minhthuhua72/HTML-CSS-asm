@@ -41,10 +41,9 @@
                             <a class="browse-links" href="browse-store-category.html">Browse Stores by Category</a>
                         </li>
                     </ul>
-
                 </li>
-                <li><a class="underline" href="Contact.html">Contact</a></li>
-                <li><a class="underline" href="Fees.html">Fees</a></li>
+                <li><a class="underline" href="contact.html">Contact</a></li>
+                <li><a class="underline" href="fees.html">Fees</a></li>
                 <li><a class="underline" href="FAQs.html">FAQs</a></li>
                 <li><a class="underline" id="account" href="MyAccount.html">My Account</a></li>
             </ul>
@@ -54,33 +53,38 @@
 
 
     <main>
-        <form class="content" method="get" action="../html/login.html">
+        <form class="content" method="get" action="MyAccount.html">
             <fieldset>
-                <legend>Login</legend>
-                <div>
-                    <label for="mail"><b>Email Address</b></label>
-                    <input class="input-design" type="email" id="mail" name="mail" placeholder="Enter Email Address"
-                        required>
+                <legend><span class="vline">LOGIN</span></legend>
+
+                <div class="input-field">
+                    <label for="mail">Email Address</label>
+                    <input class="input-design" type="email" id="mail" name="mail"
+                        placeholder="Enter your email address" required>
                 </div>
-                <div>
-                    <label for="pw"><b>Password</b></label>
+
+                <div class="input-field">
+                    <label for="pw">Password</label>
                     <input class="input-design" type="password" id="pw" name="password" maxlength="10" minlength="6"
-                        placeholder="Enter Password" required>
+                        placeholder="Enter your password" required>
                 </div>
-                <div><button type="submit">Login</button></div>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-                <div class="fpass">
-                    <a style="color:#777;" class="pws" href="My Account/html/ForgetPw.html">Forgot Password?</a>
-                </div>
-                <div class="no-regis">
-                    Not Registered? <a style="color: #777;" href="register.html">Click here</a>
+
+                <button type="submit"><span>Login</span></button>
+
+                <div class="container">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <div class="subcontainer">
+                        <a href="My Account/html/ForgetPw.html">Forgot Password?</a>
+                        <span>Not Registered?
+                            <a href="register.html">Click here</a></span>
+                    </div>
                 </div>
             </fieldset>
         </form>
     </main>
-    <!--Footer copy this-->
+
     <footer>
         <a id="logoName" href="index.html">
             <img class="logo" src="imgs/LOGO-01.png" alt="logo">
@@ -88,12 +92,12 @@
         </a>
         <div class="policy">
             <ul>
-                <li><a href="#">Term Of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="tos.html">Term Of Service</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
         </div>
         <div class="copyright">
-            <a href="#">Copyright &copy; Mall 2021</a>
+            <a href="copyright.html">Copyright &copy; Mall 2021</a>
         </div>
     </footer>
     <!--EndFooter-->

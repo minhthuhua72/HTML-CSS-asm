@@ -4,15 +4,43 @@
 
 main {
   margin-top: 160px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Roboto", sans-serif;
-  line-height: 1.5;
-  text-align: left;
+}
+
+fieldset {
+  width: 50%;
+  margin-bottom: 7.7%;
 }
 
 legend {
   margin: auto;
-  font-family: "Roboto", sans-serif;
-  font-size: 50px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.vline {
+  border-bottom: 5px solid #bfbfbf;
+  padding-bottom: 5px;
+}
+
+.input-field {
+  margin: 0 20px 10px 20px;
+}
+
+.input-field:first-of-type {
+  margin-top: 30px;
+}
+
+.input-field label {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .input-design {
@@ -22,50 +50,64 @@ legend {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-size: medium;
+  font-size: 16px;
 }
 
 .input-design:focus {
   background-color: rgb(236, 236, 236);
+  outline: none;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-fieldset {
-  width: 50%;
-  margin-bottom: 7.7%;
-}
-
-main>span {
-  margin-left: 50%;
-}
-
-.fpass {
-  text-align: right;
-}
-
-.no-regis {
-  text-align: right;
-}
-
-/* Set a style for all buttons */
 button {
-  background-color: rgb(2, 95, 142);
-  color: white;
+  background-color: rgb(158, 154, 154);
+  color: #fff;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 10px 20px 30px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 95%;
+  -webkit-box-shadow: 0px 7px 7px -4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 7px 7px -4px rgba(0, 0, 0, 0.4);
 }
 
 button:hover {
-  background-color: rgb(158, 154, 154);
+  background-color: rgb(2, 95, 142);
 }
+
+button>span {
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 20px 20px 20px;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.subcontainer a {
+  color: #727272;
+  padding-bottom: 5px;
+}
+
+.subcontainer a:hover {
+  text-decoration: underline;
+}
+
+.subcontainer a:active {
+  color: rgb(2, 95, 142);
+}
+
+
 
 @media screen and (max-width:600px) {
   fieldset {
