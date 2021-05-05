@@ -181,7 +181,7 @@ main>p {
     color: #fff;
 }
 
-@media screen and (max-width:850px) {
+@media screen and (max-width:1372px) {
     .alpha-links ul li {
         display: none;
     }
@@ -210,5 +210,9 @@ main>p {
 
     .alpha-container a:active {
         color: #000;
+    }
+
+    .back-top {
+        right: 20px;
     }
 }
