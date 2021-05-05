@@ -9,66 +9,32 @@ h1 {
     margin-bottom: 30px;
 }
 
-h2 {
-    text-align: left;
-}
-
 .vline {
     border-bottom: 5px solid #bfbfbf;
     padding-bottom: 5px;
 }
 
 main {
-    width: 96%;
-    padding: 0 2%;
-    margin-top: 170px;
+    width: 100%;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 160px;
     font-family: "Roboto", sans-serif;
 }
 
 .content {
     display: flex;
-}
-
-.listQues {
-    width: 30%;
-
-}
-
-main .content .listQues ul {
-    text-decoration: none;
-    list-style: none;
-
-}
-
-main .content .listQues ul li a:hover {
-    background-color: #00000014;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.listQues ul li {
-    padding-bottom: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .content .commonQ {
-    width: 70%;
-
+    list-style-type: square;
 }
 
-.vertical-line {
-    width: 1px;
-    background-color: #0000002e;
-    height: 100px;
-    float: left;
-}
-
-.vertical-line1 {
-    width: 1px;
-    background-color: #0000002e;
-    height: 260px;
-    float: left;
-}
-
+/* 
 .commonQ hr {
     border: none;
     border-top: 1px dotted #0000004f;
@@ -106,10 +72,28 @@ main .content .listQues ul li a:hover {
 
 .commonQ .answer {
     margin-left: 75px;
+} */
+
+.back-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 80px;
+    background-color: lightgray;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
 }
 
+.back-top:hover {
+    background-color: rgb(2, 95, 142);
+    color: #fff;
+}
 
-@media screen and (max-width: 1023px) {
+/* @media screen and (max-width: 1023px) {
     .listQues {
         display: none;
     }
@@ -135,4 +119,8 @@ main .content .listQues ul li a:hover {
         margin-left: auto;
         margin-right: auto;
     }
-}
+
+    .back-top {
+        right: 20px;
+    }
+} */
