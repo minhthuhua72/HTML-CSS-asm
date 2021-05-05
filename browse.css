@@ -108,6 +108,7 @@ main>p {
 .available-stores {
     align-items: flex-start;
     color: #000;
+    cursor: pointer;
 }
 
 .stores,
