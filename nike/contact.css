@@ -1,12 +1,11 @@
 #contact {
-    color: #FAB325;
+    color: #ff6600;
 }
 
 main {
     margin-top: 140px;
     margin-left: 13%;
     margin-right: 13%;
-    margin-bottom: 80px;
     display: block;
     font-family: "Roboto", sans-serif;
 }
@@ -19,168 +18,128 @@ h1 {
 }
 
 .vline {
-    border-bottom: 5px solid #bfbfbf;
+    border-bottom: 5px solid #ff6600;
     padding-bottom: 5px;
 }
 
-p {
-    font-size: larger;
-}
-
-label {
-    font-size: larger;
-}
-
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus {
-    border-color: #7db0fb;
-    outline: 0;
-}
-
-input[type="submit"],
-input[type="reset"] {
-    background-color: #2b2b2b71;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #1ce38c;
-}
-
-
-textarea {
-    outline: none;
-    border: none;
-    resize: none;
-}
-
-button {
-    background-color: #0d3efd;
-}
-
-
-#mon,
-#tue,
-#wed,
-#thu,
-#fri,
-#sat,
-#sun {
-    margin-left: 25px;
-
-}
-
-#name,
-#mail,
-#phonenum {
-    display: flex;
-}
-
-#smail {
-    margin-left: 25px;
-}
-
-#num {
-    margin-left: 40px;
-}
-
-#Mess {
-    font-size: 150%;
-    margin-bottom: 1rem;
+form {
+    font-size: 16px;
     width: 100%;
-    display: flex
-}
-
-#mess {
-    font-size: 18px;
-}
-
-
-#cp {
-    margin-right: 50px;
-}
-
-#purpose:focus {
-    border-color: #1039df;
-}
-
-#purpose {
-    width: 100%;
-    height: 40px;
-}
-
-.content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-.input-design {
-    display: flex;
-    width: 100%;
-    line-height: 1.2;
-    border: 0px;
-    outline: none;
-    padding: 0.5rem 0.7rem;
-    background-color: #f7f7f7;
-    font-size: 25px;
-}
-
-.form-group:after {
-    content: "*";
-    color: red;
-}
-
-.form-group {
-    font-size: 150%;
-    margin-bottom: 1rem;
-    width: 100%;
-    display: flex
-}
-
-.form-group1 {
-    font-size: 150%;
-    margin-bottom: 1rem;
-    width: 100%;
-    display: flex
-}
-
-.bg0 {
-    background-color: #fff;
-}
-
-.bg1 {
-    background-color: #f7f7f7;
-}
-
-.button-control {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    margin-right: 40%;
+    font-family: "Roboto", sans-serif;
 }
 
 .wrap-input150 {
     width: 60%;
     position: relative;
-    border: 1px solid #e6e6e6;
+    border: 2px solid #e6e6e6;
     border-radius: 13px;
-    padding: 10px 30px 9px 22px;
-    margin: auto;
+    padding: 10px 30px 20px 22px;
+    margin-bottom: 30px;
+    background-color: #f7f7f7;
+}
+
+#purpose {
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+#purpose option[value="0"] {
+    color: #bfbfbf;
+}
+
+.form-group {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex
+}
+
+.input100 {
+    display: flex;
+    width: 97%;
+    height: 40px;
+    border: 0px;
+    outline: none;
+    border-radius: 1px solid #bfbfbf;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.required:after {
+    content: "\00a0 *";
+    color: #e60202;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    background-color: rgb(236, 236, 236);
+    outline: 0;
+}
+
+/*radio starts*/
+input[type="radio"]~#num {
+    margin-left: 40px;
+}
+
+/*checkbox starts*/
+input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-* {
-    margin: 0;
+textarea {
+    display: flex;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+#messLabel {
+    font-size: 20px;
+}
+
+#mess {
+    margin-top: 1rem;
+    font-size: 18px;
+    width: 97%;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+/*button starts*/
+.button-control {
+    display: flexbox;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin: 4px 15px 30px 0;
+}
+
+input[type="submit"] {
+    background-color: #ff6600;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="reset"] {
+    border: 2px solid #ff6600;
+    background-color: #fff;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    font-size: 20px;
 }

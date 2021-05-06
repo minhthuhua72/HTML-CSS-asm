@@ -2,6 +2,10 @@
     color: #ff6600;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 .nike-store {
     background-image: url(imgs/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg);
     height: 710px;

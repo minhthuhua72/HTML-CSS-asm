@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="nike.css">
     <link rel="stylesheet" href="contact.css">
-    <title>My Account</title>
+    <title>Contact</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <header>
         <!--Logo-->
         <a href="nike.html" class="logo-name">
-            <img class="logo" src="imgs/ni-ke.jpg" alt="logo">
+            <img class="logo" src="imgs/nikeLogo.jpg" alt="logo">
             <span>NIKE</span>
         </a>
         <nav>
@@ -35,14 +35,14 @@
                     <span id="browse-text"><a href="#">Products</a></span>
                     <ul class="browse-dropdown">
                         <li class="browse-dropdown-info">
-                            <a class="browse-links" href="browseProC.html">Browse Products by Category</a>
+                            <a class="browse-links" href="browseProCT.html">Browse Products by Category</a>
                         </li>
                         <li class="browse-dropdown-info">
-                            <a class="browse-links" href="browseProCT.html">Browse Stores by Created Time</a>
+                            <a class="browse-links" href="browseProC.html">Browse Stores by Created Time</a>
                         </li>
                     </ul>
                 </li>
-                <li><a class="underline" href="Contact.html">Contact</a></li>
+                <li><a class="underline" id="contact" href="contact.html">Contact</a></li>
 
             </ul>
         </nav>
@@ -54,8 +54,8 @@
         <h1><span class="vline">CONTACT</span></h1>
         <form class="content" method="GET" action="contact.html">
             <!-- contact purpose -->
-            <div class="wrap-input150 bg1">
-                <span id="cp" class="form-group">Contact Purpose</span>
+            <div class="wrap-input150">
+                <label for="purpose" class="form-group required">Contact Purpose</label>
                 <select id="purpose">
                     <option value="0" selected>Select the purpose</option>
                     <option value="1">Product</option>
@@ -68,32 +68,32 @@
                 </select>
             </div>
             <!-- input full name -->
-            <div class="wrap-input150 bg1">
-                <span class="form-group">Full Name</span>
-                <input class="input100" type="text" id="name" name="name" placeholder="Your name..." required>
+            <div class="wrap-input150">
+                <label for="name" class="form-group required">Full Name</label>
+                <input class="input100" type="text" id="name" name="name" placeholder="Enter your name" required>
             </div>
             <!-- input email -->
-            <div class="wrap-input150 bg1">
-                <span class="form-group">E-mail</span>
-                <input class="input100" type="email" id="mail" name="email" placeholder="Your email..." required>
+            <div class="wrap-input150">
+                <label for="mail" class="form-group required">Email</label>
+                <input class="input100" type="email" id="mail" name="email" placeholder="Enter your email" required>
             </div>
             <!-- input number phone -->
-            <div class="wrap-input150 bg1">
-                <span class="form-group">Phone Number</span>
-                <input class="input100" type="number" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
-                    placeholder="Your phone..." required>
+            <div class="wrap-input150">
+                <label for="phonenum" class="form-group required">Phone Number</label>
+                <input class="input100" type="tel" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
+                    placeholder="Enter your phone number" required>
             </div>
             <!-- input preferred contact method -->
-            <div class="wrap-input150 bg1">
-                <span class="form-group1">Preferred Contact Method</span>
+            <div class="wrap-input150">
+                <label class="form-group">Preferred Contact Method</label>
                 <input type="radio" id="smail" name="method" value="email" />
                 <label for="smail">Email</label>
                 <input type="radio" id="num" name="method" value="phone" />
                 <label for="num">Phone</label>
             </div>
             <!-- select Contact days -->
-            <div class="wrap-input150 bg1">
-                <span class="form-group1">Contact days</span><br>
+            <div class="wrap-input150">
+                <span class="form-group">Contact Days</span><br>
                 <input type="checkbox" id="mon" name="mon" value="Monday">
                 <label for="mon">Monday</label><br>
                 <input type="checkbox" id="tue" name="tue" value="Tuesday">
@@ -110,22 +110,22 @@
                 <label for="sun">Sunday</label><br>
             </div>
             <!-- textfield -->
-            <div class="wrap-input150 bg0">
-                <span id="Mess">Message</span>
-                <textarea name="mess" id="mess" placeholder="Type here" cols="85" rows="10"></textarea>
+            <div class="wrap-input150">
+                <label for="mess" id="messLabel">Message</label>
+                <textarea name="mess" id="mess" placeholder="Enter your message here" cols="85" rows="10"></textarea>
             </div>
+
             <!-- button -->
             <div class="button-control">
                 <input type="submit" value="Send">
                 <input type="reset" value="Clear">
             </div>
         </form>
-
     </main>
     <!--Footer copy this-->
     <footer>
         <a id="logoName" href="nike.html">
-            <img class="logo" src="imgs/ni-ke.jpg" alt="logo">
+            <img class="logo" src="imgs/nikeLogo.jpg" alt="logo">
             <span>Nike</span>
         </a>
 
