@@ -1,0 +1,153 @@
+#faq {
+    color: #FAB325;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Archivo Bold", sans-serif;
+    margin-bottom: 30px;
+}
+
+.vline {
+    border-bottom: 5px solid #bfbfbf;
+    padding-bottom: 5px;
+}
+
+main {
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 140px;
+    font-family: "Roboto", sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+
+.content>p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.commonQ {
+    display: flex;
+    justify-content: center;
+    background-color: #bfbfbf;
+    width: 80%;
+}
+
+.commonQ ol {
+    text-transform: capitalize;
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.commonQ ol li a:hover {
+    color: rgb(2, 95, 142);
+    font-weight: bold;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.answer span {
+    border: 2px solid #000;
+    padding: 7px;
+}
+
+
+
+.answer ul {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.answer ul li {
+    list-style: square;
+}
+
+.answer dl dt {
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+.answer dl dt:last-of-type {
+    margin: 10px 0;
+}
+
+.answer p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h3 {
+    text-transform: uppercase;
+    scroll-margin-top: 140px;
+    margin-top: 40px;
+}
+
+h3:target {
+    color: rgb(2, 95, 142);
+}
+
+.back-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 80px;
+    background-color: lightgray;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+}
+
+.back-top:hover {
+    background-color: rgb(2, 95, 142);
+    color: #fff;
+}
+
+/* @media screen and (max-width: 1023px) {
+    .listQues {
+        display: none;
+    }
+
+
+    .commonQ ul {
+        margin-left: 20px
+    }
+
+    .commonQ {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .content .commonQ {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content .commonQ .answer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .back-top {
+        right: 20px;
+    }
+} */
