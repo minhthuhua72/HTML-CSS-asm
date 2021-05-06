@@ -6,7 +6,7 @@ main {
 }
 
 h1 {
-    text-align: center;
+    text-align: justify;
     font-size: 30px;
     font-family: "Archivo Bold", sans-serif;
     margin-bottom: 35px;
@@ -22,6 +22,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .pro-info {
@@ -43,7 +44,7 @@ h1 {
     height: 30px;
     text-align: left;
     font-weight: bold;
-    color: #afafaf;
+    color: #bfbfbf;
     letter-spacing: 1px;
     font-size: 18px;
 }
@@ -53,7 +54,7 @@ h1 {
     width: 25%;
     height: 30px;
     font-weight: bold;
-    color: #afafaf;
+    color: #bfbfbf;
     letter-spacing: 1px;
     font-size: 18px;
 }
@@ -85,6 +86,7 @@ h1 {
     border-radius: 5px;
     border: 1px solid #bfbfbf;
     color: #777;
+    font-size: 18px;
 }
 
 .pro-img {
@@ -104,15 +106,19 @@ hr {
 }
 
 .summary {
-    width: 30%;
-    background-color: #bfbfbf;
-    padding: 100px 5px;
-    height: fit-content;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 30%;
+    background-color: #afafaf;
+    padding: 100px 5px;
+    position: relative;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
 }
 
 .summary a {
@@ -124,12 +130,13 @@ hr {
     color: #fff;
     margin: 5px 0px;
     border: 2px solid #000;
+    letter-spacing: 1.5px;
+    font-size: 18px;
 }
 
 .summary a:hover {
-    border: 2px solid #000;
-    background-color: unset;
-    color: #000;
+    background-color: #ff6600;
+    border: none;
 }
 
 .order-sum {
@@ -140,6 +147,8 @@ hr {
     flex-direction: column;
     justify-content: left;
     align-items: left;
+    margin-bottom: 20px;
+    padding: 20px 5px;
 }
 
 .order-sum .detailBox {
@@ -152,4 +161,12 @@ hr {
 .order-sum p {
     font-weight: 20px;
     margin: 30px 20px;
+}
+
+.detailBox .value {
+    font-weight: bold;
+}
+
+.order-sum hr {
+    margin: 5px;
 }
