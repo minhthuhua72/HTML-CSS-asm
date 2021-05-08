@@ -53,7 +53,8 @@
     <main>
         <h1><span class="vline">REGISTER</span></h1>
 
-        <form method="GET" action="register.html">
+        <form class="RegistForm" action="register.html" onsubmit="Validate()">
+            <p id="notif"></p>
             <!-- input mail -->
             <div class="wrap-input150">
                 <label for="mail" class="form-group">Email</label>
@@ -366,62 +367,63 @@
             <!-- type -->
             <div class="wrap-input150">
                 <label class="form-group">Account Type</label>
+
                 <input type="radio" id="sowner" class="cc" name="type" value="storeowner" />
                 <label for="sowner">Store Owner</label>
                 <input type="radio" id="shopper" name="type" value="shopper" />
                 <label for="shopper">Shopper</label>
 
-                <form action="get" action="register.html">
-                    <fieldset class="ownerContent">
-                        <legend><strong>These fields are only for Store Owner</strong></legend>
 
-                        <label class="subContent" for="bname">Business Name:</label>
-                        <input class="input-design" type="text" id='bname' name='bname'
-                            placeholder="Enter your business name" required>
+                <!-- <fieldset class="ownerContent"> -->
+                <div class="ownerContent">
+                    <legend><strong>These fields are only for Store Owner</strong></legend>
 
-                        <label class="subContent" for="sname">Store Name:</label>
-                        <input class="input-design" type="text" id='sname' name='sname'
-                            placeholder="Enter your store name" required>
+                    <label class="subContent" for="bname">Business Name:</label>
+                    <input class="input-design" type="text" id='bname' name='bname'
+                        placeholder="Enter your business name">
 
-                        <label class="subContent" for="options">Store Category</label>
-                        <select name="storecate" id="options">
-                            <option value="0" selected>Select your store category</option>
-                            <option value="1">Department store</option>
-                            <option value="2">Grocery store</option>
-                            <option value="3">Restaurant</option>
-                            <option value="4">Clothing store</option>
-                            <option value="5">Accessory store</option>
-                            <option value="6">Pharmacies</option>
-                            <option value="7">Technology store</option>
-                            <option value="8">Pet store</option>
-                            <option value="9">Specialty store</option>
-                            <option value="10">Thrift store</option>
-                            <option value="11">Service</option>
-                            <option value="12">Kiosks</option>
-                        </select>
-                    </fieldset>
-                </form>
+                    <label class="subContent" for="sname">Store Name:</label>
+                    <input class="input-design" type="text" id='sname' name='sname' placeholder="Enter your store name">
+
+                    <label class="subContent" for="options">Store Category</label>
+                    <select name="storecate" id="options">
+                        <option value="0" selected>Select your store category</option>
+                        <option value="1">Department store</option>
+                        <option value="2">Grocery store</option>
+                        <option value="3">Restaurant</option>
+                        <option value="4">Clothing store</option>
+                        <option value="5">Accessory store</option>
+                        <option value="6">Pharmacies</option>
+                        <option value="7">Technology store</option>
+                        <option value="8">Pet store</option>
+                        <option value="9">Specialty store</option>
+                        <option value="10">Thrift store</option>
+                        <option value="11">Service</option>
+                        <option value="12">Kiosks</option>
+                    </select>
+                </div>
+                <!-- </fieldset> -->
             </div>
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Register">
-                <input type="reset" value="Clear">
+                <input type="submit" name="send" value="Register">
+                <input type="reset" name="clear" value="Clear">
             </div>
         </form>
 
     </main>
     <div class="cookie-container">
         <p>
-            We use cookies in this website to help you have the best experience with the website and the advertisements. 
-            For more information,  you can read our <a href="#">privacy policy</a>
+            We use cookies in this website to help you have the best experience with the website and the advertisements.
+            For more information, you can read our <a href="#">privacy policy</a>
             and <a href="#">cookie policy</a>.
         </p>
         <button class="cookie-btn">
             Agree
         </button>
-        
+
     </div>
-</div>
+
     <footer>
         <a id="logoName" href="index.html">
             <img class="logo" src="imgs/LOGO-01.png" alt="logo">
@@ -438,7 +440,10 @@
         </div>
     </footer>
     <!--EndFooter-->
+
     <script src="ck.js"></script>
+
 </body>
 
 </html>
+<script src="random.js"></script>

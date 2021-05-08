@@ -1,5 +1,3 @@
-const btn = document.getElementsByClassName('addBtn');
-console.log(btn.length);
 const items = []
 
 
@@ -13,30 +11,30 @@ function addItem() {
         total: parseInt(num),
         quantity: 1
     }
-    itemToLocalStore(item)
+    itemToLocalStore(item);
     window.alert("Your product has been added to your cart!");
 }
-var count = 1;
+
 
 function itemToLocalStore(item) {
-    let startCode = "cartItem";
-    let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
+    let itemInCart = JSON.parse(localStorage.getItem('cartItem'));
     if (itemInCart === null) {
-        items.push(item)
-        localStorage.setItem(startCode + count.toString(), JSON.stringify(items))
+        items.push(item);
+        localStorage.setItem('cartItem', JSON.stringify(items));
     } else {
+        console.log("item In cart Length:" + itemInCart.length);
         itemInCart.forEach(product => {
             if (item.name == product.name) {
                 item.quantity = product.quantity += 1;
                 item.total = product.total += item.total;
             } else {
-                items.push(item)
+                items.push(product);
             }
         });
-        items.push(item)
+        items.push(item);
     }
-    localStorage.setItem('cartItem', JSON.stringify(items))
-    window.location.reload()
+    localStorage.setItem('cartItem', JSON.stringify(items));
+    window.location.reload();
 }
 
 // function removeItem() {
@@ -69,20 +67,21 @@ function displayCart() {
 }
 displayCart();
 
-function Payment() {
-    payment = 0;
+
+function subtotal() {
+    subtotal = 0;
     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
     itemInCart.forEach(product => {
-        subtotal = product.total += payment;
+        subtotal = product.total += subtotal;
         dispSubtotal = '$' + subtotal;
     });
+
     document.querySelector('.payment p').textContent = dispSubtotal;
 }
-Payment();
+subtotal();
 
 
 function addCoupon() {
-    Payment();
     let coupon20 = 'COSC2430-HD';
     let coupon10 = 'COSC2430-DI';
     let input = document.getElementById('discount').value;

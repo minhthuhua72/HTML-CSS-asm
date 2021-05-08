@@ -154,11 +154,11 @@ input[type="reset"]:hover {
 }
 
 #notif {
-    background: #f3d741;
     padding: 7px;
     margin-top: 0;
     height: auto;
     width: auto;
     display: none;
     color: red;
+    font-weight: bold;
 }
