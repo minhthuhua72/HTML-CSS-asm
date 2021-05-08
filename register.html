@@ -62,19 +62,19 @@
             <!-- input phone num -->
             <div class="wrap-input150">
                 <label for="phonenum" class="form-group">Phone Number</label>
-                <input class="input-design" type="tel" id="phonenum" name="phonenumber" 
+                <input class="input-design" type="tel" id="phonenum" name="phonenumber"
                     placeholder="Enter your phone number" required>
             </div>
             <!-- input password -->
             <div class="wrap-input150">
                 <label for="pw" class="form-group">Password</label>
-                <input class="input-design" type="password" id="pw" name="password" 
-                    placeholder="Enter a password" required>
+                <input class="input-design" type="password" id="pw" name="password" placeholder="Enter a password"
+                    required>
             </div>
             <!-- retype pass -->
             <div class="wrap-input150">
                 <label for="rpw" class="form-group">Retype Password</label>
-                <input class="input-design" type="password" id="rpw" name="repassword" 
+                <input class="input-design" type="password" id="rpw" name="repassword"
                     placeholder="Retype your password" required>
             </div>
             <!-- Add picture -->
@@ -366,67 +366,92 @@
             <!-- type -->
             <div class="wrap-input150">
                 <label class="form-group">Account Type</label>
+
                 <input type="radio" id="sowner" class="cc" name="type" value="storeowner" />
                 <label for="sowner">Store Owner</label>
                 <input type="radio" id="shopper" name="type" value="shopper" />
                 <label for="shopper">Shopper</label>
 
-                <form action="get" action="register.html">
-                    <fieldset class="ownerContent">
-                        <legend><strong>These fields are only for Store Owner</strong></legend>
 
-                        <label class="subContent" for="bname">Business Name:</label>
-                        <input class="input-design" type="text" id='bname' name='bname'
-                            placeholder="Enter your business name" required>
+                <!-- <fieldset class="ownerContent"> -->
+                <div class="ownerContent">
+                    <legend><strong>These fields are only for Store Owner</strong></legend>
 
-                        <label class="subContent" for="sname">Store Name:</label>
-                        <input class="input-design" type="text" id='sname' name='sname'
-                            placeholder="Enter your store name" required>
+                    <label class="subContent" for="bname">Business Name:</label>
+                    <input class="input-design" type="text" id='bname' name='bname'
+                        placeholder="Enter your business name">
 
-                        <label class="subContent" for="options">Store Category</label>
-                        <select name="storecate" id="options">
-                            <option value="0" selected>Select your store category</option>
-                            <option value="1">Department store</option>
-                            <option value="2">Grocery store</option>
-                            <option value="3">Restaurant</option>
-                            <option value="4">Clothing store</option>
-                            <option value="5">Accessory store</option>
-                            <option value="6">Pharmacies</option>
-                            <option value="7">Technology store</option>
-                            <option value="8">Pet store</option>
-                            <option value="9">Specialty store</option>
-                            <option value="10">Thrift store</option>
-                            <option value="11">Service</option>
-                            <option value="12">Kiosks</option>
-                        </select>
-                    </fieldset>
-                </form>
+                    <label class="subContent" for="sname">Store Name:</label>
+                    <input class="input-design" type="text" id='sname' name='sname' placeholder="Enter your store name">
+
+                    <label class="subContent" for="options">Store Category</label>
+                    <select name="storecate" id="options">
+                        <option value="0" selected>Select your store category</option>
+                        <option value="1">Department store</option>
+                        <option value="2">Grocery store</option>
+                        <option value="3">Restaurant</option>
+                        <option value="4">Clothing store</option>
+                        <option value="5">Accessory store</option>
+                        <option value="6">Pharmacies</option>
+                        <option value="7">Technology store</option>
+                        <option value="8">Pet store</option>
+                        <option value="9">Specialty store</option>
+                        <option value="10">Thrift store</option>
+                        <option value="11">Service</option>
+                        <option value="12">Kiosks</option>
+                    </select>
+                </div>
+                <!-- </fieldset> -->
             </div>
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Register" onclick="checkVali()">
-                <input type="reset" value="Clear">
+                <<<<<<< HEAD <input type="submit" name="send" value="Register">
+                    <input type="reset" name="clear" value="Clear">
+                    =======
+                    <input type="submit" value="Register" onclick="checkVali()">
+                    <input type="reset" value="Clear">
+                    >>>>>>> 3e4b8ccd90d6734957bd810bc28d7174bc902ee8
             </div>
         </form>
 
     </main>
-    <footer>
-        <a id="logoName" href="index.html">
-            <img class="logo" src="imgs/LOGO-01.png" alt="logo">
-            <span>Shopeeverse</span>
-        </a>
-        <div class="policy">
-            <ul>
-                <li><a href="tos.html">Term Of Service</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
+    <<<<<<< HEAD <div class="cookie-container">
+        <p>
+            We use cookies in this website to help you have the best experience with the website and the advertisements.
+            For more information, you can read our <a href="#">privacy policy</a>
+            and <a href="#">cookie policy</a>.
+        </p>
+        <button class="cookie-btn">
+            Agree
+        </button>
+
         </div>
-        <div class="copyright">
-            <a href="copyright.html">Copyright &copy; Mall 2021</a>
-        </div>
-    </footer>
-    <!--EndFooter-->
-    <script src="js/register.js"></script>
+
+        =======
+        >>>>>>> 3e4b8ccd90d6734957bd810bc28d7174bc902ee8
+        <footer>
+            <a id="logoName" href="index.html">
+                <img class="logo" src="imgs/LOGO-01.png" alt="logo">
+                <span>Shopeeverse</span>
+            </a>
+            <div class="policy">
+                <ul>
+                    <li><a href="tos.html">Term Of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <a href="copyright.html">Copyright &copy; Mall 2021</a>
+            </div>
+        </footer>
+        <!--EndFooter-->
+        <<<<<<< HEAD <script src="ck.js">
+            </script>
+
+            =======
+            <script src="js/register.js"></script>
+            >>>>>>> 3e4b8ccd90d6734957bd810bc28d7174bc902ee8
 </body>
 
 </html>
+<script src="random.js"></script>

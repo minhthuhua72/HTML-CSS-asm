@@ -21,7 +21,7 @@ h1 {
     padding-bottom: 5px;
 }
 
-form {
+.RegistForm {
     font-size: 16px;
     width: 100%;
     display: flex;
@@ -123,6 +123,7 @@ input[value="storeowner"]:checked~.ownerContent {
     width: 100%;
 }
 
+
 input[type="submit"],
 input[type="reset"] {
     border-radius: 30px;
@@ -150,7 +151,7 @@ input[type="reset"]:hover {
     font-size: 20px;
 }
 
-#nortification1{
+#nortification1 {
     background: #f3d741;
     padding: -7px;
     /* margin: 10px; */

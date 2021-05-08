@@ -143,15 +143,17 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
     font-size: 20px;
 }
-#nortimess{
+
+#nortimess {
     font-size: 20px;
     float: right;
 }
-#count{
+
+#count {
     float: right;
 }
 
-#nortification1{
+#nortification1 {
     background: #f3d741;
     padding: -7px;
     /* margin: 10px; */
@@ -162,4 +164,5 @@ input[type="reset"]:hover {
     display: none;
     /* padding-top: 5px; */
     color: red;
+    font-weight: bold;
 }

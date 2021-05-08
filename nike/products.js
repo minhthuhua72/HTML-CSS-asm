@@ -1,7 +1,4 @@
-const btn = document.getElementsByClassName('addBtn');
-console.log(btn.length);
 const items = []
-
 
 function addItem() {
     let v = (event.target.offsetParent.children[1].innerText);
@@ -13,40 +10,31 @@ function addItem() {
         total: parseInt(num),
         quantity: 1
     }
-    itemToLocalStore(item)
+    itemToLocalStore(item);
     window.alert("Your product has been added to your cart!");
 }
-var count = 1;
+
 
 function itemToLocalStore(item) {
-    let startCode = "cartItem";
-    let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
+    let itemInCart = JSON.parse(localStorage.getItem('cartItem'));
     if (itemInCart === null) {
-        items.push(item)
-        localStorage.setItem(startCode + count.toString(), JSON.stringify(items))
+        items.push(item);
+        localStorage.setItem('cartItem', JSON.stringify(items));
     } else {
+        console.log("item In cart Length:" + itemInCart.length);
         itemInCart.forEach(product => {
             if (item.name == product.name) {
                 item.quantity = product.quantity += 1;
                 item.total = product.total += item.total;
             } else {
-                items.push(item)
+                items.push(product);
             }
         });
-        items.push(item)
+        items.push(item);
     }
-    localStorage.setItem('cartItem', JSON.stringify(items))
-    window.location.reload()
+    localStorage.setItem('cartItem', JSON.stringify(items));
+    window.location.reload();
 }
-
-// function removeItem() {
-//     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
-//     console.log(event.target.offsetParent.children[1]);
-//     itemInCart.forEach(productg => {});
-
-// }
-
-// removeItem();
 
 function displayCart() {
     let summary = '';
@@ -62,31 +50,36 @@ function displayCart() {
         <div id="price" class="price"><p>$${product.price}</p></div>
         <div class="quantity">${product.quantity}</div>
         <div class="subtotal">$${product.total}</div>
-        <div class="removeBtn"><button type="button">Remove</button></div>
     </div>`
     });
-    document.querySelector('.pro-info').innerHTML = summary;
+    document.querySelector('.dispPro').innerHTML = summary;
 }
 displayCart();
 
-function Payment() {
-    payment = 0;
+
+function subtotal() {
+    subtotal = 0;
     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
     itemInCart.forEach(product => {
-        subtotal = product.total += payment;
+        subtotal = product.total += subtotal;
         dispSubtotal = '$' + subtotal;
     });
     document.querySelector('.payment p').textContent = dispSubtotal;
 }
-Payment();
+subtotal();
 
 
 function addCoupon() {
-    Payment();
     let coupon20 = 'COSC2430-HD';
     let coupon10 = 'COSC2430-DI';
     let input = document.getElementById('discount').value;
-    if (input === coupon20) {
+    if (input == "") {
+        finalTotal = subtotal;
+        document.querySelector('.payment section:last-of-type p').textContent = '$' + finalTotal;
+        document.getElementById('error-Msg').innerHTML = "";
+        document.getElementById('correct-Msg').innerHTML = "";
+        return true;
+    } else if (input === coupon20) {
         beforeDiscount = subtotal;
         discount = 0.2;
         discountAmount = beforeDiscount * discount;
