@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="ckstyle.css">
     <title>Register Account</title>
 </head>
 
@@ -53,7 +54,6 @@
         <h1><span class="vline">REGISTER</span></h1>
 
         <form method="GET" action="register.html">
-            <p id="thongBao"></p>
             <!-- input mail -->
             <div class="wrap-input150">
                 <label for="mail" class="form-group">Email</label>
@@ -62,19 +62,19 @@
             <!-- input phone num -->
             <div class="wrap-input150">
                 <label for="phonenum" class="form-group">Phone Number</label>
-                <input class="input-design" type="tel" id="phonenum" name="phonenumber" 
+                <input class="input-design" type="tel" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
                     placeholder="Enter your phone number" required>
             </div>
             <!-- input password -->
             <div class="wrap-input150">
                 <label for="pw" class="form-group">Password</label>
-                <input class="input-design" type="password" id="pw" name="password" 
+                <input class="input-design" type="password" id="pw" name="password" maxlength="10" minlength="6"
                     placeholder="Enter a password" required>
             </div>
             <!-- retype pass -->
             <div class="wrap-input150">
                 <label for="rpw" class="form-group">Retype Password</label>
-                <input class="input-design" type="password" id="rpw" name="repassword" 
+                <input class="input-design" type="password" id="rpw" name="repassword" maxlength="10" minlength="6"
                     placeholder="Retype your password" required>
             </div>
             <!-- Add picture -->
@@ -404,12 +404,24 @@
             </div>
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Register" onclick="checkVali()">
+                <input type="submit" value="Register">
                 <input type="reset" value="Clear">
             </div>
         </form>
 
     </main>
+    <div class="cookie-container">
+        <p>
+            We use cookies in this website to help you have the best experience with the website and the advertisements. 
+            For more information,  you can read our <a href="#">privacy policy</a>
+            and <a href="#">cookie policy</a>.
+        </p>
+        <button class="cookie-btn">
+            Agree
+        </button>
+        
+    </div>
+</div>
     <footer>
         <a id="logoName" href="index.html">
             <img class="logo" src="imgs/LOGO-01.png" alt="logo">
@@ -426,7 +438,7 @@
         </div>
     </footer>
     <!--EndFooter-->
-    <script src="js/register.js"></script>
+    <script src="ck.js"></script>
 </body>
 
 </html>
