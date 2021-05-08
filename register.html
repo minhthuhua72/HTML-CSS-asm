@@ -53,6 +53,7 @@
         <h1><span class="vline">REGISTER</span></h1>
 
         <form method="GET" action="register.html">
+            <p id="thongBao"></p>
             <!-- input mail -->
             <div class="wrap-input150">
                 <label for="mail" class="form-group">Email</label>
@@ -61,19 +62,19 @@
             <!-- input phone num -->
             <div class="wrap-input150">
                 <label for="phonenum" class="form-group">Phone Number</label>
-                <input class="input-design" type="tel" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
+                <input class="input-design" type="tel" id="phonenum" name="phonenumber" 
                     placeholder="Enter your phone number" required>
             </div>
             <!-- input password -->
             <div class="wrap-input150">
                 <label for="pw" class="form-group">Password</label>
-                <input class="input-design" type="password" id="pw" name="password" maxlength="10" minlength="6"
+                <input class="input-design" type="password" id="pw" name="password" 
                     placeholder="Enter a password" required>
             </div>
             <!-- retype pass -->
             <div class="wrap-input150">
                 <label for="rpw" class="form-group">Retype Password</label>
-                <input class="input-design" type="password" id="rpw" name="repassword" maxlength="10" minlength="6"
+                <input class="input-design" type="password" id="rpw" name="repassword" 
                     placeholder="Retype your password" required>
             </div>
             <!-- Add picture -->
@@ -403,7 +404,7 @@
             </div>
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Register">
+                <input type="submit" value="Register" onclick="checkVali()">
                 <input type="reset" value="Clear">
             </div>
         </form>
@@ -425,6 +426,7 @@
         </div>
     </footer>
     <!--EndFooter-->
+    <script src="js/register.js"></script>
 </body>
 
 </html>

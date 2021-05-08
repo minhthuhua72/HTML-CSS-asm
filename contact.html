@@ -56,6 +56,7 @@
     <main>
         <h1><span class="vline">CONTACT</span></h1>
         <form class="content" method="GET" action="contact.html">
+            <p id="thongBao"></p>
             <!-- contact purpose -->
             <div class="wrap-input150">
                 <label for="purpose" class="form-group required">Contact Purpose</label>
@@ -114,13 +115,14 @@
             </div>
             <!-- textfield -->
             <div class="wrap-input150">
-                <label for="mess" id="messLabel">Message</label>
+                <span for="mess" id="messLabel">Message</span><span id="nortimess"></span>
                 <textarea name="mess" id="mess" placeholder="Enter your message here" cols="85" rows="10"></textarea>
+                <span id="count">0</span>
             </div>
 
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Send">
+                <input type="submit" value="Send" onclick="checkVali()">
                 <input type="reset" value="Clear">
             </div>
         </form>
@@ -142,6 +144,7 @@
         </div>
     </footer>
     <!--EndFooter-->
+    <script src=".//js/contact.js"></script>
 </body>
 
 </html>
