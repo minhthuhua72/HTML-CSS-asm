@@ -7,7 +7,7 @@ var lname = document.getElementById("lname");
 var address = document.getElementById("address");
 var cities = document.getElementById("cities");
 var zip = document.getElementById("zip");
-var thongBao = document.getElementById("thongBao");
+var nortification1 = document.getElementById("nortification1");
 var countries = document.getElementById("countries");
 var owner = document.getElementById("sowner");
 var shopper = document.getElementById("shopper");
@@ -28,22 +28,22 @@ function checkBlank() {
     !zip.value
   ) {
 
-    thongBao.style.display = "block";
-    thongBao.innerHTML = "Please fill in the blanks!!!" + "<br/>";
+    nortification1.style.display = "block";
+    nortification1.innerHTML = "Please fill in the blanks!!!" + "<br/>";
     return false;
   } else if (countries.selectedIndex == 0) {
-    thongBao.style.display = "block";
+    nortification1.style.display = "block";
 
-    thongBao.innerHTML = "Please select your country!!!" + "<br/>";
+    nortification1.innerHTML = "Please select your country!!!" + "<br/>";
     return false;
   } else if (!owner.checked && !shopper.checked) {
-    thongBao.style.display = "block";
+    nortification1.style.display = "block";
 
-    thongBao.innerHTML = "Please select Account type!!!" + "<br/>";
+    nortification1.innerHTML = "Please select Account type!!!" + "<br/>";
     return false;
   } else {
     
-    thongBao.style.display = "none";
+    nortification1.style.display = "none";
     return true;
   }
 }
@@ -52,11 +52,11 @@ function checkMinMax(idText, minlength) {
   var inputText = document.getElementById(idText);
   var fiele = inputText.value;
   if (fiele.length < minlength) {
-    thongBao.style.display = "block";
-    thongBao.innerHTML = "Please enter at least 3 characters ";
+    nortification1.style.display = "block";
+    nortification1.innerHTML = "Please enter at least 3 characters ";
     return false;
   } else {
-    thongBao.style.display = "none";
+    nortification1.style.display = "none";
     return true;
   }
 }
@@ -67,11 +67,11 @@ function checkMinMaxZip(idZip, minlength, maxlength) {
   if (fieleZip.length < minlength || fieleZip.length > maxlength) {
     zip.style.border = "solid 2px red";
 
-    thongBao.style.display = "block";
-    thongBao.innerHTML = "Please Zip Code contain 4 to 6 digits. ";
+    nortification1.style.display = "block";
+    nortification1.innerHTML = "Please Zip Code contain 4 to 6 digits. ";
     return false;
   } else {
-    thongBao.style.display = "none";
+    nortification1.style.display = "none";
     return true;
   }
 }
@@ -79,22 +79,22 @@ function checkPassword(){
   var password =document.getElementById('pw')
   var passwordLetter = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w]).{8,20}$/;
   if (password.value.match(passwordLetter)){
-      thongBao.style.display="none"
+    nortification1.style.display="none"
       return true
   }else{
-      thongBao.style.display= "block"
-      thongBao.innerHTML=" Please enter a valid password!!!"
+    nortification1.style.display= "block"
+    nortification1.innerHTML=" Please enter a valid password!!!"
       return false
   }   
 }
 function checkRePassword(){
     if(password.value == repassword.value){
-        thongBao.style.display = "none";
+      nortification1.style.display = "none";
         return true;
         
     }else{
-        thongBao.style.display = "block";
-        thongBao.innerHTML = "Please correct your repassword ";
+      nortification1.style.display = "block";
+      nortification1.innerHTML = "Please correct your repassword ";
         return false
     }
 }
@@ -102,11 +102,11 @@ function checkEmail(){
   var email = document.getElementById('mail')
   var emailLetter = /^([\w]|\.{3,})+([\.]?\w+)*@\w+([\.]?\w+)*(\.\w{2,5})+$/;
   if (email.value.match(emailLetter)){
-      thongBao.style.display="none"
+    nortification1.style.display="none"
       return true
   }else{
-      thongBao.style.display= "block"
-      thongBao.innerHTML=" Please enter a valid email!!!"
+    nortification1.style.display= "block"
+    nortification1.innerHTML=" Please enter a valid email!!!"
       return false
 }
 }
