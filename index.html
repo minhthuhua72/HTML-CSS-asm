@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Librabries/owl.carousel.min.css">
+    <link rel="stylesheet" href="Librabries/owl.theme.default.min.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="mall-home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
-    <link rel="stylesheet" href="ckstyle.css">
+    <link rel="stylesheet" href="ckstyle.css">   
     <title>Mall Home</title>
 </head>
 
@@ -116,81 +118,92 @@
         <!--New Store-->
         <div class="mall-section">
             <h2><span class="vline">NEW STORES</span></h2>
-            <div class="store-sections">
-                <div class="storeLists">
-                    <div class="store-container">
-                        <a href="nike/nike.html">
-                            <img class="store-logo" src="imgs/dunkin.png" alt="store-logo">
-                        </a>
+            <style>
+                #styleS {
+                    width: 1000px;
+                    margin: 0 auto;
+                }
+            </style>
+            <div id="styleS">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="store-container">
+                            <a href="nike/nike.html">
+                                <img class="store-logo" src="imgs/dunkin.png" alt="store-logo" />
+                            </a>
+                        </div>
+                        <div class="store-info">
+                            <a href="nike/nike.html">
+                                <p>Dunkin' Donuts</p>
+                            </a>
+                        </div>
+    
                     </div>
-                    <div class="store-info">
-                        <a href="nike/nike.html">
-                            <p>Dunkin' Donuts</p>
-                        </a>
+                    
+                    <div class="item">
+                        <div class="store-container">
+                            <a href="nike/nike.html">
+                                <img class="store-logo" src="imgs/jollibee.png" alt="store-logo" />
+                            </a>
+                        </div>    
+                        <div class="store-info">
+                            <a href="nike/nike.html">
+                                <p>Jollibee</p>
+                            </a>
+                        </div>           
                     </div>
-                </div>
-                <div class="storeLists">
-                    <div class="store-container">
-                        <a href="nike/nike.html">
-                            <img class="store-logo" src="imgs/jollibee.png" alt="store-logo">
-                        </a>
+                    <div class="item">
+                        <div class="store-container">
+                            <a href="nike/nike.html">
+                                <img class="store-logo" src="imgs/kfc.png" alt="store-logo" />
+                            </a>
+                        </div>
+                        <div class="store-info">
+                            <a href="nike/nike.html">
+                                <p>KFC</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <a href="nike/nike.html">
-                            <p>Jollibee</p>
-                        </a>
+                    <div class="item">
+                        <div class="store-container">
+                            <a href="nike/nike.html">
+                                <img class="store-logo" src="imgs/thai.jpg" alt="store-logo" />
+                            </a>
+                        </div>
+                        <div class="store-info">
+                            <a href="nike/nike.html">
+                                <p>Thai Express</p>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="storeLists">
-                    <div class="store-container">
-                        <a href="nike/nike.html">
-                            <img class="store-logo" src="imgs/kfc.png" alt="store-logo">
-                        </a>
+                    <div class="item">
+                        <div class="store-container">
+                            <a href="nike/nike.html">
+                                <img class="store-logo" src="imgs/starbucks.png" alt="store-logo" />
+                            </a>
+                        </div>
+                        <div class="store-info">
+                            <a href="nike/nike.html">
+                                <p>Starbucks</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <a href="nike/nike.html">
-                            <p>KFC</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="storeLists">
-                    <div class="store-container">
-                        <a href="nike/nike.html">
-                            <img class="store-logo" src="imgs/thai.jpg" alt="store-logo">
-                        </a>
-                    </div>
-                    <div class="store-info">
-                        <a href="nike/nike.html">
-                            <p>Thai Express</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="storeLists">
-                    <div class="store-container">
-                        <a href="nike/nike.html">
-                            <img class="store-logo" src="imgs/starbucks.png" alt="store-logo">
-                        </a>
-                    </div>
-                    <div class="store-info">
-                        <a href="nike/nike.html">
-                            <p>Starbucks</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="storeLists">
-                    <div class="store-container">
-                        <a href="nike/nike.html">
-                            <img class="store-logo" src="imgs/wrap.png" alt="store-logo">
-                        </a>
-                    </div>
-                    <div class="store-info">
-                        <a href="nike/nike.html">
-                            <p>Wrap & Roll</p>
-                        </a>
-                    </div>
+                    <div class="item">
+                        <div class="store-container">
+                            <a href="nike/nike.html">
+                                <img class="store-logo" src="imgs/wrap.png" alt="store-logo" />
+                            </a>
+                        </div>
+                        <div class="store-info">
+                            <a href="nike/nike.html">
+                                <p>Wrap & Roll</p>
+                            </a>
+                        </div>
+                    
                 </div>
             </div>
-        </div>
+            </div>
+        </div>        
         <!--Featured Product-->
         <div class="mall-section">
             <h2><span class="vline">FEATURED PRODUCTS</span></h2>
@@ -262,86 +275,106 @@
             </div>
         </div>
         <!--New Product-->
-        <div class="mall-section">
+        <div class="mall-section"> 
             <h2><span class="vline">NEW PRODUCTS</span></h2>
-            <div class="store-sections">
-                <div class="newProduct-list">
-                    <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/ck-stictch.jpg"
-                            alt="product-image"></a>
-                    <a class="pro-detail" href="nike/nikePro1.html">
-                        <p>Grosgrain Stitch Trim Long Wallet</p>
-                    </a>
-                    <a class="price" href="nike/nikePro1.html">
-                        <p>$162</p>
-                    </a>
-                    <a class="pro-detail" href="nike/nike.html">
-                        <p>CHARLES & KEITH</p>
-                    </a>
-                </div>
-                <div class="newProduct-list">
-                    <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/nike-hippie.png"
-                            alt="product-image"></a>
-                    <a class="pro-detail" href="nike/nikePro1.html">
-                        <p>Nike Cosmic Unity Space Hippie</p>
-                    </a>
-                    <a class="price" href="nike/nikePro1.html">
-                        <p>$150</p>
-                    </a>
-                    <a class="pro-detail" href="nike/nike.html">
-                        <p>NIKE</p>
-                    </a>
-                </div>
-
-                <div class="newProduct-list">
-                    <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/tommy-recycled.jpg"
-                            alt="product-image"></a>
-                    <a class="pro-detail" href="nike/nikePro1.html">
-                        <p>Recycled Luv The World T-shirt </p>
-                    </a>
-                    <a class="price" href="nike/nikePro1.html">
-                        <p>$50</p>
-                    </a>
-                    <a class="pro-detail" href="nike/nike.html">
-                        <p>TOMMY HILFIGER</p>
-                    </a>
-                </div>
-
-                <div class="newProduct-list">
-                    <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/pan-halo.png" alt="product-image"></a>
-                    <a class="pro-detail" href="nike/nikePro1.html">
-                        <p>Sparkling Teardrop Halo Ring</p>
-                    </a>
-                    <a class="price" href="#">
-                        <p>$39</p>
-                    </a>
-                    <a class="pro-detail" href="nike/nike.html">
-                        <p>PANDORA</p>
-                    </a>
-                </div>
-                <div class="newProduct-list">
-                    <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/ck-metallic.jpg"
-                            alt="product-image"></a>
-                    <a class="pro-detail" href="nike/nikePro1.html">
-                        <p>Sage Green Metallic Push-Lock Shoulder Bag</p>
-                    </a>
-                    <a class="price" href="#">
-                        <p>$66</p>
-                    </a>
-                    <a class="pro-detail" href="nike/nike.html">
-                        <p>CHARLES & KEITH</p>
-                    </a>
-                </div>
-                <div class="newProduct-list">
-                    <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/pan-stud.jpg" alt="product-image"></a>
-                    <a class="pro-detail" href="nike/nikePro1.html">
-                        <p>Sparkling Elevated Heart Stud Earrings</p>
-                    </a>
-                    <a class="price" href="nike/nikePro1.html">
-                        <p>$100</p>
-                    </a>
-                    <a class="pro-detail" href="nike/nike.html">
-                        <p>PANDORA</p>
-                    </a>
+            <style>
+                #styleS {
+                    width: 1000px;
+                    margin: 0 auto;
+                }
+            </style>
+            <div id="styleS">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="newProduct-list">
+                            <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/ck-stictch.jpg"
+                                    alt="product-image" /></a>
+                            <a class="pro-detail" href="nike/nikePro1.html">
+                                <p>Grosgrain Stitch Trim Long Wallet</p>
+                            </a>
+                            <a class="price" href="nike/nikePro1.html">
+                                <p>$162</p>
+                            </a>
+                            <a class="pro-detail" href="nike/nike.html">
+                                <p>CHARLES & KEITH</p>
+                            </a>
+                        </div>   
+                    </div>                    
+                    <div class="item">
+                        <div class="newProduct-list">
+                            <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/nike-hippie.png"
+                                    alt="product-image" /></a>
+                            <a class="pro-detail" href="nike/nikePro1.html">
+                                <p>Nike Cosmic Unity Space Hippie</p>
+                            </a>
+                            <a class="price" href="nike/nikePro1.html">
+                                <p>$150</p>
+                            </a>
+                            <a class="pro-detail" href="nike/nike.html">
+                                <p>NIKE</p>
+                            </a>
+                        </div>        
+                    </div>
+                    <div class="item">
+                        <div class="newProduct-list">
+                            <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/tommy-recycled.jpg"
+                                    alt="product-image" /></a>
+                            <a class="pro-detail" href="nike/nikePro1.html">
+                                <p>Recycled Luv The World T-shirt</p>
+                            </a>
+                            <a class="price" href="nike/nikePro1.html">
+                                <p>$50</p>
+                            </a>
+                            <a class="pro-detail" href="nike/nike.html">
+                                <p>TOMMY HILFIGER</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="newProduct-list">
+                            <a href="nike/nikePro1.html"><img class="pro-logo" src="./imgs/pan-stud.jpg"
+                                    alt="product-image" /></a>
+                            <a class="pro-detail" href="nike/nikePro1.html">
+                                <p>Sparkling Teardrop Halo Ring</p>
+                            </a>
+                            <a class="price" href="#">
+                                <p>$39</p>
+                            </a>
+                            <a class="pro-detail" href="nike/nike.html">
+                                <p>PANDORA</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="newProduct-list">
+                            <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/ck-metallic.jpg"
+                                    alt="product-image" /></a>
+                            <a class="pro-detail" href="nike/nikePro1.html">
+                                <p>Sage Green Metallic Push-Lock Shoulder Bag</p>
+                            </a>
+                            <a class="price" href="#">
+                                <p>$66</p>
+                            </a>
+                            <a class="pro-detail" href="nike/nike.html">
+                                <p>CHARLES & KEITH</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="newProduct-list">
+                            <a href="nike/nikePro1.html"><img class="pro-logo" src="imgs/pan-stud.jpg"
+                                    alt="product-image" /></a>
+                            <a class="pro-detail" href="nike/nikePro1.html">
+                                <p>Sparkling Elevated Heart Stud Earrings</p>
+                            </a>
+                            <a class="price" href="nike/nikePro1.html">
+                                <p>$100</p>
+                            </a>
+                            <a class="pro-detail" href="nike/nike.html">
+                                <p>PANDORA</p>
+                            </a>
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -373,7 +406,27 @@
             <a href="copyright.html">Copyright &copy; Mall 2021</a>
         </div>
     </footer>   
+    <script> 
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    });   
+    </script>
     <script src="ck.js"></script>   
+    <script src="Librabries/jquery.min.js"></script>
+    <script src="Librabries/owl.carousel.min.js"></script>
 </body>
 
 </html>
