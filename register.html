@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="ckstyle.css">
     <title>Register Account</title>
 </head>
 
@@ -53,8 +52,8 @@
     <main>
         <h1><span class="vline">REGISTER</span></h1>
 
-        <form class="RegistForm" action="register.html" onsubmit="Validate()">
-            <p id="notif"></p>
+        <form method="GET" action="register.html">
+            <p id="nortification1"></p>
             <!-- input mail -->
             <div class="wrap-input150">
                 <label for="mail" class="form-group">Email</label>
@@ -63,19 +62,19 @@
             <!-- input phone num -->
             <div class="wrap-input150">
                 <label for="phonenum" class="form-group">Phone Number</label>
-                <input class="input-design" type="tel" id="phonenum" name="phonenumber" maxlength="10" minlength="10"
+                <input class="input-design" type="tel" id="phonenum" name="phonenumber"
                     placeholder="Enter your phone number" required>
             </div>
             <!-- input password -->
             <div class="wrap-input150">
                 <label for="pw" class="form-group">Password</label>
-                <input class="input-design" type="password" id="pw" name="password" maxlength="10" minlength="6"
-                    placeholder="Enter a password" required>
+                <input class="input-design" type="password" id="pw" name="password" placeholder="Enter a password"
+                    required>
             </div>
             <!-- retype pass -->
             <div class="wrap-input150">
                 <label for="rpw" class="form-group">Retype Password</label>
-                <input class="input-design" type="password" id="rpw" name="repassword" maxlength="10" minlength="6"
+                <input class="input-design" type="password" id="rpw" name="repassword"
                     placeholder="Retype your password" required>
             </div>
             <!-- Add picture -->
@@ -406,13 +405,17 @@
             </div>
             <!-- button -->
             <div class="button-control">
-                <input type="submit" name="send" value="Register">
-                <input type="reset" name="clear" value="Clear">
+                <<<<<<< HEAD <input type="submit" name="send" value="Register">
+                    <input type="reset" name="clear" value="Clear">
+                    =======
+                    <input type="submit" value="Register" onclick="checkVali()">
+                    <input type="reset" value="Clear">
+                    >>>>>>> 3e4b8ccd90d6734957bd810bc28d7174bc902ee8
             </div>
         </form>
 
     </main>
-    <div class="cookie-container">
+    <<<<<<< HEAD <div class="cookie-container">
         <p>
             We use cookies in this website to help you have the best experience with the website and the advertisements.
             For more information, you can read our <a href="#">privacy policy</a>
@@ -422,27 +425,32 @@
             Agree
         </button>
 
-    </div>
-
-    <footer>
-        <a id="logoName" href="index.html">
-            <img class="logo" src="imgs/LOGO-01.png" alt="logo">
-            <span>Shopeeverse</span>
-        </a>
-        <div class="policy">
-            <ul>
-                <li><a href="tos.html">Term Of Service</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
         </div>
-        <div class="copyright">
-            <a href="copyright.html">Copyright &copy; Mall 2021</a>
-        </div>
-    </footer>
-    <!--EndFooter-->
 
-    <script src="ck.js"></script>
+        =======
+        >>>>>>> 3e4b8ccd90d6734957bd810bc28d7174bc902ee8
+        <footer>
+            <a id="logoName" href="index.html">
+                <img class="logo" src="imgs/LOGO-01.png" alt="logo">
+                <span>Shopeeverse</span>
+            </a>
+            <div class="policy">
+                <ul>
+                    <li><a href="tos.html">Term Of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <a href="copyright.html">Copyright &copy; Mall 2021</a>
+            </div>
+        </footer>
+        <!--EndFooter-->
+        <<<<<<< HEAD <script src="ck.js">
+            </script>
 
+            =======
+            <script src="js/register.js"></script>
+            >>>>>>> 3e4b8ccd90d6734957bd810bc28d7174bc902ee8
 </body>
 
 </html>

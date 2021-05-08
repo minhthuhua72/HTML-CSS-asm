@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="ckstyle.css">
     <title>Contact</title>
 </head>
 
@@ -56,8 +55,8 @@
 
     <main>
         <h1><span class="vline">CONTACT</span></h1>
-        <form onsubmit="event.preventDefault();checkVali();" class="content" method="GET" action="contact.html">
-            <p id="notif"></p>
+        <form class="content" method="GET" action="contact.html">
+            <p id="nortification1"></p>
             <!-- contact purpose -->
             <div class="wrap-input150">
                 <label for="purpose" class="form-group required">Contact Purpose</label>
@@ -97,7 +96,7 @@
                 <label for="num">Phone</label>
             </div>
             <!-- select Contact days -->
-            <div id="contactday" class="wrap-input150">
+            <div class="wrap-input150">
                 <span class="form-group">Contact Days</span><br>
                 <input type="checkbox" id="mon" name="mon" value="Monday">
                 <label for="mon">Monday</label><br>
@@ -116,29 +115,17 @@
             </div>
             <!-- textfield -->
             <div class="wrap-input150">
-                <label for="mess" id="messLabel">Message</label>
+                <span for="mess" id="messLabel">Message</span><span id="nortimess"></span>
                 <textarea name="mess" id="mess" placeholder="Enter your message here" cols="85" rows="10"></textarea>
+                <span id="count">0</span>
             </div>
 
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Send">
+                <input type="submit" value="Send" onclick="checkVali()">
                 <input type="reset" value="Clear">
             </div>
         </form>
-        <div class="cookie-container">
-            <p>
-                We use cookies in this website to help you have the best experience with the website and the
-                advertisements.
-                For more information, you can read our <a href="#">privacy policy</a>
-                and <a href="#">cookie policy</a>.
-            </p>
-            <button class="cookie-btn">
-                Agree
-            </button>
-
-        </div>
-        </div>
     </main>
     <!--Footer copy this-->
     <footer>
@@ -157,8 +144,7 @@
         </div>
     </footer>
     <!--EndFooter-->
-    <script src="contact.js"></script>
-    <script src="ck.js"></script>
+    <script src=".//js/contact.js"></script>
 </body>
 
 </html>
