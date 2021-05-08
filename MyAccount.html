@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="ckstyle.css">
     <title>My Account</title>
 </head>
 
@@ -54,7 +53,7 @@
 
 
     <main>
-        <form class="content" method="get" action="MyAccount.html">
+        <form class="content">
             <fieldset>
                 <legend><span class="vline">LOGIN</span></legend>
 
@@ -66,11 +65,11 @@
 
                 <div class="input-field">
                     <label for="pw">Password</label>
-                    <input class="input-design" type="password" id="pw" name="password" maxlength="10" minlength="6"
+                    <input class="input-design" type="password" id="pww" name="password"
                         placeholder="Enter your password" required>
                 </div>
 
-                <button type="submit"><span>Login</span></button>
+                <p id="Tuan" onclick="onFormSubmit()">Login</p>
 
                 <div class="container">
                     <label>
@@ -85,18 +84,7 @@
             </fieldset>
         </form>
     </main>
-    <div class="cookie-container">
-        <p>
-            We use cookies in this website to help you have the best experience with the website and the advertisements. 
-            For more information,  you can read our <a href="#">privacy policy</a>
-            and <a href="#">cookie policy</a>.
-        </p>
-        <button class="cookie-btn">
-            Agree
-        </button>
-        
-    </div>
-</div>
+
     <footer>
         <a id="logoName" href="index.html">
             <img class="logo" src="imgs/LOGO-01.png" alt="logo">
@@ -113,7 +101,9 @@
         </div>
     </footer>
     <!--EndFooter-->
-    <script src="ck.js"></script>
+    <script src="./js/Myaccount.js"></script>
+
+    </script>
 </body>
 
 </html>
