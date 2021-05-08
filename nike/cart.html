@@ -50,31 +50,34 @@
 
     <main>
         <h1><span class="vline">YOUR CART</span></h1>
-        <div class="pro-info">
-            <div class="info">
-                <div class="title" id="title-one">
-                    <p>PRODUCT(s)</p>
+        <div class="cart">
+            <div class="pro-info">
+                <div class="info">
+                    <div class="title" id="title-one">
+                        <p>PRODUCT</p>
+                    </div>
+                    <div class="title" id="title-two">
+                        <p>PRICE</p>
+                    </div>
+                    <div class="title" id="title-three">
+                        <p>QUANTITY</p>
+                    </div>
+                    <div class="title" id="title-four">
+                        <p>TOTAL</p>
+                    </div>
+                    <div class="title" id="title-five"></div>
                 </div>
-                <div class="title" id="title-two">
-                    <p>PRICE</p>
-                </div>
-                <div class="title" id="title-three">
-                    <p>QUANTITY</p>
-                </div>
-                <div class="title" id="title-four">
-                    <p>TOTAL</p>
-                </div>
-            </div>
-            <hr>
+                <hr>
+                <div class="proInfo">
 
-            <div class="proInfo">
-                <div class="product"></div>
-                <div class="price"></div>
-                <div class="quantity"></div>
-                <div class="subtotal"></div>
+                    <div class="product"></div>
+                    <div class="price"></div>
+                    <div class="quantity"></div>
+                    <div class="subtotal"></div>
+                    <!-- <div onclick="removeItem()" class="removeBtn"><button type="button">Remove</button></div> -->
+                </div>
+                <hr>
             </div>
-            <hr>
-
             <div class="payment">
                 <section>
                     <h3>Sub Total:</h3>
@@ -100,15 +103,14 @@
                     <p></p>
                 </section>
 
-            </div>
+                <button class="payBtn" onclick="location.href='ThankYou.html'" type="button">Order</button>
+                <button class="payBtn" onclick="location.href='nikePro1.html'" type="button">Continue Shopping</button>
 
-
-
-            <div class="buttons">
-                <button onclick="location.href='ThankYou.html'" type="button">Order</button>
-                <button onclick="location.href='nikePro1.html'" type="button">Continue Shopping</button>
             </div>
         </div>
+
+
+
 
     </main>
 

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="aboutus.css">
-    <script src="aboutus.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
@@ -66,87 +65,88 @@
 
         <h1><span class="vline">OUR MEMBERS</span></h1>
 
-        <div class="members">
-            <div id="photo" onclick="modalWindowThu()" class="portraits">
-                <img class="mem-photo" src="imgs/memoji1.png" />
-                <div class="overlay">
-                    <img id="portrait" class="mem-photo" src="imgs/thu.jpg" />
+        <div class="ourmembers">
+
+            <div class="members">
+                <div id="photo" onclick="modalWindowThu()" class="portraits">
+                    <img class="mem-photo" src="imgs/memoji1.png" />
+                    <div class="overlay">
+                        <img id="portrait" class="mem-photo" src="imgs/thu.jpg" />
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div id="thuModal" class="modal">
-            <div id="content" class="mem-info">
-                <span class="close">×</span>
-                <p>Hua Minh Thu <br />s3878667</p>
-                <a href="mailto:s3878667@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
-            </div>
-        </div>
-        
-        
-            <div class="portraits" onclick="modalWindowHoang()">
-                <img class="mem-photo" src="imgs/memoji3.jpg" />
-                <div class="overlay">
-                    <img class="mem-photo real-person" src="imgs/tuan.jpg" />
+            <div id="thuModal" class="modal">
+                <div id="content" class="mem-info">
+                    <span class="close">×</span>
+                    <p>Hua Minh Thu <br />s3878667</p>
+                    <a href="mailto:s3878667@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
                 </div>
             </div>
-        </div>
-        
-        <div id="hoangModal" class="modal">
-            <div class="mem-info">
-                <span class="close">×</span>
-                <p>
-                    Hoang Ngoc Tuan <br />
-                    s3817872
-                </p>
-                <a href="mailto:s3817872@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
-            </div>
-        </div>
-        
-        <div class="members">
-            <div class="portraits" onclick="modalWindowDung()">
-                <img class="mem-photo" src="imgs/memoji4.jpg" />
-                <div class="overlay">
-                    <img class="mem-photo real-person" src="imgs/dung.jpg" />
-                </div>
-            </div>
-        </div>
-        
-        <div id="dungModal" class="modal">
-            <div class="mem-info">
-                <span class="close">×</span>
-        
-                <p>
-                    Nguyen Hoang Dung <br />
-                    s3863900
-                </p>
-                <a href="mailto:s3863900@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
-            </div>
-        </div>
-        
-        <div class="members">
-            <div class="portraits" onclick="modalWindowNgan()">
-                <img class="mem-photo" src="imgs/memoji2.jpg" />
-                <div class="overlay">
-                    <img class="mem-photo real-person" src="imgs/ngan.jpg" />
-                </div>
-            </div>
-        </div>
-        
-        <div id="nganModal" class="modal">
-            <div class="mem-info">
-                <span class="close">×</span>
-        
-                <p>
-                    Phan Luu Thien Ngan <br />
-                    s3863893
-                </p>
-                <a href="mailto:s3863893@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
-            </div>
-        </div>
-        
 
 
+
+            <div class="members">
+                <div class="portraits" onclick="modalWindowHoang()">
+                    <img class="mem-photo" src="imgs/memoji3.jpg" />
+                    <div class="overlay">
+                        <img class="mem-photo real-person" src="imgs/tuan.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div id="hoangModal" class="modal">
+                <div class="mem-info">
+                    <span class="close">×</span>
+                    <p>
+                        Hoang Ngoc Tuan <br />
+                        s3817872
+                    </p>
+                    <a href="mailto:s3817872@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
+                </div>
+            </div>
+
+
+
+            <div class="members">
+                <div class="portraits" onclick="modalWindowDung()">
+                    <img class="mem-photo" src="imgs/memoji4.jpg" />
+                    <div class="overlay">
+                        <img class="mem-photo real-person" src="imgs/dung.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div id="dungModal" class="modal">
+                <div class="mem-info">
+                    <span class="close">×</span>
+                    <p>
+                        Nguyen Hoang Dung <br />
+                        s3863900
+                    </p>
+                    <a href="mailto:s3863900@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
+                </div>
+            </div>
+
+
+
+            <div class="members">
+                <div class="portraits" onclick="modalWindowNgan()">
+                    <img class="mem-photo" src="imgs/memoji2.jpg" />
+                    <div class="overlay">
+                        <img class="mem-photo real-person" src="imgs/ngan.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div id="nganModal" class="modal">
+                <div class="mem-info">
+                    <span class="close">×</span>
+                    <p>
+                        Phan Luu Thien Ngan <br />
+                        s3863893
+                    </p>
+                    <a href="mailto:s3863893@rmit.edu.vn"><img class="icons" src="imgs/outlook.png" /></a>
+                </div>
+            </div>
+            >
+        </div>
     </main>
 
     <footer>
@@ -164,6 +164,7 @@
             <a href="copyright.html">Copyright &copy; Mall 2021</a>
         </div>
     </footer>
+    <script src="aboutus.js"></script>
 </body>
 
 </html>

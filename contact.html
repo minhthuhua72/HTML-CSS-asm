@@ -55,8 +55,8 @@
 
     <main>
         <h1><span class="vline">CONTACT</span></h1>
-        <form class="content" method="GET" action="contact.html">
-            <p id="thongBao"></p>
+        <form onsubmit="event.preventDefault();checkVali();" class="content" method="GET" action="contact.html">
+            <p id="notif"></p>
             <!-- contact purpose -->
             <div class="wrap-input150">
                 <label for="purpose" class="form-group required">Contact Purpose</label>
@@ -96,7 +96,7 @@
                 <label for="num">Phone</label>
             </div>
             <!-- select Contact days -->
-            <div class="wrap-input150">
+            <div id="contactday" class="wrap-input150">
                 <span class="form-group">Contact Days</span><br>
                 <input type="checkbox" id="mon" name="mon" value="Monday">
                 <label for="mon">Monday</label><br>
@@ -122,7 +122,7 @@
 
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Send" onclick="checkVali()">
+                <input type="submit" value="Send">
                 <input type="reset" value="Clear">
             </div>
         </form>
@@ -144,7 +144,7 @@
         </div>
     </footer>
     <!--EndFooter-->
-    <script src=".//js/contact.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>

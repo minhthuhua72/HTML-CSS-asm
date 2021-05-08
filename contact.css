@@ -143,23 +143,22 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
     font-size: 20px;
 }
-#nortimess{
+
+#nortimess {
     font-size: 20px;
     float: right;
 }
-#count{
+
+#count {
     float: right;
 }
 
-#thongBao{
+#notif {
     background: #f3d741;
-    padding: -7px;
-    /* margin: 10px; */
+    padding: 7px;
+    margin-top: 0;
     height: auto;
     width: auto;
-    /* padding-left: 5px; */
-    /* padding-bottom: 9px; */
     display: none;
-    /* padding-top: 5px; */
     color: red;
 }

@@ -1,23 +1,29 @@
-const buttons = document.getElementsByClassName('addBtn');
+const btn = document.getElementsByClassName('addBtn');
+console.log(btn.length);
 const items = []
 
+
 function addItem() {
+    let v = (event.target.offsetParent.children[1].innerText);
+    let num = parseInt(v.match(/\d+/g));
     let item = {
         image: event.target.offsetParent.previousElementSibling.children[1].src,
         name: event.target.offsetParent.firstElementChild.innerText,
-        price: event.target.offsetParent.children[1].innerText,
-        total: parseInt(event.target.offsetParent.children[1].innerText),
+        price: num,
+        total: parseInt(num),
         quantity: 1
     }
     itemToLocalStore(item)
     window.alert("Your product has been added to your cart!");
 }
+var count = 1;
 
 function itemToLocalStore(item) {
+    let startCode = "cartItem";
     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
     if (itemInCart === null) {
         items.push(item)
-        localStorage.setItem('cartItem', JSON.stringify(items))
+        localStorage.setItem(startCode + count.toString(), JSON.stringify(items))
     } else {
         itemInCart.forEach(product => {
             if (item.name == product.name) {
@@ -33,9 +39,19 @@ function itemToLocalStore(item) {
     window.location.reload()
 }
 
+// function removeItem() {
+//     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
+//     console.log(event.target.offsetParent.children[1]);
+//     itemInCart.forEach(productg => {});
+
+// }
+
+// removeItem();
+
 function displayCart() {
     let summary = '';
     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
+    console.log(itemInCart);
     itemInCart.forEach(product => {
         summary += `
     <div class="proInfo">
@@ -43,13 +59,13 @@ function displayCart() {
             <img class="pro-img" src="${product.image}">
             <p>${product.name}</p>
         </div>
-        <div id="price" class="price">$${product.price}</div>
+        <div id="price" class="price"><p>$${product.price}</p></div>
         <div class="quantity">${product.quantity}</div>
         <div class="subtotal">$${product.total}</div>
+        <div class="removeBtn"><button type="button">Remove</button></div>
     </div>`
-
     });
-    document.querySelector('.proInfo').innerHTML = summary;
+    document.querySelector('.pro-info').innerHTML = summary;
 }
 displayCart();
 
@@ -76,7 +92,7 @@ function addCoupon() {
         discountAmount = beforeDiscount * discount;
         finalTotal = beforeDiscount - discountAmount;
         document.querySelector('.payment section:nth-child(2) p').textContent = '- $' + discountAmount;
-        document.querySelector('.payment section:last-child p').textContent = '$' + finalTotal;
+        document.querySelector('.payment section:last-of-type p').textContent = '$' + finalTotal;
         document.getElementById('correct-Msg').innerHTML = "Coupon applied!";
         document.getElementById('error-Msg').innerHTML = "";
         return true;
@@ -86,13 +102,13 @@ function addCoupon() {
         discountAmount = beforeDiscount * discount;
         finalTotal = beforeDiscount - discountAmount;
         document.querySelector('.payment section:nth-child(2) p').textContent = '- $' + discountAmount;
-        document.querySelector('.payment section:last-child p').textContent = '$' + finalTotal;
+        document.querySelector('.payment section:last-of-type p').textContent = '$' + finalTotal;
         document.getElementById('correct-Msg').innerHTML = "Coupon applied!";
         document.getElementById('error-Msg').innerHTML = "";
         return true;
     } else {
         finalTotal = subtotal;
-        document.querySelector('.payment section:nth-child(2) p').textContent = '$0';
+        document.querySelector('.payment section:last-of-type p').textContent = '$' + finalTotal;
         document.getElementById('error-Msg').innerHTML = "Invalid coupon!";
         document.getElementById('correct-Msg').innerHTML = "";
         return false;
