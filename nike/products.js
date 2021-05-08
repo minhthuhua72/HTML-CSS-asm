@@ -1,6 +1,5 @@
 const items = []
 
-
 function addItem() {
     let v = (event.target.offsetParent.children[1].innerText);
     let num = parseInt(v.match(/\d+/g));
@@ -37,15 +36,6 @@ function itemToLocalStore(item) {
     window.location.reload();
 }
 
-// function removeItem() {
-//     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
-//     console.log(event.target.offsetParent.children[1]);
-//     itemInCart.forEach(productg => {});
-
-// }
-
-// removeItem();
-
 function displayCart() {
     let summary = '';
     let itemInCart = JSON.parse(localStorage.getItem('cartItem'))
@@ -60,10 +50,9 @@ function displayCart() {
         <div id="price" class="price"><p>$${product.price}</p></div>
         <div class="quantity">${product.quantity}</div>
         <div class="subtotal">$${product.total}</div>
-        <div class="removeBtn"><button type="button">Remove</button></div>
     </div>`
     });
-    document.querySelector('.pro-info').innerHTML = summary;
+    document.querySelector('.dispPro').innerHTML = summary;
 }
 displayCart();
 
@@ -75,7 +64,6 @@ function subtotal() {
         subtotal = product.total += subtotal;
         dispSubtotal = '$' + subtotal;
     });
-
     document.querySelector('.payment p').textContent = dispSubtotal;
 }
 subtotal();
@@ -85,7 +73,13 @@ function addCoupon() {
     let coupon20 = 'COSC2430-HD';
     let coupon10 = 'COSC2430-DI';
     let input = document.getElementById('discount').value;
-    if (input === coupon20) {
+    if (input == "") {
+        finalTotal = subtotal;
+        document.querySelector('.payment section:last-of-type p').textContent = '$' + finalTotal;
+        document.getElementById('error-Msg').innerHTML = "";
+        document.getElementById('correct-Msg').innerHTML = "";
+        return true;
+    } else if (input === coupon20) {
         beforeDiscount = subtotal;
         discount = 0.2;
         discountAmount = beforeDiscount * discount;
