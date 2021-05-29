@@ -33,15 +33,18 @@ main>p {
 }
 
 .category-select {
-    display: block;
-    float: left;
-    height: 20px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-bottom: 80px;
 }
 
+.category-select form {
+    font-family: "Roboto", sans-serif;
+}
+
 #store-cate {
-    width: 100%;
+    width: 85%;
     border-radius: 9px 9px 9px 9px;
     border: 2px solid #bfbfbf;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -49,7 +52,7 @@ main>p {
     font-size: 18px;
     padding-left: 50px;
     color: #000;
-
+    cursor: pointer;
 }
 
 #store-cate option {
@@ -58,6 +61,24 @@ main>p {
 
 #store-cate option[value="choice"] {
     color: #bfbfbf;
+}
+
+.category-select input {
+    padding: 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    width: auto;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.category-select input:hover {
+    background-color: rgb(2, 95, 142);
+    color: white;
+    letter-spacing: 1px;
 }
 
 .stores-list-cate {
