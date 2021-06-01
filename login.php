@@ -1,5 +1,6 @@
-<?php 
-    include "deleteInstall.php";
+<?php
+    session_start();
+    // include "deleteInstall.php";
     $nortification1 = '';
     $check = true;
     // Check the will the user submit data
@@ -16,7 +17,8 @@
             {
                 $nortification1 .= '<p style = "color: red; text-align: center;">Login successfully</p>';
                 $check = false;
-                break;
+                $_SESSION["logged-in"] = $_POST["mail"];
+                break;                
             }
         }
         // Get data from csv for checking admin user
@@ -38,6 +40,7 @@
         fclose($file_open);
         fclose($file_open2);
     }
+    
 ?>
 
 
