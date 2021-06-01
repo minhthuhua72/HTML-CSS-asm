@@ -123,7 +123,7 @@
             if ($value2['cateName'] === $selected) {
                 echo '<div class="store-browse">
                         <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="nike/imgs/logo.png" alt="store-logo"></a>
+                            <a href="nike/nike.php?id='.$value2["storeID"].'"><img class="storeLogos" src="nike/imgs/logo.png" alt="store-logo"></a>
                             <a href="nike/nike.html">
                                 <h3>'.$value2['storeName'].'</h3>
                             </a>
@@ -134,7 +134,7 @@
             if (isset($selected) == false) {
                 echo'<div class="store-browse">
                         <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="nike/imgs/logo.png" alt="store-logo"></a>
+                            <a href="nike/nike.php?id='.$value2["storeID"].'"><img class="storeLogos" src="nike/imgs/logo.png" alt="store-logo"></a>
                             <a href="nike/nike.html">
                                 <h3>'.$value2['storeName'].'</h3>
                             </a>
