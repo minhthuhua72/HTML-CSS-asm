@@ -33,14 +33,16 @@ main>p {
 }
 
 .category-select {
-    display: block;
-    float: left;
-    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
     width: 100%;
     margin-bottom: 80px;
+    margin-top: 50px;
 }
 
-#store-cate {
+#category {
     width: 100%;
     border-radius: 9px 9px 9px 9px;
     border: 2px solid #bfbfbf;
@@ -49,27 +51,22 @@ main>p {
     font-size: 18px;
     padding-left: 50px;
     color: #000;
-
 }
 
-#store-cate option {
+#category option {
     font-size: 18px;
 }
 
-#store-cate option[value="choice"] {
+#category option[value="choice"] {
     color: #bfbfbf;
 }
 
 .productLST {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     flex-wrap: wrap;
-}
+    align-items: center;
+    justify-content: space-evenly;
 
-.productLST>div {
-    margin: 10px;
 }
 
 .nikePro {
@@ -77,10 +74,6 @@ main>p {
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-}
-
-.nikePro:last-child {
-    padding-top: 20px;
 }
 
 .pro-img {
@@ -123,7 +116,7 @@ main>p {
 
 .description p {
     padding: 10px 0;
-    text-align: justify;
+    text-align: left;
     margin: 0;
 }
 
@@ -161,4 +154,30 @@ main>p {
 .date {
     color: #666;
     font-weight: bold;
+}
+
+#storeID {
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+    color: #ff6600;
+}
+
+.pagination .currentPage {
+    text-decoration: underline;
+    color: #ff6600;
 }

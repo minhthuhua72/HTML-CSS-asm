@@ -43,8 +43,8 @@ main>p {
     font-family: "Roboto", sans-serif;
 }
 
-#store-cate {
-    width: 85%;
+#category {
+    width: 100%;
     border-radius: 9px 9px 9px 9px;
     border: 2px solid #bfbfbf;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -55,51 +55,26 @@ main>p {
     cursor: pointer;
 }
 
-#store-cate option {
+#category option {
     font-size: 18px;
 }
 
-#store-cate option[value="choice"] {
+#category option[value="choice"] {
     color: #bfbfbf;
-}
-
-.category-select input {
-    padding: 15px;
-    margin-left: 5px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    width: auto;
-    font-size: 16px;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-.category-select input:hover {
-    background-color: rgb(2, 95, 142);
-    color: white;
-    letter-spacing: 1px;
 }
 
 .stores-list-cate {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 h2 {
     font-family: "Archivo Bold", sans-serif;
     letter-spacing: 2px;
-}
-
-.store-browse {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 
 .storeLogos {
@@ -110,6 +85,8 @@ h2 {
 }
 
 .stores-lst {
+    display: flex;
+    flex-direction: column;
     width: 250px;
     height: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
@@ -120,6 +97,12 @@ h2 {
 
 .stores-lst a {
     font-family: "Roboto", sans-serif;
+}
+
+.store-browse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {

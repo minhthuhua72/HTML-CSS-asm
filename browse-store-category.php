@@ -31,16 +31,16 @@
                 <i class="fa fa-times" id="close"></i>
             </label>
             <ul>
-                <li><a class="underline" href="index.html">Home</a></li>
+                <li><a class="underline" href="index.php">Home</a></li>
                 <li><a class="underline" href="aboutus.css">About Us</a></li>
                 <li class="browse">
                     <span id="browse-text"><a href="#" id="browse">Browse</a></span>
                     <ul class="browse-dropdown">
                         <li class="browse-dropdown-info">
-                            <a class="browse-links" href="browse-store-name.html">Browse Stores by Name</a>
+                            <a class="browse-links" href="browse-store-name.php">Browse Stores by Name</a>
                         </li>
                         <li class="browse-dropdown-info">
-                            <a class="browse-links" href="browse-store-category.html">Browse Stores by
+                            <a class="browse-links" href="browse-store-category.php">Browse Stores by
                                 Category</a>
                         </li>
                     </ul>
@@ -56,113 +56,93 @@
     <!--Main content starts here-->
     <main>
         <h1><span class="vline">OUR STORES</span></h1>
-
         <p>Browse by Category</p>
-        <div class="category-select" required>
-            <form method="POST">
-                <select name="category" id="store-cate">
-                    <option value="choice">Choose a Category</option>
-                    <option value="accessories">Fashion Accessories</option>
-                    <option value="unisex">Unisex Apparel</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="submit" value="Search">
-            </form>
+
+        <div class="category-select">
+            <select name="category" id="category">
+                <option value="choice" disabled selected>Choose a Category</option>
+            <?php 
+                // Open categories csv file
+                if (($csv = fopen("data/categories.csv", "r")) !== FALSE) {
+                    fgetcsv($csv);
+                    while (($line = fgetcsv($csv, 1000, ",")) !== FALSE) {
+                        $name = $line[1];
+                        $cateInfo = [
+                            'cateID' => $line[0],
+                            'cateName' => $line[1],
+                        ];
+                        $_SESSION['categories'][] = $cateInfo;    
+            ?>
+                    <option value="<?php echo $name?>"><?php echo $name ?></option>
+            <?php        
+                    }
+                    fclose($csv);
+                }
+            ?>
+            </select>
         </div>
-        <?php 
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    $selectedOption = $_POST['category'];
-    switch ($selectedOption) {
-                case 'accessories':
-                    echo ' <div class="stores-list-cate">
-                    <div class="category">
-                        <h2>Fashion Accessories</h2>
-                    </div>
-                    <div class="store-browse">
+
+        <?php
+        // Open stores csv file
+        if (($csv2 = fopen("data/stores.csv", "r")) !== FALSE) {
+            fgetcsv($csv2);
+            while (($line2 = fgetcsv($csv2, 1000, ",")) !== FALSE) {
+                $storeInfo = [
+                    'storeID' => $line2[0],
+                    'storeName' => $line2[1],
+                    'cateID' => $line2[2],
+                    'storeTime' => $line2[3],
+                    'storeFeatured' =>  $line2[4]
+                ];
+                $_SESSION['stores'][] = $storeInfo;    
+            }
+            fclose($csv2);
+        }
+
+        //Add category names to store info
+        foreach ($_SESSION['categories'] as $key => $value) {
+            for ($i = 0; $i < count($_SESSION['stores']); $i++) {
+                if ($_SESSION['stores'][$i]['cateID'] == $value['cateID']) {
+                    $_SESSION['stores'][$i]['cateName'] = $value['cateName'];
+                }
+            }
+        }
+        if (isset($_GET['category'])) {
+                $selected = $_GET['category'];
+        } else {
+            $selected = null;
+        }
+        ?>
+        <div class="stores-list-cate">
+            <div class="category">
+                <h2><?= $selected?></h2>
+            </div>
+        <?php
+        foreach ($_SESSION['stores'] as $key2 => $value2) {
+            if ($value2['cateName'] === $selected) {
+                echo '<div class="store-browse">
                         <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/charles.png" alt="store-logo"></a>
+                            <a href="nike/nike.html"><img class="storeLogos" src="nike/imgs/logo.png" alt="store-logo"></a>
                             <a href="nike/nike.html">
-                                <h3>Charles & Keith</h3>
+                                <h3>'.$value2['storeName'].'</h3>
                             </a>
-                        </div>
-                        <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/pandora.jpg" alt="store-logo"></a>
-                            <a href="nike/nike.html">
-                                <h3>Pandora</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>';
-                    break;
-                case 'unisex':
-                    echo ' <div class="stores-list-cate">
-                    <div class="category">
-                        <h2>Unisex Apparel</h2>
-                    </div>
-                    <div class="store-browse">
-                        <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/nike.png" alt="store-logo"></a>
-                            <a href="nike/nike.html">
-                                <h3>Nike</h3>
-                            </a>
-                        </div>
-                        <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/tommy.jpg" alt="store-logo"></a>
-                            <a href="nike/nike.html">
-                                <h3>Tommy Hilfiger</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>';
-                    break;
-                    case 'other':
-                        echo ' ';
-                        break;    
-                default:
-                    echo ' <div class="stores-list-cate">
-                    <div class="category">
-                        <h2>Fashion Accessories</h2>
-                    </div>
-                    <div class="store-browse">
-                        <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/charles.png" alt="store-logo"></a>
-                            <a href="nike/nike.html">
-                                <h3>Charles & Keith</h3>
-                            </a>
-                        </div>
-                        <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/pandora.jpg" alt="store-logo"></a>
-                            <a href="nike/nike.html">
-                                <h3>Pandora</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="stores-list-cate">
-                    <div class="category">
-                        <h2>Unisex Apparel</h2>
-                    </div>
-                    <div class="store-browse">
-                        <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/nike.png" alt="store-logo"></a>
-                            <a href="nike/nike.html">
-                                <h3>Nike</h3>
-                            </a>
-                        </div>
-                        <div class="stores-lst">
-                            <a href="nike/nike.html"><img class="storeLogos" src="imgs/tommy.jpg" alt="store-logo"></a>
-                            <a href="nike/nike.html">
-                                <h3>Tommy Hilfiger</h3>
-                            </a>
-                        </div>
                     </div>
                 </div>';
-                    break;
-    }
-} ?>
+            }
     
+            if (isset($selected) == false) {
+                echo'<div class="store-browse">
+                        <div class="stores-lst">
+                            <a href="nike/nike.html"><img class="storeLogos" src="nike/imgs/logo.png" alt="store-logo"></a>
+                            <a href="nike/nike.html">
+                                <h3>'.$value2['storeName'].'</h3>
+                            </a>
+                        </div>
+                    </div>';
+            }
+        }
+        ?>
+        </div>  
     </main>
     <div class="cookie-container">
         <p>
@@ -193,9 +173,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         </div>
     </footer>
     <script src="ck.js"></script>
+    <script> 
+    let selectCate = document.querySelector("#category");
+    selectCate.addEventListener("change", function(){
+        let selected = selectCate.value;
+        console.log(selected);
+        location.href = "browse-store-category.php?category=" + selected;
+    });
+    </script>
 </body>
+
 
 </html>
 
+<?php 
 
-/
+
+
+
+
+
+
+

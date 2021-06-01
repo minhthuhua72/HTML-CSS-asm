@@ -72,11 +72,18 @@ main>p {
     display: none;
 }
 
-.store-list {
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.storeList {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 20px 0;
+    width: 100%;
 }
 
 .stores {
@@ -136,7 +143,6 @@ main>p {
 }
 
 .store-logo {
-
     display: flex;
     justify-content: flex-end;
     width: 30%;
@@ -144,17 +150,21 @@ main>p {
     margin-right: 20px;
 }
 
-.store-logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+.sLogo {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    margin: 20px;
 }
 
 .store-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     line-height: 5px;
-    width: 70%;
+    width: fit-content;
+    margin-top: 30px;
 }
 
 .store-info p {
@@ -182,7 +192,21 @@ main>p {
     color: #fff;
 }
 
-@media screen and (max-width:1372px) {
+.category {
+    background: rgb(2, 95, 142);
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    height: fit-content;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media screen and (max-width:900) {
     .alpha-links ul li {
         display: none;
     }

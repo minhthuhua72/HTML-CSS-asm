@@ -56,18 +56,15 @@
     <!--Main content starts here-->
     <main>
         <h1><span class="vline">OUR STORES</span></h1>
-
         <p>Browse by Category</p>
-        <div class="category-select" required>
-            <form action="browse-store-category.php" method="POST">
-                <select name="category" id="store-cate">
-                    <option value="choice">Choose a Category</option>
-                    <option value="accessories">Fashion Accessories</option>
-                    <option value="unisex">Unisex Apparel</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="submit" value="Search">
-            </form>
+
+        <div class="category-select">
+            <select name="category" id="category">
+                <option value="choice">Choose a Category</option>
+                <option value="accessories">Fashion Accessories</option>
+                <option value="unisex">Unisex Apparel</option>
+                <option value="other">Other</option>
+            </select>
         </div>
 
         <div class="stores-list-cate">

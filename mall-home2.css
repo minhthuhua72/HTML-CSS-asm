@@ -1,0 +1,196 @@
+#home {
+    color: #FAB325;
+}
+
+.mall-photo {
+    background-image: url(imgs/robin-spielmann-uzjd9nNtqGg-unsplash.jpg);
+    background-size: cover;
+    height: 630px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 89px;
+    width: 100%;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 70%;
+    height: 400px;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#learnmore {
+    background: none;
+    border: 2px solid #fff;
+    height: 50px;
+    width: 300px;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 16px;
+}
+
+#learnmore>a {
+    font-family: "Archivo Bold", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/*Featured & new stores section starts*/
+h2 {
+    text-align: center;
+    font-family: "Archivo Bold", sans-serif;
+    font-size: 30px;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.vline {
+    border-bottom: 5px solid #bfbfbf;
+    padding-bottom: 5px;
+}
+
+.mall-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: scroll;
+    overflow-y: hidden;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    scroll-margin-top: 140px;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+::-webkit-scrollbar {
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#first-mall-section {
+    padding-bottom: 0;
+    margin-top: 80px;
+}
+
+.store-sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.storeLists,
+.newProduct-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.store-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.store-logo {
+    width: 130px;
+    height: 130px;
+    align-items: center;
+    object-fit: contain;
+    display: block;
+}
+
+.store-info a,
+.store-info {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #666;
+    margin-top: 30px;
+}
+
+.store-info a .name:hover,
+.store-info a .price:hover,
+.store-info a .store:hover {
+    color: rgb(2, 95, 142);
+}
+
+
+.store-info a .price {
+    color: black;
+    font-size: 25px;
+    margin: 0;
+}
+
+@media screen and (max-width:1024px) {
+    .store-sections {
+        display: flex;
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .product-sections {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .product-sections .productInfo {
+        margin-top: -70px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .mall-photo .slogan h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .mall-photo .slogan h1 {
+        font-size: 30px;
+    }
+}
