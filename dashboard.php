@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
 <header>
 
-		<div class="logo">Xero<span>Source</span></div>
+	<div class="logo">Xero<span>Source</span></div>
 	</header>
 
 	<div class="nav-btn">Menu</div>
 	<div class="container">
-		
 		<div class="sidebar">
 			<nav>
 				<a href="#">Admin<span>Admin</span></a>
@@ -25,8 +25,6 @@
 					<li><a href="#tos">ToS</a></li>
 					<li><a href="#privacy">Privacy Policy</a></li>
 					<li><a href="#aboutUs">About Us</a></li>
-                    
-
 				</ul>
 			</nav>
 		</div>
@@ -34,11 +32,9 @@
 		<div class="main-content">
 			<h1>Dashboard</h1>
 			<p>Here you can stuff!</p>
-			
 			<div class="panel-wrapper">
-				<div class="panel-head">
-					News
-				</div>
+                <!--News-->
+				<h4 class="panel-head" id="h1">News</h4>	
 				<div class="panel-body">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam fugiat culpa quia possimus molestiae id sapiente ad eveniet, aliquid, eum sint fuga eius, ratione suscipit ut minus voluptates dicta nesciunt. Totam fugiat culpa quia possimus molestiae id sapiente ad eveniet, aliquid, eum sint fuga eius, ratione suscipit ut minus voluptates dicta nesciunt.
 				</div>
@@ -47,231 +43,23 @@
         </div>
         <div id="copy" class="main-content">
             <div class="panel-wrapper">
-				<div class="panel-head">
-					Copyright
-				</div>
-				<div class="panel-body">
-                <form  method = "post" >
-                <?php
-                    if(isset($_POST['submitData'])){
-                        $content1 = $_POST['text'];
-                        $path = "content.txt";
-                        file_put_contents($path,$content1);
-                    }
-                    ?>
-                    Section: <input name="section" style="font-size:15px; padding:10px" type="text" value ="Why why why are u" disabled>
-                    <br>
-                    
-                    <?php
-                    $path = 'content.txt';
-                    $file= file_get_contents($path);
-                    $content = explode(" - ", $file);
-                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
-                        ;
-                    ?>
-                    <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
-                    <br>
-                    
-                    <p style="cursor: pointer;
-                            border: solid 2px black;
-                            margin-right: 1055px;
-                            padding-left: 10px;
-                            color: blue;" 
-                         id="buttonEdit" class="edit" >Edit
-                    </p>
-                    <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
-                    
-                </form>
-                
-                
-				</div>
-
-			</div>
-            <div class="panel-wrapper">
-				<div class="panel-head">
-                    Copyright
-				</div>
-				<div class="panel-body">
-                <form  method = "post" >
-                <?php
-                    if(isset($_POST['submitData'])){
-                        $content1 = $_POST['text'];
-                        $path = "content.txt";
-                        file_put_contents($path,$content1);
-                    }
-                    ?>
-                    Section: <input name="section"  style="font-size:15px; padding:10px" type="text" value ="Do do do you need" disabled>
-                    <br>
-                    
-                    <?php
-                    $path = 'content.txt';
-                    $file= file_get_contents($path);
-                    $content = explode(" - ", $file);
-                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
-                        ;
-                    ?>
-                    <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
-                    <br>
-                    
-                    <p style="cursor: pointer;
-                            border: solid 2px black;
-                            margin-right: 1055px;
-                            padding-left: 10px;
-                            color: blue;" 
-                         id="buttonEdit" class="edit" >Edit
-                    </p>
-                    <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
-                    
-                </form>
-                
-                
-				</div>
-
-			</div>
-            
-        </div>
-        <div id="tos" class="main-content">
-            <div class="panel-wrapper">
-				<div class="panel-head">
-					Term of Service
-				</div>
-				<div class="panel-body">
-                <form  method = "post" >
-                <?php
-                    if(isset($_POST['submitData'])){
-                        $content1 = $_POST['text'];
-                        $path = "content.txt";
-                        file_put_contents($path,$content1);
-                    }
-                    ?>
-                    Section: <input name="section"  style="font-size:15px; padding:10px" type="text" value ="Why why why are u" disabled>
-                    <br>
-                    
-                    <?php
-                    $path = 'content.txt';
-                    $file= file_get_contents($path);
-                    $content = explode(" - ", $file);
-                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
-                        ;
-                    ?>
-                    <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
-                    <br>
-                    
-                    <p style="cursor: pointer;
-                            border: solid 2px black;
-                            margin-right: 1055px;
-                            padding-left: 10px;
-                            color: blue;" 
-                         id="buttonEdit" class="edit"  >Edit
-                    </p>
-                    <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
-                    
-                </form>
-                
-                
-				</div>
-
-			</div>
-            <div class="panel-wrapper">
-				<div class="panel-head">
-                Term of Service
-				</div>
-				<div class="panel-body">
-                <form  method = "post" >
-                <?php
-                    if(isset($_POST['submitData'])){
-                        $content1 = $_POST['text'];
-                        $path = "content.txt";
-                        file_put_contents($path,$content1);
-                    }
-                    ?>
-                    Section: <input name="section"  style="font-size:15px; padding:10px" type="text" value ="Do do do you need" disabled>
-                    <br>
-                    
-                    <?php
-                    $path = 'content.txt';
-                    $file= file_get_contents($path);
-                    $content = explode(" - ", $file);
-                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
-                        ;
-                    ?>
-                    <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
-                    <br>
-                    
-                    <p style="cursor: pointer;
-                            border: solid 2px black;
-                            margin-right: 1055px;
-                            padding-left: 10px;
-                            color: blue;" 
-                         id="buttonEdit" class="edit"  >Edit
-                    </p>
-                    <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
-                    
-                </form>
-                
-                
-				</div>
-
-			</div>
-            
-        </div>
-        <div id="privacy" class="main-content">
-            <div class="panel-wrapper">
-				<div class="panel-head">
-					Privacy Police
-				</div>
-				<div class="panel-body">
-                <form  method = "post" >
-                <?php
-                    if(isset($_POST['submitData'])){
-                        $content1 = $_POST['text'];
-                        $path = "content.txt";
-                        file_put_contents($path,$content1);
-                    }
-                    ?>
-                    Section: <input name="section"  style="font-size:15px; padding:10px" type="text" value ="Why why why are u" disabled>
-                    <br>
-                    
-                    <?php
-                    $path = 'content.txt';
-                    $file= file_get_contents($path);
-                    $content = explode(" - ", $file);
-                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
-                        ;
-                    ?>
-                    <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
-                    <br>
-                    
-                    <p style="cursor: pointer;
-                            border: solid 2px black;
-                            margin-right: 1055px;
-                            padding-left: 10px;
-                            color: blue;" 
-                         id="buttonEdit" class="edit"  >Edit
-                    </p>
-                    <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
-                    
-                </form>
-                
-                
-				</div>
-
-			</div>
-            <div class="panel-wrapper">
-				<div class="panel-head">
-					Privacy Police
-				</div>
+                <h4 class="panel-head">Copyright</h4>	
 				<div class="panel-body">
                     <form  method = "post" >
-                        <?php
-                            if(isset($_POST['submitData'])){
-                                $content1 = $_POST['text'];
-                                $path = "content.txt";
-                                file_put_contents($path,$content1);
-                            }
+                    <?php
+                        if(isset($_POST['submitData'])){
+                            $content1 = $_POST['text'];
+                            $path = "content.txt";
+                            file_put_contents($path,$content1);
+                        }
                         ?>
-                        Section: <input name="section"  style="font-size:15px; padding:10px" type="text" value ="Do do do you need" disabled>
-                        <br>
+                        <label for="sect">Section:</label>
+                        <select name="section" id="sect" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
                         
                         <?php
                         $path = 'content.txt';
@@ -280,275 +68,262 @@
                         echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
                             ;
                         ?>
-                        <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
-                        <br>
-                        
-                        <p style="cursor: pointer;
-                                border: solid 2px black;
-                                margin-right: 1055px;
-                                padding-left: 10px;
-                                color: blue;" 
-                            id="buttonEdit1" class="edit"  >Edit
-                        </p>
-                        <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
-                        
+                        <textarea name="text" class="text" cols="100" rows="10">Edited content</textarea>
+                        <div class="btns">
+                            <p id="buttonEdit0" class="edit">Edit</p>
+                            <butto id="submitData0" name="submitData">Update</button>
+                        </div>
                     </form>
                 
                 
 				</div>
 
 			</div>
-            
+        </div>
+        <div id="tos" class="main-content">
+            <div class="panel-wrapper">
+                <h4 class="panel-head">Term of Service</h4>	
+				<div class="panel-body">
+                    <form  method = "post" >
+                    <?php
+                        if(isset($_POST['submitData'])){
+                            $content1 = $_POST['text'];
+                            $path = "content.txt";
+                            file_put_contents($path,$content1);
+                        }
+                        ?>
+                        <label for="sect">Section:</label>
+                        <select name="section" id="sect" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        
+                        <?php
+                        $path = 'content.txt';
+                        $file= file_get_contents($path);
+                        $content = explode(" - ", $file);
+                        echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
+                            ;
+                        ?>
+                        <textarea name="text" class="text" cols="100" rows="10">Edited content</textarea>
+                        <div class="btns">
+                            <p id="buttonEdit1" class="edit">Edit</p>
+                            <butto id="submitData1" name="submitData">Update</button>
+                        </div>
+                    </form>
+                
+                
+				</div>
+
+			</div>
+        </div>
+        <div id="privacy" class="main-content">
+            <div class="panel-wrapper">
+                <h4 class="panel-head">Privacy Policy</h4>	
+				<div class="panel-body">
+                    <form  method = "post" >
+                    <?php
+                        if(isset($_POST['submitData'])){
+                            $content1 = $_POST['text'];
+                            $path = "content.txt";
+                            file_put_contents($path,$content1);
+                        }
+                        ?>
+                        <label for="sect">Section:</label>
+                        <select name="section" id="sect" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        
+                        <?php
+                        $path = 'content.txt';
+                        $file= file_get_contents($path);
+                        $content = explode(" - ", $file);
+                        echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
+                            ;
+                        ?>
+                        <textarea name="text" class="text" cols="100" rows="10">Edited content</textarea>
+                        <div class="btns">
+                            <p id="buttonEdit" class="edit">Edit</p>
+                            <butto id="submitData" name="submitData">Update</button>
+                        </div>
+                    </form>
+                
+                
+				</div>
+
+			</div>
         </div>
         <div id="aboutUs" class="main-content">
+            <!--First member-->
             <div class="panel-wrapper" >
-                <div class="panel-head">
-                    Hứa Minh Thư
-                </div>
+                <h4 class="panel-head">Hua Minh Thu</h4>
                 <div class="panel-body" >
-                        <form  method=POST enctype="multipart/form-data" >
-                            Choose file: <input type="file" name="file"/><br>
-                            <input type="submit" value="Uploading" name="ok"/>
-                            <?php
-                            if(isset($_POST["ok"])) //kiem tra xem nguoi xu dung da bam vao nut "tai len" hay chua
-                            {
-                            if($_FILES["file"]["name"]!=NULL)
-                            {
-
-                            if($_FILES["file"]["type"]=="image/jpeg"
-                            ||$_FILES["file"]["type"]=="image/png"
-                            ||$_FILES["file"]["type"]=="image/gif"
-                            )
-                            {
-                            if($_FILES["file"]["size"]>1048576)
-                            {
-                            echo "File is too heavy";
+                    <form  method=POST enctype="multipart/form-data" >
+                        <label for="file" >Choose file: </label>
+                        <input id="file" type="file" name="file"/><br>
+                        <input class="submitBtn" type="submit" value="Upload" name="upload"/>
+                        <?php
+                        if(isset($_POST["ok"])) {
+                            if($_FILES["file"]["name"] != NULL) {
+                                if($_FILES["file"]["type"] == "image/jpeg" || $_FILES["file"]["type"]=="image/png" || $_FILES["file"]["type"]=="image/gif") {
+                                    if($_FILES["file"]["size"]>1048576) {
+                                        echo "File is too heavy";
+                                    } elseif (file_exists("" . $_FILES["file"]["name"])) {
+                                        echo $_FILES["file"]["name"]." File already exists. ";
+                                    } else {
+                                    $path = ""; 
+                                    $tmp_name = $_FILES['file']['tmp_name'];
+                                    $name = $_FILES['file']['name'];
+                                    $type = $_FILES['file']['type']; 
+                                    $size = $_FILES['file']['size']; 
+                                    // Upload file
+                                    move_uploaded_file($tmp_name,$path.$name);
+                                    echo "File uploaded! <br />";
+                                    echo "File name: ".$name."<br />";
+                                    echo "File type: ".$type."<br />";
+                                    echo "File size : ".$size;
+                                    } 
+                                } else {
+                                    echo "Invalid file";
+                                }
+                            } else {
+                                echo "Please select file";
                             }
-
-                            // kiem tra su ton tai cua file
-                            elseif (file_exists("" . $_FILES["file"]["name"])) 
-                            {
-                            echo $_FILES["file"]["name"]." File already exists. ";
-                            }
-
-                            else{
-
-                            $path = ""; // file luu vào thu muc chua file upload
-                            $tmp_name = $_FILES['file']['tmp_name'];
-                            $name = $_FILES['file']['name'];
-                            $type = $_FILES['file']['type']; 
-                            $size = $_FILES['file']['size']; 
-                            // Upload file
-                            move_uploaded_file($tmp_name,$path.$name);
-                            echo "File uploaded! <br />";
-                            echo "Tên file : ".$name."<br />";
-                            echo "Kieu file : ".$type."<br />";
-                            echo "File size : ".$size;
-                            }
-                            }
-                            else {
-                            echo "Invalid file";
-                            }
-                            }
-                            else 
-                            {
-                            echo "Please select file";
-                            }
-                            }
-
-                            ?>
-                        </form>
-            </div>
-            
-            </div>
-            <div class="panel-wrapper" >
-                    <div class="panel-head">
-                        Hứa Minh Thư
-                    </div>
-                    <div class="panel-body" >
-                        <form  method=POST enctype="multipart/form-data" >
-                            Choose file: <input type="file" name="file"/><br>
-                            <input type="submit" value="Uploading" name="ok"/>
-                            <?php
-                            if(isset($_POST["ok"])) //kiem tra xem nguoi xu dung da bam vao nut "tai len" hay chua
-                            {
-                            if($_FILES["file"]["name"]!=NULL)
-                            {
-
-                            if($_FILES["file"]["type"]=="image/jpeg"
-                            ||$_FILES["file"]["type"]=="image/png"
-                            ||$_FILES["file"]["type"]=="image/gif"
-                            )
-                            {
-                            if($_FILES["file"]["size"]>1048576)
-                            {
-                            echo "File is too heavy";
-                            }
-
-                            // kiem tra su ton tai cua file
-                            elseif (file_exists("" . $_FILES["file"]["name"])) 
-                            {
-                            echo $_FILES["file"]["name"]." File already exists. ";
-                            }
-
-                            else{
-
-                            $path = ""; // file luu vào thu muc chua file upload
-                            $tmp_name = $_FILES['file']['tmp_name'];
-                            $name = $_FILES['file']['name'];
-                            $type = $_FILES['file']['type']; 
-                            $size = $_FILES['file']['size']; 
-                            // Upload file
-                            move_uploaded_file($tmp_name,$path.$name);
-                            echo "File uploaded! <br />";
-                            echo "Tên file : ".$name."<br />";
-                            echo "Kieu file : ".$type."<br />";
-                            echo "File size : ".$size;
-                            }
-                            }
-                            else {
-                            echo "Invalid file";
-                            }
-                            }
-                            else 
-                            {
-                            echo "Please select file";
-                            }
-                            }
-
-                            ?>
-                        </form>
+                        }
+                        ?>
+                    </form>
                 </div>
-            
             </div>
+
+            <!--Second member-->
             <div class="panel-wrapper" >
-                    <div class="panel-head">
-                        Hứa Minh Thư
-                    </div>
-                    <div class="panel-body" >
-                        <form  method=POST enctype="multipart/form-data" >
-                            Choose file: <input type="file" name="file"/><br>
-                            <input type="submit" value="Uploading" name="ok"/>
-                            <?php
-                            if(isset($_POST["ok"])) //kiem tra xem nguoi xu dung da bam vao nut "tai len" hay chua
-                            {
-                            if($_FILES["file"]["name"]!=NULL)
-                            {
-
-                            if($_FILES["file"]["type"]=="image/jpeg"
-                            ||$_FILES["file"]["type"]=="image/png"
-                            ||$_FILES["file"]["type"]=="image/gif"
-                            )
-                            {
-                            if($_FILES["file"]["size"]>1048576)
-                            {
-                            echo "File is too heavy";
+                <h4 class="panel-head">Hoang Ngoc Tuan</h4>
+                <div class="panel-body" >
+                    <form  method=POST enctype="multipart/form-data" >
+                        <label for="file">Choose file: </label>
+                        <input id="file" type="file" name="file"/><br>
+                        <input class="submitBtn" type="submit" value="Upload" name="upload"/>
+                        <?php
+                        if(isset($_POST["ok"])) {
+                            if($_FILES["file"]["name"] != NULL) {
+                                if($_FILES["file"]["type"] == "image/jpeg" || $_FILES["file"]["type"]=="image/png" || $_FILES["file"]["type"]=="image/gif") {
+                                    if($_FILES["file"]["size"]>1048576) {
+                                        echo "File is too heavy";
+                                    } elseif (file_exists("" . $_FILES["file"]["name"])) {
+                                        echo $_FILES["file"]["name"]." File already exists. ";
+                                    } else {
+                                    $path = ""; 
+                                    $tmp_name = $_FILES['file']['tmp_name'];
+                                    $name = $_FILES['file']['name'];
+                                    $type = $_FILES['file']['type']; 
+                                    $size = $_FILES['file']['size']; 
+                                    // Upload file
+                                    move_uploaded_file($tmp_name,$path.$name);
+                                    echo "File uploaded! <br />";
+                                    echo "File name: ".$name."<br />";
+                                    echo "File type: ".$type."<br />";
+                                    echo "File size : ".$size;
+                                    } 
+                                } else {
+                                    echo "Invalid file";
+                                }
+                            } else {
+                                echo "Please select file";
                             }
-
-                            // kiem tra su ton tai cua file
-                            elseif (file_exists("" . $_FILES["file"]["name"])) 
-                            {
-                            echo $_FILES["file"]["name"]." File already exists. ";
-                            }
-
-                            else{
-
-                            $path = ""; // file luu vào thu muc chua file upload
-                            $tmp_name = $_FILES['file']['tmp_name'];
-                            $name = $_FILES['file']['name'];
-                            $type = $_FILES['file']['type']; 
-                            $size = $_FILES['file']['size']; 
-                            // Upload file
-                            move_uploaded_file($tmp_name,$path.$name);
-                            echo "File uploaded! <br />";
-                            echo "Tên file : ".$name."<br />";
-                            echo "Kieu file : ".$type."<br />";
-                            echo "File size : ".$size;
-                            }
-                            }
-                            else {
-                            echo "Invalid file";
-                            }
-                            }
-                            else 
-                            {
-                            echo "Please select file";
-                            }
-                            }
-
-                            ?>
-                        </form>
+                        }
+                        ?>
+                    </form>
                 </div>
-            
             </div>
+
+            <!--Third member-->
             <div class="panel-wrapper" >
-                    <div class="panel-head">
-                        Hứa Minh Thư
-                    </div>
-                    <div class="panel-body" >
-                        <form  method=POST enctype="multipart/form-data" >
-                            Choose file: <input type="file" name="file"/><br>
-                            <input type="submit" value="Uploading" name="ok"/>
-                            <?php
-                            if(isset($_POST["ok"])) //kiem tra xem nguoi xu dung da bam vao nut "tai len" hay chua
-                            {
-                            if($_FILES["file"]["name"]!=NULL)
-                            {
-
-                            if($_FILES["file"]["type"]=="image/jpeg"
-                            ||$_FILES["file"]["type"]=="image/png"
-                            ||$_FILES["file"]["type"]=="image/gif"
-                            )
-                            {
-                            if($_FILES["file"]["size"]>1048576)
-                            {
-                            echo "File is too heavy";
+                <h4 class="panel-head">Nguyen Hoang Dung</h4>
+                <div class="panel-body" >
+                    <form  method=POST enctype="multipart/form-data" >
+                        <label for="file">Choose file: </label>
+                        <input id="file" type="file" name="file"/><br>
+                        <input class="submitBtn" type="submit" value="Upload" name="upload"/>
+                        <?php
+                        if(isset($_POST["ok"])) {
+                            if($_FILES["file"]["name"] != NULL) {
+                                if($_FILES["file"]["type"] == "image/jpeg" || $_FILES["file"]["type"]=="image/png" || $_FILES["file"]["type"]=="image/gif") {
+                                    if($_FILES["file"]["size"]>1048576) {
+                                        echo "File is too heavy";
+                                    } elseif (file_exists("" . $_FILES["file"]["name"])) {
+                                        echo $_FILES["file"]["name"]." File already exists. ";
+                                    } else {
+                                    $path = ""; 
+                                    $tmp_name = $_FILES['file']['tmp_name'];
+                                    $name = $_FILES['file']['name'];
+                                    $type = $_FILES['file']['type']; 
+                                    $size = $_FILES['file']['size']; 
+                                    // Upload file
+                                    move_uploaded_file($tmp_name,$path.$name);
+                                    echo "File uploaded! <br />";
+                                    echo "File name: ".$name."<br />";
+                                    echo "File type: ".$type."<br />";
+                                    echo "File size : ".$size;
+                                    } 
+                                } else {
+                                    echo "Invalid file";
+                                }
+                            } else {
+                                echo "Please select file";
                             }
-
-                            // kiem tra su ton tai cua file
-                            elseif (file_exists("" . $_FILES["file"]["name"])) 
-                            {
-                            echo $_FILES["file"]["name"]." File already exists. ";
-                            }
-
-                            else{
-
-                            $path = ""; // file luu vào thu muc chua file upload
-                            $tmp_name = $_FILES['file']['tmp_name'];
-                            $name = $_FILES['file']['name'];
-                            $type = $_FILES['file']['type']; 
-                            $size = $_FILES['file']['size']; 
-                            // Upload file
-                            move_uploaded_file($tmp_name,$path.$name);
-                            echo "File uploaded! <br />";
-                            echo "Tên file : ".$name."<br />";
-                            echo "Kieu file : ".$type."<br />";
-                            echo "File size : ".$size;
-                            }
-                            }
-                            else {
-                            echo "Invalid file";
-                            }
-                            }
-                            else 
-                            {
-                            echo "Please select file";
-                            }
-                            }
-
-                            ?>
-                        </form>
+                        }
+                        ?>
+                    </form>
                 </div>
-            
             </div>
-            
-            
-            
+
+             <!--Fourth member-->
+             <div class="panel-wrapper" >
+                <h4 class="panel-head">Phan Luu Thien Ngan</h4>
+                <div class="panel-body" >
+                    <form  method=POST enctype="multipart/form-data" >
+                        <label for="file">Choose file: </label>
+                        <input id="file" type="file" name="file"/><br>
+                        <input class="submitBtn" type="submit" value="Upload" name="upload"/>
+                        <?php
+                        if(isset($_POST["ok"])) {
+                            if($_FILES["file"]["name"] != NULL) {
+                                if($_FILES["file"]["type"] == "image/jpeg" || $_FILES["file"]["type"]=="image/png" || $_FILES["file"]["type"]=="image/gif") {
+                                    if($_FILES["file"]["size"]>1048576) {
+                                        echo "File is too heavy";
+                                    } elseif (file_exists("" . $_FILES["file"]["name"])) {
+                                        echo $_FILES["file"]["name"]." File already exists. ";
+                                    } else {
+                                    $path = ""; 
+                                    $tmp_name = $_FILES['file']['tmp_name'];
+                                    $name = $_FILES['file']['name'];
+                                    $type = $_FILES['file']['type']; 
+                                    $size = $_FILES['file']['size']; 
+                                    // Upload file
+                                    move_uploaded_file($tmp_name,$path.$name);
+                                    echo "File uploaded! <br />";
+                                    echo "File name: ".$name."<br />";
+                                    echo "File type: ".$type."<br />";
+                                    echo "File size : ".$size;
+                                    } 
+                                } else {
+                                    echo "Invalid file";
+                                }
+                            } else {
+                                echo "Please select file";
+                            }
+                        }
+                        ?>
+                    </form>
+                </div>
+            </div>
         </div>
-        
-        
-        
-
+    
     <script>
             var text = document.getElementsByClassName("text");
             var text1 = document.getElementsByClassName("text1");
@@ -559,9 +334,6 @@
                 text[i].style.display="block";
                 })
             }
-
-
-        
         $(document).ready(function() {
         $('.nav-btn').on('click', function(event) {
             event.preventDefault();
