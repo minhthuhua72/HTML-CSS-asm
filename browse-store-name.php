@@ -58,7 +58,6 @@
 
         <div class="alpha-links">
             <ul>
-                <li><a href="browse-store-name.php?name=digit" class="link" title="Scroll to #">#</a></li>
                 <li><a href="browse-store-name.php?name=a" class="link" title="Scroll to A">A</a></li>
                 <li><a href="browse-store-name.php?name=b" class="link" title="Scroll to B">B</a></li>
                 <li><a href="browse-store-name.php?name=c" class="link" title="Scroll to C">C</a></li>
@@ -85,12 +84,18 @@
                 <li><a href="browse-store-name.php?name=x" class="link" title="Scroll to X">X</a></li>
                 <li><a href="browse-store-name.php?name=y" class="link" title="Scroll to Y">Y</a></li>
                 <li><a href="browse-store-name.php?name=z" class="link" title="Scroll to Z">Z</a></li>
+                <li><a href="browse-store-name.php?name=Other" class="link" title="Scroll to #">#</a></li>
             </ul>
         </div>
 
-        <div class="category">
-                <h2><?= strtoupper($_GET['name']);?></h2>
-            </div>
+        <?php
+        if (isset($_GET['name']) && !empty($_GET['name'])) { 
+            echo '<div class="category">
+                    <h2>'.strtoupper($_GET['name']).'</h2>
+                </div>';
+        } 
+        ?>
+            
 
         <div class= "storeList">
             <?php 
@@ -117,15 +122,15 @@
 
             //Sort store by alphabetically order
             usort($_SESSION['stores'], 'name_cmp');
-            
             foreach ($_SESSION['stores'] as $key => $value ) {
                 if (isset($_GET['name']) && !empty($_GET['name'])) {
+                    echo '';
                     if (strtolower($value['storeName'])[0] == $_GET['name']) {
                         echo '<div class="store-info">
                                     <a href="nike/nike.php?id='.$value["storeID"].'">'.'<img class="sLogo" src="nike/imgs/logo.png" alt="logo"></a>
                                     <h3>'.$value["storeName"].'</h3>
                                 </div>';
-                    } elseif (is_numeric($value['storeName'][0]) && $_GET['name'] == "digit") {
+                    } elseif (is_numeric($value['storeName'][0]) && $_GET['name'] == 'Other') {
                         echo '<div class="store-info">
                                     <a href="nike/nike.php?id='.$value["storeID"].'">'.'<img class="sLogo" src="nike/imgs/logo.png" alt="logo"></a>
                                     <h3>'.$value['storeName'].'</h3>

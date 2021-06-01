@@ -107,17 +107,18 @@
                 }
             }
         }
+        
+        ?>
+       <div class="stores-list-cate">
+        <?php
         if (isset($_GET['category'])) {
-                $selected = $_GET['category'];
+            $selected = $_GET['category'];
+            echo '<div class="category">
+                    <h2>'.$selected.'</h2>
+                </div>';
         } else {
             $selected = null;
         }
-        ?>
-        <div class="stores-list-cate">
-            <div class="category">
-                <h2><?= $selected?></h2>
-            </div>
-        <?php
         foreach ($_SESSION['stores'] as $key2 => $value2) {
             if ($value2['cateName'] === $selected) {
                 echo '<div class="store-browse">
