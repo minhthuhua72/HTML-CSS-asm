@@ -1,3 +1,4 @@
+<?php require_once 'deleteInstall.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -187,7 +188,6 @@
 
 </html>
 
-<?php 
 
 
 
