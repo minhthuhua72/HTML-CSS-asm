@@ -1,3 +1,161 @@
+<?php
+include "deleteInstall.php";
+// Set variables 
+$nortification1 = '';
+$nortification2 = '';
+$mail = '';
+$phonenum = '';
+$password = '';
+$repassword = '';
+$fname = '';
+$lname = '';
+$address = '';
+$cities = '';
+$zip = '';
+$country = '';
+
+// Function to clear the text
+function clean_text($string)
+{
+ $string = trim($string);
+ $string = stripslashes($string);
+ $string = htmlspecialchars($string);
+ return $string;
+}
+
+if(isset($_POST["submit"]))
+{
+
+   // Check blank
+   if(empty($_POST["mail"]) 
+   || empty($_POST["fname"]) 
+   || empty($_POST["lname"]) 
+   || empty($_POST["password"]) 
+   || empty($_POST["repassword"]) 
+   || empty($_POST["phonenumber"]) 
+   || empty($_POST["address"]) 
+   || empty($_POST["cities"]) 
+   || empty($_POST["zip"]) 
+   || empty($_POST["countries"]) 
+   || empty($_POST["type"]))
+      {
+         $nortification1 .= '<p id="nortification1">Please fill the blank</p>';
+      }
+   else
+      {
+          // Add value to the variables
+         $mail = clean_text($_POST["mail"]);
+         $fname = clean_text($_POST["fname"]);
+         $lname = clean_text($_POST["lname"]);
+         $password = clean_text($_POST["password"]);
+         $repassword = clean_text($_POST["repassword"]);
+         $phonenum = clean_text($_POST["phonenumber"]);
+         $address = clean_text($_POST["address"]);
+         $cities = clean_text($_POST["cities"]);
+         $country = clean_text($_POST["countries"]);
+         $zip = clean_text($_POST["zip"]);
+         // Validation email
+         if(!filter_var($mail, FILTER_VALIDATE_EMAIL))
+         {
+            $nortification1 .= '<p id="nortification1">Invalid email</p>';
+         }
+         // Validate first name
+         if(!preg_match("/^[a-zA-Z ]*$/",$fname))
+         {
+            $nortification1 .= '<p id="nortification1">Only letters and white space allowed</p>';
+         }
+         // Validate last name
+         if(!preg_match("/^[a-zA-Z ]*$/",$lname))
+         {
+            $nortification1 .= '<p id="nortification1">Only letters and white space allowed</p>';
+         }
+         // Validate password
+         if(!preg_match("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w]).{8,20}$/",$password))
+         {
+            $nortification1 .= '<p id="nortification1">Incorrect Password format</p>';
+         }
+         else
+         {
+            $h_password = password_hash($password, PASSWORD_DEFAULT); // Hash password
+         }
+
+         $h_repassword = password_hash($repassword, PASSWORD_DEFAULT); // Hash repassword
+         // Validate repassword
+         if($password !== $repassword)
+        {
+            $nortification1 .= '<p id="nortification1">Please retype the correct Password</p>';
+        }
+        // Validate phone number
+        if(!preg_match("/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3,5}$/",$phonenum))
+        {
+            $nortification1 .= '<p id="nortification1">Please enter the valid phone number</p>';
+        }
+        // Validate zip code
+        if(!preg_match("/\d{4,6}/",$zip))
+        {
+            $nortification1 .= '<p id="nortification1">Please enter the valid phone number</p>';
+        }
+        // Check username and phone number are unique      
+        // Open and write into the file
+        $file_open1 = fopen("register.csv", "r");
+        // Check username and phone number are unique      
+        while(! feof($file_open1))
+        {
+            $row = fgetcsv($file_open1);
+            if ($_POST['mail'] == $row[3])
+            {
+                $nortification1 .= '<p id="nortification1">Your email are already used !!</p>';
+            }
+            if($_POST['phonenumber'] == $row[4])
+            {
+                $nortification1 .= '<p id="nortification1">Your phone are already used !!</p>';
+            }
+
+        }
+        fclose($file_open1);
+    }
+
+    // Check if the nortification is null, the code inside will be excecuted
+   if($nortification1 == '')
+      {
+        // Open and write into the file
+        $file_open = fopen("register.csv", "a");
+         // Check row data add number row for it
+         $no_rows = count(file("register.csv"));
+         if($no_rows > 1)
+            {
+               $no_rows = ($no_rows - 1) + 1;
+            }
+         // Add data into the array 
+         $form_data = array(
+         'sr_no'  => $no_rows,
+         'first_name' => $fname,
+         'last_name'  => $lname,
+         'email'  => $mail,
+         'phone_number' => $phonenum,
+         'password' => $h_password,
+         'address' => $address,
+         'city' => $cities,
+         'zip' => $zip,
+         'country' => $country
+         );
+         // Add array into the csv file
+         fputcsv($file_open, $form_data);
+         $mail = '';
+         $phonenum = '';
+         $password = '';
+         $repassword = '';
+         $fname = '';
+         $lname = '';
+         $address = '';
+         $cities = '';
+         $zip = '';
+         $country = '';
+         header("Location: login.php"); // head user if success the register process to the login page
+      }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +179,7 @@
             <span>Shopeeverse</span>
         </a>
         <nav>
-            <!--Responsive Navbar-->
+            <!-- Responsive Navbar-->
             <input type="checkbox" id="active">
             <label for="active">
                 <i class="fa fa-bars" id="open"></i>
@@ -51,71 +209,72 @@
 
     <main>
         <h1><span class="vline">REGISTER</span></h1>
-
-        <form method="GET" action="register.html">
-            <p id="nortification1"></p>
+        
+        <form method="POST" class = "RegistForm" action="register.php">
+            <?php echo $nortification1 ?>
+            <?php echo $nortification2 ?>
             <!-- input mail -->
             <div class="wrap-input150">
                 <label for="mail" class="form-group">Email</label>
-                <input class="input-design" type="email" id="mail" name="mail" placeholder="Enter your email" required>
+                <input class="input-design" type="email" id="mail" value="<?php echo $mail; ?>" name="mail" placeholder="Enter your email">
             </div>
             <!-- input phone num -->
             <div class="wrap-input150">
                 <label for="phonenum" class="form-group">Phone Number</label>
                 <input class="input-design" type="tel" id="phonenum" name="phonenumber" 
-                    placeholder="Enter your phone number" required>
+                    placeholder="Enter your phone number" value = '<?php echo $phonenum; ?>' >
             </div>
             <!-- input password -->
             <div class="wrap-input150">
                 <label for="pw" class="form-group">Password</label>
-                <input class="input-design" type="password" id="pw" name="password" 
-                    placeholder="Enter a password" required>
+                <input class="input-design" type="password" id="pw" value = "<?php echo $password; ?>" name="password" 
+                    placeholder="Enter a password" >
             </div>
             <!-- retype pass -->
             <div class="wrap-input150">
                 <label for="rpw" class="form-group">Retype Password</label>
-                <input class="input-design" type="password" id="rpw" name="repassword" 
-                    placeholder="Retype your password" required>
+                <input class="input-design" type="password" value = "<?php echo $repassword; ?>" id="rpw" name="repassword" 
+                    placeholder="Retype your password" >
             </div>
             <!-- Add picture -->
             <div class="wrap-input150">
                 <label class="form-group">Profile Picture</label>
-                <input type="file" id="proimage" name="proimage" required>
+                <input type="file" id="proimage" name="proimage">
             </div>
             <!-- input fname -->
             <div class="wrap-input150">
                 <label for="fname" class="form-group">First Name</label>
-                <input class="input-design" type="text" id="fname" name="fname" placeholder="Enter your first name"
-                    required>
+                <input class="input-design" type="text" id="fname" value = "<?php echo $fname; ?>" name="fname" placeholder="Enter your first name"
+                    >
             </div>
             <!-- input lname -->
             <div class="wrap-input150">
                 <label for="lname" class="form-group">Last Name</label>
-                <input class="input-design" type="text" id="lname" name="lname" placeholder="Enter your last name"
-                    required>
+                <input class="input-design" type="text" id="<?php echo $lname; ?>" name="lname" placeholder="Enter your last name"
+                    >
             </div>
             <!-- input address -->
             <div class="wrap-input150">
                 <label for="address" class="form-group">Address</label>
-                <input class="input-design" type="text" id="address" name="address"
-                    placeholder="Enter your home address" required>
+                <input class="input-design" type="text" id="address" value = "<?php echo $address; ?>" name="address"
+                    placeholder="Enter your home address" minlength = "3" >
             </div>
             <!-- city -->
             <div class="wrap-input150">
                 <label for="cities" class="form-group">City</label>
-                <input class="input-design" type="text" id="cities" name="cities" placeholder="Enter your city"
-                    required>
+                <input class="input-design" type="text" id="cities" value = "<?php echo $cities; ?>" name="cities" placeholder="Enter your city" minlength = "3"
+                    >
             </div>
             <!-- zip code -->
             <div class="wrap-input150">
                 <label for="zip" class="form-group">Zip Code</label>
-                <input class="input-design" type="number" id="zip" name="zip" maxlength="6" minlength="4"
-                    placeholder="Enter your zip code" required>
+                <input class="input-design" type="number" id="zip" name="zip" value = "<?php echo $zip; ?>"
+                    placeholder="Enter your zip code" >
             </div>
             <!-- select countries -->
             <div class="wrap-input150">
                 <label for="countries" class="form-group">Country</label>
-                <select id="countries" name="countries">
+                <select id="countries" name="countries" value = "<?php echo $country; ?>">
                     <option value="0" selected>Select your country</option>
                     <option value="AF">Afghanistan</option>
                     <option value="AX">Åland Islands</option>
@@ -377,11 +536,11 @@
 
                         <label class="subContent" for="bname">Business Name:</label>
                         <input class="input-design" type="text" id='bname' name='bname'
-                            placeholder="Enter your business name" required>
+                            placeholder="Enter your business name" >
 
                         <label class="subContent" for="sname">Store Name:</label>
                         <input class="input-design" type="text" id='sname' name='sname'
-                            placeholder="Enter your store name" required>
+                            placeholder="Enter your store name" >
 
                         <label class="subContent" for="options">Store Category</label>
                         <select name="storecate" id="options">
@@ -404,7 +563,7 @@
             </div>
             <!-- button -->
             <div class="button-control">
-                <input type="submit" value="Register" onclick="checkVali()">
+                <input type="submit" value="Register" name="submit">
                 <input type="reset" value="Clear">
             </div>
         </form>
@@ -425,8 +584,6 @@
             <a href="copyright.html">Copyright &copy; Mall 2021</a>
         </div>
     </footer>
-    <!--EndFooter-->
-    <script src="register.js"></script>
 </body>
 
 </html>
